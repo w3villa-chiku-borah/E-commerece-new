@@ -1,0 +1,130 @@
+{
+   "TOP_CATEGORIES" : [
+    {
+ "img" : "./asset/12.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/12.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/12.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/12.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/12.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/12.jpg" ,
+ "type" : "FASHION"
+
+   }
+],
+   "ELECTRONICS" : [
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/13.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/13.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/13.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/13.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   }
+],
+   "BEAUTY" : [
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/14.jpg" ,
+ "type" : "FASHION"
+
+   }
+],
+   "FASHION" : [
+    {
+ "img" : "./asset/15.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/15.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/15.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/15.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/15.jpg" ,
+ "type" : "FASHION"
+
+   },
+    {
+ "img" : "./asset/15.jpg" ,
+ "type" : "FASHION"
+
+   }
+]
+}

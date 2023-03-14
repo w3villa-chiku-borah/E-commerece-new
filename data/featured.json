@@ -1,0 +1,215 @@
+{
+   "FEATURED" :[ {
+    "name" : "HEADPHONE",
+    "img" : "/asset/21.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "FOOTWEAR",
+    "img" : "/asset/22.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "BAGS",
+    "img" : "/asset/23.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "CAMERA",
+    "img" : "/asset/24.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "MOBILE",
+    "img" : "/asset/25.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "GLASSES",
+    "img" : "/asset/26.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   }
+
+   
+],
+   "LATEST" :[ 
+    {
+        "name" : "FOOTWEAR",
+        "img" : "/asset/22.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+       {
+        "name" : "BAGS",
+        "img" : "/asset/23.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+       {
+    "name" : "HEADPHONE",
+    "img" : "/asset/21.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+ 
+   {
+    "name" : "CAMERA",
+    "img" : "/asset/24.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "MOBILE",
+    "img" : "/asset/25.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "GLASSES",
+    "img" : "/asset/26.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   }
+
+   
+],
+   "BESTSELLERS" :[ 
+
+   {
+    "name" : "CAMERA",
+    "img" : "/asset/24.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "MOBILE",
+    "img" : "/asset/25.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+   {
+    "name" : "GLASSES",
+    "img" : "/asset/26.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+
+    {
+        "name" : "FOOTWEAR",
+        "img" : "/asset/22.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+       {
+        "name" : "BAGS",
+        "img" : "/asset/23.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+       {
+    "name" : "HEADPHONE",
+    "img" : "/asset/21.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   }
+ 
+   
+],
+   "SPECIAL" :[ 
+    {
+        "name" : "MOBILE",
+        "img" : "/asset/25.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+       {
+        "name" : "GLASSES",
+        "img" : "/asset/26.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+    
+        {
+            "name" : "FOOTWEAR",
+            "img" : "/asset/22.jpg",
+            "price" : "85.00",
+            "modal_name" : "6789",
+            "brand" : "Eriksoon",
+            "price_cut" : "7890.00"
+           },
+   {
+    "name" : "CAMERA",
+    "img" : "/asset/24.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   },
+  
+       {
+        "name" : "BAGS",
+        "img" : "/asset/23.jpg",
+        "price" : "85.00",
+        "modal_name" : "6789",
+        "brand" : "Eriksoon",
+        "price_cut" : "7890.00"
+       },
+       {
+    "name" : "HEADPHONE",
+    "img" : "/asset/21.jpg",
+    "price" : "85.00",
+    "modal_name" : "6789",
+    "brand" : "Eriksoon",
+    "price_cut" : "7890.00"
+   }
+ 
+   
+]
+
+}

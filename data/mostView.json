@@ -1,0 +1,25 @@
+{
+    "mostView": [
+        {
+            "name": "Footwear",
+            "price": 100,
+            "img": "/asset/22.jpg"
+        },
+        {
+            "name": "Headphones",
+            "price": 20,
+            "img": "/asset/21.jpg"
+        },
+        {
+            "name": "t-shirt",
+            "price": 90,
+            "img": "/asset/72.jpg"
+        },
+        {
+            "name": "bags",
+            "price": 50,
+            "img": "/asset/23.jpg"
+        }
+        
+    ]
+}
