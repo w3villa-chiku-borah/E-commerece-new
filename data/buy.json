@@ -6,28 +6,28 @@
 
    },
     {
- "img" : "./asset/12.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/13.jpg" ,
+ "type" : "JACKET"
 
    },
     {
- "img" : "./asset/12.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/14.jpg" ,
+ "type" : "HOME DECOR"
 
    },
     {
- "img" : "./asset/12.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/15.jpg" ,
+ "type" : "FOOTWEAR"
 
    },
     {
- "img" : "./asset/12.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/16.jpg" ,
+ "type" : "BAGS"
 
    },
     {
- "img" : "./asset/12.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/17.jpg" ,
+ "type" : "BEAUTY"
 
    }
 ],

@@ -1446,12 +1446,12 @@ padding-right: 20px; */
 
 }
 
-/* *******************footer-****************** */
-.footer_sec {
+/* *******************.footer-sec-main-****************** */
+..footer-sec-main_sec {
   background-color: rgb(243, 243, 244);
 }
 
-footer {
+.footer-sec-main {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1460,22 +1460,22 @@ footer {
   padding-bottom: 40px;
 }
 
-footer div {
+.footer-sec-main div {
   padding-left: 20px;
   width: 400px;
   border-right: 1px solid rgb(184, 182, 182);
 }
 
-.footer-nav{
-  border-right: none;
+.foot-nav{
+  border-right: none !important;
   overflow-x: hidden;
 }
 
-footer div h2 {
+.footer-sec-main div h2 {
   font-size: 27px;
 }
 
-footer div hr {
+.footer-sec-main div hr {
   width: 80px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1484,7 +1484,7 @@ footer div hr {
   border: none;
 }
 
-footer div ul li {
+.footer-sec-main div ul li {
   list-style-type: none;
   color: blue;
   padding-bottom: 10px;
@@ -1493,7 +1493,7 @@ footer div ul li {
 }
 
 
-footer div .paragraph {
+.footer-sec-main div .paragraph {
   font-size: 22px;
   opacity: 60%;
   width: 100%;
@@ -1501,7 +1501,7 @@ footer div .paragraph {
   padding-bottom: 10px;
 }
 
-footer div input[type="email"] {
+.footer-sec-main div input[type="email"] {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 200px !important;
@@ -1514,10 +1514,10 @@ footer div input[type="email"] {
   padding-right: 60px;
 }
 
-.footer-input-con{  
+.foot-input-con{  
   
-  border-right: none;
-  padding: 0;;
+  border-right: none imporat !important;
+  padding: 0!important;
 }
 
 .button-send {
@@ -1528,7 +1528,7 @@ background-color: #9aa5d4;
   width: 60px;
 }
 
-footer div p {
+.footer-sec-main div p {
   padding-top: 10px;
   opacity: 60%;
 }
@@ -1538,16 +1538,16 @@ footer div p {
 }
 
 @media screen and (max-width:1844px) {
-  footer div {
+  .footer-sec-main div {
     border-right: 0;
   }
 }
 
 @media screen and (max-width:890px) {
-  footer div {
+  .footer-sec-main div {
     width: 250px;
   }
-  footer div input[type="email"] {
+  .footer-sec-main div input[type="email"] {
     width: 100%;
   }
 }
