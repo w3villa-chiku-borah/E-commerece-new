@@ -87,14 +87,14 @@ padding-right: 10px; */
   
 
 }
-.FAQ .drop_down_container .drop_down li a{
+/* .FAQ .drop_down_container .drop_down li a{
   color: aliceblue;
   text-decoration: none;
 }
-.FAQ .drop_down_container .drop_down li a:hover{
+ .drop_down .ancher-all-manu:hover{
   color: aliceblue;
   font-weight: bold;
-}
+} */
 
 
 .nav-home ul li a {
