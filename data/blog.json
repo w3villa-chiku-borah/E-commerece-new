@@ -5,7 +5,8 @@
             "text": "120",
             "view": "59322",
             "para": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sit,cumque veritatis ratione aut voluptates ipsum fugit minus porro tenetur autem aliquam delectus, cum eligendi vel.lorem10",
-            "img": "./asset/12.jpg"
+            "img": "./asset/12.jpg",
+            "lebels" : []
         },
         {
             "name": "chiku",
