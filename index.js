@@ -19,13 +19,13 @@ const showFashion = (arrayOfData) => {
             <div class="image-container">
                 <img loading="lazy" src="${element.img}" alt="">
 
-                <div class="lebels-c1 lebels-04-main-1">
+              ${element.c_lebels ? ` <div class="lebels-c1 lebels-04-main-1">
                     2-3 days
-                </div>
+                </div>` : ``}
 
-                <div class="lebels-c2 lebels-c3 lebels-04-main-2">
+               ${element.hot ? ` <div class="lebels-c2 lebels-c3 lebels-04-main-2">
                     HOT
-                </div>
+                </div>` : ``}
 
 
 
@@ -40,7 +40,7 @@ const showFashion = (arrayOfData) => {
 
                         <input type="button" value="ADD TO CART">
                     </div>
-                    <div>
+                    <div class="heart-exchange-fashion">
                         <i style="font-weight:100" class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     </div>
@@ -74,12 +74,12 @@ const showFashion = (arrayOfData) => {
             },
 
             1220: {
-                items: 2
+                items: 3
             },
 
 
             1400: {
-                items: 3
+                items: 4
             },
         }
 
@@ -95,9 +95,12 @@ const showMostView = (arrayOfData) => {
                     <div class="item-c-09">
                         <div class="item-c1-09"><img src="${element.img}"></div>
                         <div class="item-c2-09">
+                             <div>
                             <h1>${element.name}</h1>
                             <p>$${element.price}</p>
+                            </div>
                             <p>
+                          
                                 <i class="fa-solid fa-cart-shopping shopping-cart-at630"></i> <i
                                     class="fa-regular fa-heart"></i> <i
                                     class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
@@ -245,12 +248,13 @@ const showFeature = (arrayOfData) => {
          
         ${element.c_lebels ? `<div class="lebels-c1">
             CUSTOM LEBELS
-        </div>` : ``}
-
-        <div class="lebels-c2">
-            -70%
-        </div>
-       ${element.hot ? `<div class="lebels-c2 lebels-c3">
+        </div>` : ``}`;
+        if (element.off.length > 0) {
+            html += `<div class="lebels-c2">
+           ${element.off}
+        </div>`
+        }
+        html += `${element.hot ? `<div class="lebels-c2 lebels-c3">
             HOT
         </div>` : ``}
 

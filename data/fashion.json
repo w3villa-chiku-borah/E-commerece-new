@@ -1,25 +1,33 @@
 {
     "fashionProducts" : [
         {
-            "name" : "Jeans",
+            "name" : "Babycon",
             "price" : "100",
-            "img" : "./asset/12.jpg"
+            "img" : "./asset/babycon.jpg",
+            "c_lebels" : true,
+            "hot" : true
         
         },
         {
-            "name" : "Headphones",
-            "price" : "100",
-            "img" : "./asset/12.jpg" 
+            "name" : "Jean",
+            "price" : "800",
+            "img" : "./asset/jeans1.jpeg",
+            "c_lebels" : false,
+            "hot" : false
         },
         {
-            "name" : "Footwear",
+            "name" : "Jacket",
             "price" : "100",
-            "img" : "./asset/12.jpg" 
+            "img" : "./asset/13.jpg" ,
+            "c_lebels" : false,
+            "hot" : true
         },
         {
-            "name" : "bags",
+            "name" : "Top",
             "price" : "100",
-            "img" : "./asset/12.jpg" 
+            "img" : "./asset/12.jpg",
+            "c_lebels" : false,
+            "hot" : false
         }
     ]
 }

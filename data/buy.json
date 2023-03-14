@@ -33,97 +33,97 @@
 ],
    "ELECTRONICS" : [
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/21.jpg" ,
+ "type" : "Headphone"
 
    },
     {
- "img" : "./asset/13.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/speaker1.jpeg" ,
+ "type" : "Speaker"
 
    },
     {
- "img" : "./asset/13.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/laptop1.jpeg" ,
+ "type" : "Laptop"
 
    },
     {
- "img" : "./asset/13.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/watch1.jpeg" ,
+ "type" : "Watch"
 
    },
     {
- "img" : "./asset/13.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/24.jpg" ,
+ "type" : "Camera"
 
    },
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/25.jpg" ,
+ "type" : "Mobile"
 
    }
 ],
    "BEAUTY" : [
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/breadoil1.jpeg" ,
+ "type" : "Beard"
 
    },
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/eyeliner1.png" ,
+ "type" : "Eyeliner"
 
    },
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/facecream1.jpeg" ,
+ "type" : "Cream"
 
    },
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/facewah1.jpeg" ,
+ "type" : "Facewash"
 
    },
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/hairoil1.jpeg" ,
+ "type" : "Hair Oil"
 
    },
     {
- "img" : "./asset/14.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/lipstick2.png" ,
+ "type" : "Lipstick"
 
    }
 ],
    "FASHION" : [
     {
- "img" : "./asset/15.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/22.jpg" ,
+ "type" : "Footwear"
+
+   },
+    {
+ "img" : "./asset/23.jpg" ,
+ "type" : "Bag"
+
+   },
+    {
+ "img" : "./asset/13.jpg",
+ "type" : "Jacket"
 
    },
     {
  "img" : "./asset/15.jpg" ,
- "type" : "FASHION"
+ "type" : "Shoe"
 
    },
     {
- "img" : "./asset/15.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/72.jpg" ,
+ "type" : "Shirt"
 
    },
     {
- "img" : "./asset/15.jpg" ,
- "type" : "FASHION"
-
-   },
-    {
- "img" : "./asset/15.jpg" ,
- "type" : "FASHION"
-
-   },
-    {
- "img" : "./asset/15.jpg" ,
- "type" : "FASHION"
+ "img" : "./asset/12.jpg" ,
+ "type" : "Top"
 
    }
 ]

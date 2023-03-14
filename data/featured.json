@@ -7,7 +7,8 @@
     "brand" : "Eriksoon",
     "price_cut" : "7890.00",
     "c_lebels" : true,
-    "hot" : true
+    "hot" : true,
+    "off" :"-70%"
    },
    {
     "name" : "FOOTWEAR",
@@ -17,7 +18,8 @@
     "brand" : "Eriksoon",
     "price_cut" : "7890.00",
     "c_lebels" : false,
-    "hot" : false
+    "hot" : false,
+    "off" :"-80%"
    },
    {
     "name" : "BAGS",
@@ -27,7 +29,8 @@
     "brand" : "Eriksoon",
     "price_cut" : "7890.00",
     "c_lebels" : false,
-    "hot" : true
+    "hot" : false,
+    "off" :""
    },
    {
     "name" : "CAMERA",
@@ -37,7 +40,8 @@
     "brand" : "Eriksoon",
     "price_cut" : "7890.00",
     "c_lebels" : true,
-    "hot" : true
+    "hot" : true,
+    "off" :"-70%"
    },
    {
     "name" : "MOBILE",
@@ -47,7 +51,8 @@
     "brand" : "Eriksoon",
     "price_cut" : "7890.00",
     "c_lebels" : true,
-    "hot" : true
+    "hot" : false,
+    "off" :""
    },
    {
     "name" : "GLASSES",
@@ -57,7 +62,8 @@
     "brand" : "Eriksoon",
     "price_cut" : "7890.00",
     "c_lebels" : false,
-    "hot" : true
+    "hot" : true,
+    "off" :"-70%"
 
    }
 
@@ -70,7 +76,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : true,
+    "hot" : true,
+    "off" :"-50%"
        },
        {
         "name" : "BAGS",
@@ -78,7 +87,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : false,
+    "hot" : false,
+    "off" :""
        },
        {
     "name" : "HEADPHONE",
@@ -86,7 +98,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : false,
+    "off" :""
    },
  
    {
@@ -95,7 +110,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : true,
+    "off" :"-70%"
    },
    {
     "name" : "MOBILE",
@@ -103,7 +121,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : false,
+    "off" :""       
    },
    {
     "name" : "GLASSES",
@@ -111,7 +132,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : true,
+    "off" :"-70%"
    }
 
    
@@ -124,7 +148,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : true,
+    "off" :"-70%"
    },
    {
     "name" : "MOBILE",
@@ -132,7 +159,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : false,
+    "off" :""
    },
    {
     "name" : "GLASSES",
@@ -140,7 +170,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : false,
+    "off" :"-70%"
    },
 
     {
@@ -149,7 +182,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : false,
+    "hot" : true,
+    "off" :"-70%"
        },
        {
         "name" : "BAGS",
@@ -157,7 +193,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : true,
+    "hot" : false,
+    "off" :"-70%"
        },
        {
     "name" : "HEADPHONE",
@@ -165,7 +204,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : false,
+    "hot" : true,
+    "off" :""
    }
  
    
@@ -177,7 +219,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : false,
+    "hot" : true,
+    "off" :"-70%"
        },
        {
         "name" : "GLASSES",
@@ -185,7 +230,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : true,
+    "hot" : false,
+    "off" :""
        },
     
         {
@@ -194,7 +242,10 @@
             "price" : "85.00",
             "modal_name" : "6789",
             "brand" : "Eriksoon",
-            "price_cut" : "7890.00"
+            "price_cut" : "7890.00",
+            "c_lebels" : true,
+    "hot" : false,
+    "off" :""
            },
    {
     "name" : "CAMERA",
@@ -202,7 +253,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : true,
+    "hot" : false,
+    "off" :"-60%"
    },
   
        {
@@ -211,7 +265,10 @@
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
-        "price_cut" : "7890.00"
+        "price_cut" : "7890.00",
+        "c_lebels" : false,
+    "hot" : true,
+    "off" :""
        },
        {
     "name" : "HEADPHONE",
@@ -219,7 +276,10 @@
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
-    "price_cut" : "7890.00"
+    "price_cut" : "7890.00",
+    "c_lebels" : true,
+    "hot" : false,
+    "off" :"-70%"
    }
  
    
