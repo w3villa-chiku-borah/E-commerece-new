@@ -1,7 +1,7 @@
 {
    "FEATURED" :[ {
     "name" : "HEADPHONE",
-    "img" : "/asset/21.jpg",
+    "img" : "./asset/21.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -9,7 +9,7 @@
    },
    {
     "name" : "FOOTWEAR",
-    "img" : "/asset/22.jpg",
+    "img" : "./asset/22.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -17,7 +17,7 @@
    },
    {
     "name" : "BAGS",
-    "img" : "/asset/23.jpg",
+    "img" : "./asset/23.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -25,7 +25,7 @@
    },
    {
     "name" : "CAMERA",
-    "img" : "/asset/24.jpg",
+    "img" : "./asset/24.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -33,7 +33,7 @@
    },
    {
     "name" : "MOBILE",
-    "img" : "/asset/25.jpg",
+    "img" : "./asset/25.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -41,7 +41,7 @@
    },
    {
     "name" : "GLASSES",
-    "img" : "/asset/26.jpg",
+    "img" : "./asset/26.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -53,7 +53,7 @@
    "LATEST" :[ 
     {
         "name" : "FOOTWEAR",
-        "img" : "/asset/22.jpg",
+        "img" : "./asset/22.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -61,7 +61,7 @@
        },
        {
         "name" : "BAGS",
-        "img" : "/asset/23.jpg",
+        "img" : "./asset/23.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -69,7 +69,7 @@
        },
        {
     "name" : "HEADPHONE",
-    "img" : "/asset/21.jpg",
+    "img" : "./asset/21.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -78,7 +78,7 @@
  
    {
     "name" : "CAMERA",
-    "img" : "/asset/24.jpg",
+    "img" : "./asset/24.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -86,7 +86,7 @@
    },
    {
     "name" : "MOBILE",
-    "img" : "/asset/25.jpg",
+    "img" : "./asset/25.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -94,7 +94,7 @@
    },
    {
     "name" : "GLASSES",
-    "img" : "/asset/26.jpg",
+    "img" : "./asset/26.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -107,7 +107,7 @@
 
    {
     "name" : "CAMERA",
-    "img" : "/asset/24.jpg",
+    "img" : "./asset/24.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -115,7 +115,7 @@
    },
    {
     "name" : "MOBILE",
-    "img" : "/asset/25.jpg",
+    "img" : "./asset/25.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -123,7 +123,7 @@
    },
    {
     "name" : "GLASSES",
-    "img" : "/asset/26.jpg",
+    "img" : "./asset/26.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -132,7 +132,7 @@
 
     {
         "name" : "FOOTWEAR",
-        "img" : "/asset/22.jpg",
+        "img" : "./asset/22.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -140,7 +140,7 @@
        },
        {
         "name" : "BAGS",
-        "img" : "/asset/23.jpg",
+        "img" : "./asset/23.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -148,7 +148,7 @@
        },
        {
     "name" : "HEADPHONE",
-    "img" : "/asset/21.jpg",
+    "img" : "./asset/21.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -160,7 +160,7 @@
    "SPECIAL" :[ 
     {
         "name" : "MOBILE",
-        "img" : "/asset/25.jpg",
+        "img" : "./asset/25.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -168,7 +168,7 @@
        },
        {
         "name" : "GLASSES",
-        "img" : "/asset/26.jpg",
+        "img" : "./asset/26.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -177,7 +177,7 @@
     
         {
             "name" : "FOOTWEAR",
-            "img" : "/asset/22.jpg",
+            "img" : "./asset/22.jpg",
             "price" : "85.00",
             "modal_name" : "6789",
             "brand" : "Eriksoon",
@@ -185,7 +185,7 @@
            },
    {
     "name" : "CAMERA",
-    "img" : "/asset/24.jpg",
+    "img" : "./asset/24.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -194,7 +194,7 @@
   
        {
         "name" : "BAGS",
-        "img" : "/asset/23.jpg",
+        "img" : "./asset/23.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",
@@ -202,7 +202,7 @@
        },
        {
     "name" : "HEADPHONE",
-    "img" : "/asset/21.jpg",
+    "img" : "./asset/21.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",

@@ -3,23 +3,23 @@
         {
             "name" : "Jeans",
             "price" : "100",
-            "img" : "/asset/12.jpg"
+            "img" : "./asset/12.jpg"
 
         },
         {
             "name" : "Chiku",
             "price" : "100",
-            "img" : "/asset/12.jpg" 
+            "img" : "./asset/12.jpg" 
         },
         {
             "name" : "Abhishek",
             "price" : "100",
-            "img" : "/asset/12.jpg" 
+            "img" : "./asset/12.jpg" 
         },
         {
             "name" : "Harsh",
             "price" : "100",
-            "img" : "/asset/12.jpg" 
+            "img" : "./asset/12.jpg" 
         }
     ]
 }
