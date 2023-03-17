@@ -6,8 +6,8 @@
             "price" : "100.00",
             "img" : "./asset/babycon2.jpg",
             "c_lebels" : true,
-            "hot" : true
-            
+            "hot" : true,
+            "off" :"-70%"
             
         },
         {
@@ -15,28 +15,32 @@
             "price" : "800.00",
             "img" : "./asset/jeans3.jpg",
             "c_lebels" : false,
-            "hot" : false
+            "hot" : false,
+            "off" :"-70%"
         },
         {
             "name" : "Jacket",
             "price" : "100.00",
             "img" : "./asset/13.jpg" ,
             "c_lebels" : false,
-            "hot" : true
+            "hot" : true,
+            "off" :"-70%"
+        },
+        {
+            "name" : "Top",
+            "price" : "100.00",
+            "img" : "./asset/12.jpg",
+            "c_lebels" : true,
+            "hot" : false,
+            "off" :"Hot"
         },
         {
             "name" : "Top",
             "price" : "100.00",
             "img" : "./asset/12.jpg",
             "c_lebels" : false,
-            "hot" : false
-        },
-        {
-            "name" : "Top",
-            "price" : "100.00",
-            "img" : "./asset/12.jpg",
-            "c_lebels" : false,
-            "hot" : false
+            "hot" : false,
+            "off" :"-70%"
         }
     ]
 },

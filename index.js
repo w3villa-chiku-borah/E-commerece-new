@@ -21,9 +21,14 @@ const showFashion = (arrayOfData) => {
 
               ${element.c_lebels ? ` <div class="lebels-c1 lebels-04-main-1">
                     2-3 days
-                </div>` : ``}
+                </div>` : ``}`;
+                if (element.off.length > 0) {
+                    html += `<div class="lebels-c2">
+                   ${element.off}
+                </div>`
+                }
 
-               ${element.hot ? ` <div class="lebels-c2 lebels-c3 lebels-04-main-2">
+               html += `${element.hot ? ` <div class="lebels-c2 lebels-c3 lebels-04-main-2">
                     HOT
                 </div>` : ``}
 
