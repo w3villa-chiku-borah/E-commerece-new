@@ -296,13 +296,13 @@ padding-right: 4px;
 @media screen and (max-width:1582px){
   .search ul li input {
     width: 236px!important;
-    height: 35px!important;
+    height: 40gitpx!important;
   }
 }
 @media screen and (max-width:1228px){
   .search ul li input {
     width: 200px!important;
-    height: 35px!important;
+    height: 40px!important;
   }
 }
 
@@ -351,7 +351,7 @@ padding-right: 4px;
 }
 .search ul li input {
   width: 500px;
-  height: 35px;
+  height: 44px;
   padding-left: 5px;
 }
 
@@ -1771,11 +1771,12 @@ border: 1px solid rgba(138, 133, 133, 0.491);
 
 .foot-input-con{  
   
-  border-right: none imporat !important;
+  /* border-right: none!important; */
   padding: 0!important;
   position: relative;
-      border: none;
+   border: none !important;
 }
+
 
 .button-send {
 background-color: #1138e7;
