@@ -4,7 +4,7 @@
         {
             "name" : "Babycon",
             "price" : "100",
-            "img" : "./asset/babycon.jpg",
+            "img" : "./asset/babycon2.jpg",
             "c_lebels" : true,
             "hot" : true
             
@@ -13,7 +13,7 @@
         {
             "name" : "Jeans",
             "price" : "800",
-            "img" : "./asset/jeans1.jpeg",
+            "img" : "./asset/jeans3.jpg",
             "c_lebels" : false,
             "hot" : false
         },

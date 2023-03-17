@@ -2,12 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   overflow-x: hidden;
 }
-
+.padding-left-right{
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+}
 .mlr-50 {
   padding-left: 50px;
   padding-right: 50px;
@@ -69,7 +73,7 @@ body {
   display: block;
   position: absolute;
   width: 100px;
-  background-color: rgb(83, 70, 226);
+  background-color: rgb(22, 5, 207);
   z-index: 9999;
  
   padding: 5px 11px 16px 11px;
@@ -86,7 +90,10 @@ body {
 
 
 }
-.FAQ .drop_down_container , .drop_down li {
+.FAQ .drop_down_container .drop_down li a{
+  color: rgb(255, 255, 255) !important;
+}
+.FAQ .drop_down_container , .drop_down li{
 padding-top: 5px;
 padding-bottom: 5px;
 /* padding-left: 10px;
@@ -94,8 +101,9 @@ padding-right: 10px; */
   /* text-align: center; */
   padding-right: 1px;
   border-bottom:1px solid white ;
-  
-
+}
+.FAQ .drop_down_container , .drop_down li:last-child{
+  border-bottom: none;
 }
 /* .FAQ .drop_down_container .drop_down li a{
   color: aliceblue;
@@ -106,7 +114,9 @@ padding-right: 10px; */
   font-weight: bold;
 } */
 
-
+.nav-home ul li i{
+padding-right: 4px;
+}
 .nav-home ul li a {
   color: black;
 }
@@ -145,10 +155,15 @@ padding-right: 10px; */
 
   .mobile-nav {
     display: none;
+    word-spacing: 10px;
   }
+ 
 
 }
-
+.fa-user-login{
+  padding-left: 5px;
+    padding-right: 5px;
+}
 /* @media screen and (max-width:767px) {
   .mobile-row {
     display: flex;
@@ -251,7 +266,12 @@ padding-right: 10px; */
     padding-bottom: 14px;
     overflow-x: hidden;
 }
-
+@media (min-width: 1121px) and (max-width:1199px){
+.padding-left-right-container{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+}
 @media screen and (max-width:1460px) {
   .search ul li input {
     width: 300px!important;
@@ -406,6 +426,10 @@ padding-right: 10px; */
 .bg-yellow ul {
   color: black;
 }
+.all-dev-2{
+  display: flex;
+  justify-content: center;
+}
 
 .sale-p {
   position: relative;
@@ -452,7 +476,7 @@ padding-right: 10px; */
   width: 100%;
   border-radius: 20px;
   z-index: -99;
-  height: 600px;
+  height: 592px;
   object-fit: cover;
   image-orientation: right;
 
@@ -508,12 +532,26 @@ padding-right: 10px; */
   /* padding-top: 30px; */
   /* padding-bottom: 30px; */
   position: relative;
+  /* padding-bottom: 30px!important; */
+  
+
+}
+.img-col2{
+  padding-bottom: 30px;
+}
+@media  screen and (min-width:1121px) {
+  .img-col{
+    padding-left: 0px;
+    padding-right:5px;
+  }
+  .img-col2 {
+     /* padding-bottom: 30px;  */
+    padding-right: 0px;
+    padding-left: 5px;
+  }
 }
 
-.img-col2 {
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
-}
+
 .img-col .owl-theme .owl-nav.disabled+.owl-dots {
   margin-top: 10px;
   position: absolute;
@@ -556,7 +594,8 @@ padding-right: 10px; */
 }
 
 .wear {
-  padding-top: 30px;
+  /* padding-top: 30px; */
+  padding-left: 10px;
   position: absolute;
   left: 17px;
   top: 17%
@@ -575,7 +614,9 @@ padding-right: 10px; */
 }
 
 .build {
-  padding-top: 30px;
+  /* padding-top: 30px;
+   */
+    padding-left: 10px;
   position: absolute;
   left: 17px;
   top: 17%
@@ -651,6 +692,9 @@ padding-right: 10px; */
   color: aliceblue;
 
   /* align-items: center; */
+}
+.dark1-03{
+  justify-content: center;
 }
 
 .dark ul {
@@ -1194,6 +1238,9 @@ padding-right: 20px; */
 .cart-container hr{
 margin-top: 0px;
 margin-bottom: 0px;
+    height: 1px;
+    background-color: #af9d9d;
+    border: none;
 }
 
 .fashion-container01 .fashion .hr, .new-fashion-container .hr {
@@ -1252,7 +1299,7 @@ margin-bottom: 0px;
 
 }
 .featured-products-card{
-  border: 1px solid rgba(102, 98, 98, 0.24);
+  border: 1px solid rgba(105, 101, 101, 0.612);
 }
 
 @media screen and (max-width:1084px) {
@@ -1320,8 +1367,8 @@ color: black!important;
 .fashion-container01 .add-to-cart-container {
   /* padding-top: 20px !important; */
   display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 26px;
+  padding-bottom:26px;
   justify-content: space-between;
 }
 
@@ -1361,8 +1408,9 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
   /* color: aliceblue; */
-  background-color: #0037ff;
+  background-color: #0037ffd4;
   padding: 3px;
+  border-radius: 10px;
   color: white;
 }
 
@@ -1710,14 +1758,14 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 .footer-sec-main div input[type="email"] {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 220px !important;
-  height: 55px;
+  width: 250px !important;
+  height: 45px;
   /* margin-top: 10px; */
   outline: none;
   padding-left: 10px;
   font-size: 20px;
   border-radius: 5px;
-
+border: 1px solid rgba(138, 133, 133, 0.491);
   padding-right: 60px;
 }
 
@@ -1726,6 +1774,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   border-right: none imporat !important;
   padding: 0!important;
   position: relative;
+      border: none;
 }
 
 .button-send {
@@ -1734,8 +1783,8 @@ background-color: #1138e7;
   border: none;
   height: 36px;
   width: 60px;
-  right: 75px;
-  top: 17%;
+  right: 45px;
+  top: 9%;
   position: absolute;
 }
 .button-send .fa-envelope{
@@ -1750,9 +1799,17 @@ background-color: #1138e7;
 .Privacy {
   color: blue;
 }
+@media screen and (max-width:1322px){
+  .footer-sec-main div{
+    border: none!important;
+  }
+}
 @media screen and (max-width:890px){
   .button-send{
     right: 38px;
+  }
+  .footer-sec-main div input[type="email"] {
+    width: 215px !important;
   }
 }
 
@@ -1791,6 +1848,7 @@ background-color: #1138e7;
 .copyright-div img{
   width: 400px;
 }
+
 @media screen and (max-width:404px){
   .copyright-div img{
     width: 250px;

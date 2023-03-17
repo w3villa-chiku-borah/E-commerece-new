@@ -78,12 +78,10 @@ const showFashion = (arrayOfData) => {
             },
 
 
-            1400: {
-                items: 4
-            },
-            1500: {
+            1460: {
                 items: 4
             }
+            
         }
 
     });
@@ -136,6 +134,7 @@ const showMostView = (arrayOfData) => {
 
             1460: {
                 items: 5
+
             },
         }
 
