@@ -1917,6 +1917,16 @@ background-color: #1138e7;
     border-right: 0;
   }
 }
+@media screen and (max-width:1000px) {
+  .copyright-div{
+    flex-direction: column;
+    justify-content: center !important;
+    text-align: center;
+  }
+  .up-arrowand-img-container{
+    justify-content: center;
+  }
+}
 
 @media screen and (max-width:890px) {
   .footer-sec-main div {
