@@ -55,6 +55,7 @@ $('#owlFirst.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
+    autoplay:true,
     responsive:{
         0:{
             items:1
@@ -78,18 +79,21 @@ $('#owlFirst.owl-carousel').owlCarousel({
     })
     
     $('#owlone.owl-carousel').owlCarousel({
-    // loop:true,
+    loop:true,
     margin:0,
     nav:false,
     responsive:{
         0:{
             items:2
         },
+        400:{
+            items:3
+        },
         600:{
-            items:5
+            items:4
         },
         800:{
-            items:6
+            items:5
         },
         1000:{
             items:6
@@ -109,6 +113,7 @@ $('#owlFirst.owl-carousel').owlCarousel({
  loop:true,
     margin:0,
     nav:false,
+    autoplay:true,
     responsive:{
         0:{
             items:1
@@ -134,6 +139,7 @@ $('#owlFirst.owl-carousel').owlCarousel({
     loop:true,
     margin:0,
     nav:false,
+    autoplay:true,
     responsive:{
         0:{
             items:1

@@ -97,7 +97,7 @@ const showMostView = (arrayOfData) => {
                         <div class="item-c1-09"><img src="${element.img}"></div>
                         <div class="item-c2-09">
                              <div>
-                            <h1>${element.name} <br>$${element.price}</h1>
+                            <h1> <strong>${element.name}</strong><br>$${element.price}</h1>
                             
                             </div>
                             <p>
@@ -121,10 +121,10 @@ const showMostView = (arrayOfData) => {
             0: {
                 items: 1
             },
-            600: {
+            460: {
                 items: 2
             },
-            1000: {
+            700: {
                 items: 3
             },
 
