@@ -30,6 +30,13 @@
             "img" : "./asset/12.jpg",
             "c_lebels" : false,
             "hot" : false
+        },
+        {
+            "name" : "Top",
+            "price" : "100.00",
+            "img" : "./asset/12.jpg",
+            "c_lebels" : false,
+            "hot" : false
         }
     ]
 },

@@ -61,7 +61,7 @@ const showFashion = (arrayOfData) => {
         loop: true,
         margin: 0,
         nav: false,
-        //  autoplay:true,
+        autoplay:true,
         responsive: {
             0: {
                 items: 1
