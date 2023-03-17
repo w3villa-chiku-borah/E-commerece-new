@@ -1,10 +1,10 @@
 async function readData() {
-    const response = await fetch('./data/fashion.json');
+    const response = await fetch('./data/item.json');
     const data = await response.json();
     const response2 = await fetch('./data/mostView.json');
     const data2 = await response2.json();
 
-    showFashion(data.fashionProducts);
+    showFashion(data.fashion.fashionProducts);
     showMostView(data2.mostView);
 
     // showBlog (data3.blog2)
@@ -61,7 +61,7 @@ const showFashion = (arrayOfData) => {
         loop: true,
         margin: 0,
         nav: false,
-        // autoplay:true,
+        //  autoplay:true,
         responsive: {
             0: {
                 items: 1
@@ -81,6 +81,9 @@ const showFashion = (arrayOfData) => {
             1400: {
                 items: 4
             },
+            1500: {
+                items: 4
+            }
         }
 
     });
@@ -96,12 +99,12 @@ const showMostView = (arrayOfData) => {
                         <div class="item-c1-09"><img src="${element.img}"></div>
                         <div class="item-c2-09">
                              <div>
-                            <h1>${element.name}</h1>
-                            <p>$${element.price}</p>
+                            <h1>${element.name} <br>$${element.price}</h1>
+                            
                             </div>
                             <p>
                           
-                                <i class="fa-solid fa-cart-shopping shopping-cart-at630"></i> <i
+                                <i class="fa-solid fa-cart-shopping fa-cart-shopping-item09 shopping-cart-at630"></i> <i
                                     class="fa-regular fa-heart"></i> <i
                                     class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
                             </p>
@@ -115,7 +118,7 @@ const showMostView = (arrayOfData) => {
         loop: true,
         margin: 0,
         nav: false,
-        autoplay: true,
+        // autoplay: true,
         responsive: {
             0: {
                 items: 1
@@ -128,11 +131,11 @@ const showMostView = (arrayOfData) => {
             },
 
             1220: {
-                items: 3
+                items: 4
             },
 
             1460: {
-                items: 4
+                items: 5
             },
         }
 
@@ -176,8 +179,8 @@ const showBlog = (arrayOfData) => {
     </p>
     <p>
         <a>
-            Read More->
-        </a>learning javascript 
+            Read More <i class="fa-solid fa-arrow-right"></i>
+        </a>
     </p>
 </div>
 </div>`
@@ -216,25 +219,25 @@ readDataBlog("LATEST POST");
 readData();
 
 async function readData2(elem) {
-    const response4 = await fetch('./data/featured.json');
+    const response4 = await fetch('./data/item.json');
     const data4 = await response4.json();
 
     // showFeature(data4.FEATURED);
     switch (elem) {
         case "FEATURED":
-            showFeature(data4.FEATURED);
+            showFeature(data4.feature.FEATURED);
             // console.log(data4.FEATURED);
             break;
         case "LATEST":
-            showFeature(data4.LATEST);
+            showFeature(data4.feature.LATEST);
             break;
         case "BESTSELLERS":
-            showFeature(data4.BESTSELLERS);
+            showFeature(data4.feature.BESTSELLERS);
             break;
 
 
         case "SPECIAL":
-            showFeature(data4.SPECIAL);
+            showFeature(data4.feature.SPECIAL);
             break;
 
     }
@@ -300,11 +303,20 @@ const showFeature = (arrayOfData) => {
             },
 
             1220: {
+                items: 3
+            },
+            1336: {
                 items: 4
             },
 
             1460: {
-                items: 5
+                items: 4
+            },
+            1560: {
+                items: 4
+            },
+            1700: {
+                items: 4
             },
         }
 
@@ -373,7 +385,7 @@ const showBuy = (arrayOfData) => {
                 items: 4
             },
 
-            1460: {
+            1440: {
                 items: 5
             },
         }
@@ -382,3 +394,80 @@ const showBuy = (arrayOfData) => {
 
 }
 readData3("TOP_CATEGORIES");
+
+
+async function search(){
+    let searchText = document.getElementById("myInput");
+    let items=searchText.value;
+    let itemsInlow = items.toLowerCase();
+    let showResult= document.getElementById("show-result-div-sec");
+    // let main= document.getElementsByTagName()
+    let main= document.getElementById("main-section")
+    let html = ``;
+    let prods = await searchInItems(itemsInlow);
+    if(items!=""){
+    if(prods.length>0){
+      prods.forEach(element =>{
+        html+= ` 
+        <div class="featured-products-card show-result-div-sec" >
+        <div class="image-container">
+            <img loading="lazy" src="${element.img}" alt="">
+        </div>
+
+        <div class="cart-container cart-container-show">
+            <h2>${element.name}</h2>
+            <p class="price">$${element.price} </p>
+            <hr>
+            <div class="add-to-cart-container show-result-cart">
+                <div>
+
+                    <input type="button" value="ADD TO CART">
+                </div>
+                <div>
+                    <i style="font-weight:100" class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>`
+
+    showResult.innerHTML=html;
+    main.style.display = "none"
+      })
+    }
+    else {
+        html = `<div> No Result is Found </div>`
+        showResult.innerHTML=html;
+    main.style.display = "none"
+    }
+}
+
+//    showResult.innerHTML=html;
+//     main.style.display = "none"
+    console.log(prods)
+ }
+
+ async function searchInItems(elem){
+    const response = await fetch('./data/item.json');
+    const obj= await response.json();
+
+  let products = Object.values(obj).map((category) => {
+    return Object.values(category);
+})
+     let itemsFound =[]; 
+    //  console.log(products);
+    products = products.flat().flat();
+   
+    for(let i =0;i< products.length;i++){
+        let itemName = products[i].name;
+        itemName = itemName.toLowerCase();
+       if(itemName.includes(elem)){
+        itemsFound.push(products[i]);
+       }
+    }
+    return itemsFound;
+    
+}

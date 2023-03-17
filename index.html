@@ -28,7 +28,7 @@
 
 
             <div class="container">
-                <div class="row d-flex home-about">
+                <div class="row d-flex home-about" id="home-arrow-up">
                     <div class="col-md-4">
                         <div class="nav-home">
                             <ul class="nav-12">
@@ -97,10 +97,10 @@
                     </div>
                 </div>
 
-                <!-- ********************* -->
+                <!-- ***********moblie screen nav bar********** -->
 
-                <div class="row mobile-row">
-                    <div class="col-sm-6  mobile-nav">
+                <div class=" mobile-row">
+                    <div class=" mobile-nav">
                         <ul>
                             <li>
                             <li><i class="fa-solid fa-user"></i>Login</li>
@@ -108,7 +108,7 @@
                             <li><i class="fa-solid fa-square-pen"></i>Register</li>
                         </ul>
                     </div>
-                    <div class="col-sm-6   mobile-nav nav-mobile-us">
+                    <div class=" mobile-nav nav-mobile-us">
                         <ul>
                             <li>
                                 $ Us Doller <i class="fa-solid fa-caret-down"></i>
@@ -126,22 +126,22 @@
                 </div>
             </div>
         </section>
-        <!-- ******************* -->
+        <!-- **************jurnal***** -->
         <section class="bg-grey">
             <div class="container">
-                <div class="row ptb-100 row-jurnal">
+                <div class="row  row-jurnal">
                     <div class="col-lg-2 mo-jurnal">
                         <div class="jurnal">
-                            <p>JURNAL</p>
+                            <p>JOURNAL</p>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="search login">
                             <ul>
                                 <li  class="FAQ">
-                                    <p > <a class="ancher-all-manu" href="#">All</a>
+                                    <p > <a class="ancher-all-manu"  href="#">All</a>
                                         
-                                        <i class="fa-solid fa-caret-down"></i>
+                                        <i class="fa-solid fa-caret-down" ></i>
                                         <!-- <div class="drop_down_container for-all-drop-down">
                                             <ul class="drop_down">
                                                 <li><a href="#">Mobile </a></li>
@@ -153,7 +153,7 @@
                                     </p>
                                     <input type="text" id="myInput"
                                         placeholder="Search for names..">
-                                    <p><i class="fa-solid fa-magnifying-glass"></i></p>
+                                    <p><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></p>
                                 </li>
 
                             </ul>
@@ -203,6 +203,7 @@
                 </div>
             </div>
         </section>
+    <!-- ********************************** ALL DEPARTMENTS******************** -->
         <section class="blue-line">
             <div class="container">
                 <div class="row">
@@ -235,7 +236,7 @@
                     </div>
                     <div class="col-md-1 all-dev bg-yellow">
                         <ul>
-                            <li><i class="fa-solid fa-messages "></i> BLOG</li>
+                            <li><i class="fa-solid fa-comment-dots"></i> BLOG</li>
                         </ul>
                     </div>
 
@@ -243,7 +244,43 @@
             </div>
         </section>
     </header>
+
+    <!-- ****************************show-result******************************* -->
+    <section id="show-search-items">
+       <div class="container show-result" id="show-result-div-sec">
+        <!-- <div class="featured-products-card show-result-div-sec" >
+            <div class="image-container">
+                <img loading="lazy" src="/asset/12.jpg" alt="">
+            </div>
+
+            <div class="cart-container">
+                <h2>Hadphones</h2>
+                <p class="price">$999.00 </p>
+                <hr>
+                <div class="add-to-cart-container show-result-cart">
+                    <div>
+
+                        <input type="button" value="ADD TO CART">
+                    </div>
+                    <div>
+                        <i style="font-weight:100" class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div> -->
+
+
+    </div>
+        
+       </div>
+    </section>
     <!-- *****************************main******************************* -->
+   
+   <main id="main-section">
     <section>
         <div class="container">
             <div class="row">
@@ -251,10 +288,10 @@
                     <div class="owl-carousel owl-theme" id="owlSecond">
                     <div class="main-c">
                         <div class="main-c-text ">
-                            <ul>
+                             <ul>
                                 <li class="mob"> Mobile</li>
-                                <li class="best"> Best Mobile <br>option At<br> any Resolutions</li>
-                                <li class="learn"> <button> Learn more-></button></li>
+                                <li class="best"> Best Mobile option At <br>any Resolutions</li>
+                                <li class="learn"> <button class="learn-button"> Learn more<i class="fa-solid fa-arrow-right"></i></button></li>
                             </ul>
                         </div>
 
@@ -262,10 +299,10 @@
                     </div>
                     <div class="main-c">
                         <div class="main-c-text ">
-                            <ul>
+                             <ul>
                                 <li class="mob"> Mobile</li>
-                                <li class="best"> Best Mobile <br>option At<br> any Resolutions</li>
-                                <li class="learn"> <button> Learn more-></button></li>
+                                <li class="best"> Best Mobile option At <br>any Resolutions</li>
+                                <li class="learn"> <button class="learn-button"> Learn more<i class="fa-solid fa-arrow-right"></i></button></li>
                             </ul>
                         </div>
 
@@ -273,15 +310,16 @@
                     </div>
                     <div class="main-c">
                         <div class="main-c-text ">
-                            <ul>
+                             <ul>
                                 <li class="mob"> Mobile</li>
-                                <li class="best"> Best Mobile <br>option At<br> any Resolutions</li>
-                                <li class="learn"> <button> Learn more-></button></li>
+                                <li class="best"> Best Mobile option At <br>any Resolutions</li>
+                                <li class="learn"> <button class="learn-button"> Learn more<i class="fa-solid fa-arrow-right"></i></button></li>
                             </ul>
                         </div>
 
                         <img class="main-c-img" src="./asset/ramiro-mendes-CjS3QsRuxnE-unsplash.jpg" alt="11">
                     </div>
+                  
                     </div>
 
                 </div>
@@ -352,7 +390,7 @@
             </div>
     </section>
 
-    <!-- **********************************main2******************************** -->
+    <!-- **********************************main2-why u bau from us******************************** -->
     <section>
         <div class="container">
             <div class="main2-01">
@@ -648,7 +686,7 @@
 
       </div>
                 <div class="main-03-see-all-product">
-                    <p>SEE ALL PRODUCT
+                    <p>SEE ALL PRODUCT<i class="fa-solid fa-arrow-right"></i>
                     </p>
                 </div>
 
@@ -656,22 +694,26 @@
 
 
     </section>
-    <!-- *************************************************main04*************************************** -->
+    <!-- *************************************************main04-feature-catagories*************************************** -->
     <section class="main-04">
 
         <div class="container">
            
 
-            <div class="">
-                <h1>Featured Categories</h1>
-                <hr>
+            <div class="main04-feature-catagories-container">
+                <h1 style="font-weight: bold ; font-size: 40px;">Featured Categories</h1>
+                <div class="line-p">
+                    <div class="line-c"></div>
+                </div>
                 <p>Display any table as tab or ipsum dolor sit amet consectetur adipisicing elit. Iste asperiores
-                    Lorem ipsum dolor sit. numquam minus iure, quidem dicta error quaerat qui repudiandae laborum. </p>
+                    Lorem ipsum dolor sit. numquam minus iure, quidem dicta error quaerat qui repudiandae laborum.lorem20 lorem20
+                 </p>
             </div>
             <div class="fashion-container01">
                 <div class="fashion">
                     <span>Fashion</span>
                     <hr class="hr">
+                    
                     <div class="image-container image-main-04 ">
                         <img loading="lazy" src="./asset/26.jpg" alt="">
                     </div>
@@ -1171,7 +1213,7 @@
             <div class="owl-carousel owl-theme" id="owlthree">
                 <div class="item item-main-07 item-main-08">
 
-                    <div class="item-main-07-jurnal">
+                    <div class="item-main-07-jurnal item-main-07-jurnal-main-08">
                         <div class="qoute"><i class="fa-solid fa-quote-left"></i>
                         </div>
                         <p class="item-main-07-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sit,
@@ -1181,7 +1223,7 @@
                         </p>
                         <p>
 
-                            -Read More
+                            <strong>-Read More</strong>
 
                         </p>
                     </div>
@@ -1197,25 +1239,7 @@
 
                         </p>
                         <p>
-
-                            -Read More
-
-                        </p>
-                    </div>
-                </div>
-                <div class="item item-main-07 item-main-08">
-
-                    <div class="item-main-07-jurnal">
-                        <div class="qoute"><i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <p class="item-main-07-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sit,
-                            cumque veritatis ratione aut voluptates ipsum fugit minus porro tenetur autem aliquam
-                            delectus, cum eligendi vel.lorem10
-
-                        </p>
-                        <p>
-
-                            -Read More
+                            <strong>-Read More</strong>
 
                         </p>
                     </div>
@@ -1232,7 +1256,24 @@
                         </p>
                         <p>
 
-                            -Read More
+                            <strong>-Read More</strong>
+
+                        </p>
+                    </div>
+                </div>
+                <div class="item item-main-07 item-main-08">
+
+                    <div class="item-main-07-jurnal">
+                        <div class="qoute"><i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="item-main-07-p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat sit,
+                            cumque veritatis ratione aut voluptates ipsum fugit minus porro tenetur autem aliquam
+                            delectus, cum eligendi vel.lorem10
+
+                        </p>
+                        <p>
+
+                            <strong>-Read More</strong>
 
                         </p>
                     </div>
@@ -1249,11 +1290,11 @@
         <div class="container">
             <div class="main2-01 main-09-c1">
                 <h1>
-                    Most Viewed
+                    MOST VIEWED
                 </h1>
             </div>
-            <div class="line-p">
-                <div class="line-c"></div>
+            <div class="line-p main-09-c1-line-p ">
+                <div class="line-c main-09-c1-line-c"></div>
             </div>
 
              <div id="mostView">
@@ -1335,12 +1376,13 @@
         </div>
 
     </section>
+</main>
     <!-- ************footer-section*********** -->
     <section class="footer_sec">
         <div class="container">
             <footer class="footer-sec-main">
 
-                <div>
+                <div class="footer-sec-main-1">
                     <h2>About Us</h2>
                     <hr>
                     <ul>
@@ -1385,10 +1427,10 @@
                     <p class="paragraph">Stay up to date with news and promotions by signing up for promotions</p>
 
                     <div class="foot-input-con">
-                         <input type="email" placeholder="Your email">
-         
+                         <input type="email" placeholder="Your email"> </input>
+                         <button class="button-send"><i class="fa-solid fa-envelope"></i>send</button>
                     </div>
-                    <button class="button-send">send</button>
+                  
                    
                     <p> <input type="checkbox" name="" id=""> I have read and agree to the <a class="Privacy" href="#">Privacy
                             Policy</a></p>
@@ -1403,9 +1445,10 @@
             <div class="container">
                 <div class="copyright-div">
                     <p> Copyright © 2023 developed by <a href="mailto:chikuborah@gmail.com"> Chiku Borah </a></p>
-                   
-                    <img loading="lazy" src="./asset/paymentcard.png" alt="">
-
+                   <div class="up-arrowand-img-container">
+                    <div><img loading="lazy" src="./asset/paymentcard.png" alt=""></div>
+                    <div><a href="#home-arrow-up"><i class="fa-solid fa-arrow-up"></i></a></div>
+                </div>
                 </div>
             </div>
         </section>

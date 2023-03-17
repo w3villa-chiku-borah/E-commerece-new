@@ -28,7 +28,7 @@ $('#owltwo.owl-carousel').owlCarousel({
 $('#owlSecond.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
-    autoplay:true,
+    // autoplay:true,
     nav:false,
     responsive:{
         0:{
@@ -86,10 +86,13 @@ $('#owlFirst.owl-carousel').owlCarousel({
             items:2
         },
         600:{
-            items:2
+            items:5
+        },
+        800:{
+            items:6
         },
         1000:{
-            items:3
+            items:6
         },
     
         1220:{
@@ -152,32 +155,7 @@ $('#owlFirst.owl-carousel').owlCarousel({
     }
     
     });
-    $('#owlfour').owlCarousel({
-    loop:true,
-    margin:0,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1084:{
-            items:2
-        },
-    
-        1220:{
-            items:2
-        },
-        
-    
-        1400:{
-            items:3
-        },
-    }
-    
-    });
+  
     });
 
 function tapButtonBuy(para){
