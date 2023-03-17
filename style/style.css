@@ -1173,12 +1173,16 @@ s{
   list-style-type: none;
 }
 .text-container{
-  padding-bottom: 31px;
+  padding-bottom: 50px;
 }
 .cart-container{
   padding-left: 14px;
   padding-right: 14px;
   padding-top: 10px;
+}
+.cart-container h2{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .item04 {
   border: 1px solid black;
@@ -1252,7 +1256,7 @@ margin-bottom: 0px;
 
 .fashion-container01 .fashion .text-container p {
   font-size: 19px;
-  padding-top: 7px;
+  /* padding-top: 7px; */
   color: rgb(68, 66, 66);
 }
 
@@ -1374,7 +1378,7 @@ color: black!important;
 
 .fashion-container01 .cart-container h2,
 .fashion-container01 .cart-container p {
-  font-weight: normal !important;
+  font-weight: bold !important;
 }
 
 .new-fashion-container .categories-card-carosel .owl3 .item {
@@ -1410,7 +1414,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   /* color: aliceblue; */
   background-color: #0037ffd4;
   padding: 3px;
-  border-radius: 10px;
+  border-radius: 4px;
   color: white;
 }
 

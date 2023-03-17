@@ -3,7 +3,7 @@
     "fashionProducts" : [
         {
             "name" : "Babycon",
-            "price" : "100",
+            "price" : "100.00",
             "img" : "./asset/babycon2.jpg",
             "c_lebels" : true,
             "hot" : true
@@ -12,21 +12,21 @@
         },
         {
             "name" : "Jeans",
-            "price" : "800",
+            "price" : "800.00",
             "img" : "./asset/jeans3.jpg",
             "c_lebels" : false,
             "hot" : false
         },
         {
             "name" : "Jacket",
-            "price" : "100",
+            "price" : "100.00",
             "img" : "./asset/13.jpg" ,
             "c_lebels" : false,
             "hot" : true
         },
         {
             "name" : "Top",
-            "price" : "100",
+            "price" : "100.00",
             "img" : "./asset/12.jpg",
             "c_lebels" : false,
             "hot" : false
