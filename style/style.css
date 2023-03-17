@@ -144,9 +144,13 @@ padding-right: 4px;
     justify-content: space-between;
     text-align: center;
 
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
   }
 
-}
+
 
 @media screen and (min-width:1219px) {
   .nav-sec {
@@ -270,6 +274,10 @@ padding-right: 4px;
 .padding-left-right-container{
   padding-left: 0px;
   padding-right: 0px;
+}
+.row-jurnal{
+  margin-left: -34px;
+  margin-right: -34px;
 }
 }
 @media screen and (max-width:1460px) {
@@ -1851,7 +1859,7 @@ background-color: #1138e7;
   color: aliceblue;
 }
 .copyright-div img{
-  width: 400px;
+  width: 350px;
 }
 
 @media screen and (max-width:404px){
