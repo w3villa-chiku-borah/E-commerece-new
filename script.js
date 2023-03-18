@@ -28,7 +28,7 @@ $('#owltwo.owl-carousel').owlCarousel({
 $('#owlSecond.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
-    autoplay:true,
+    // autoplay:true,
     nav:false,
     responsive:{
         0:{
