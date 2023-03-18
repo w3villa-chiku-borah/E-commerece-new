@@ -164,7 +164,7 @@
    },
    {
     "name" : "MOBILE",
-    "img" : "./asset/25.jpg",
+    "img" : "./asset/mobile02.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -202,7 +202,7 @@
    },
    {
     "name" : "MOBILE",
-    "img" : "./asset/25.jpg",
+    "img" : "./asset/mobile03.jpg",
     "price" : "85.00",
     "modal_name" : "6789",
     "brand" : "Eriksoon",
@@ -262,7 +262,7 @@
    "SPECIAL" :[ 
     {
         "name" : "MOBILE",
-        "img" : "./asset/25.jpg",
+        "img" : "./asset/mobile04.jpg",
         "price" : "85.00",
         "modal_name" : "6789",
         "brand" : "Eriksoon",

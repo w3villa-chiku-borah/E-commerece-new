@@ -214,6 +214,7 @@ padding-right: 4px;
 
 .search ul li input {
   width: 450px !important;
+  outline: none;
   height: 35px;
 }
 
@@ -247,7 +248,7 @@ padding-right: 4px;
   color: aliceblue;
   font-size: 20px;
   width: 30px;
-  height: 100%;
+  height: 31px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,12 +281,18 @@ padding-right: 4px;
   padding-right: 0px;
 }
 .row-jurnal{
-  margin-left: -34px;
-  margin-right: -34px;
+  margin-left: -13px;
+  margin-right: -13px;
 }
 .mobile-nav{
   margin-left: -15px;
   margin-right: -15px;
+}
+.o-items ul li:first-child{
+  font-size: 14px !important;
+}
+.login ul{
+  font-size: 14px !important;
 }
 }
 @media screen and (max-width:1460px) {
@@ -315,9 +322,9 @@ padding-right: 4px;
     height: 40px!important;
   }
 }
-@media screen and (max-width:1300px){
+@media screen and (max-width:1306px){
   .search ul li input {
-    width: 200px!important;
+    width: 211px!important;
     height: 40px!important;
   }
 }
@@ -360,7 +367,7 @@ padding-right: 4px;
   align-items: center;
 }
 
-@media screen and (min-width:1120px) {
+@media screen and (min-width:1121px) {
   .mobile-row-jp {
     display: none;
   }
@@ -370,7 +377,12 @@ padding-right: 4px;
   height: 44px;
   padding-left: 5px;
 }
-
+.search p:first-child    {
+  border-radius: 5px 0 0 5px !important; 
+}
+.search p:last-child{
+  border-radius: 0 5px 5px 0;
+}
 /* ********show-result-sec********** */
 .show-result{
   padding-top: 20px;
@@ -709,8 +721,12 @@ padding-right: 4px;
 
   /* align-items: center; */
 }
-.dark1-03{
-  justify-content: center;
+
+
+@media screen and (min-width:1200px){
+  .dark1-03{
+    justify-content: center;
+  }
 }
 
 .dark ul {
@@ -751,7 +767,7 @@ padding-right: 4px;
   }
 }
 
-@media screen and (min-width:1199px) {
+@media screen and (min-width:1200px) {
   .last-dark-c {
     justify-content: end;
   }
@@ -826,7 +842,7 @@ padding-right: 4px;
   position: relative;
 }
 .box-c:nth-child(1){
-  border: none !important;
+  /* border: none !important; */
 }
 
 .boxc1 , .boxc1-feature , .boxc1-blog{
