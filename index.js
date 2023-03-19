@@ -409,8 +409,14 @@ async function search(){
     let main= document.getElementById("main-section")
     let html = ``;
      prods = await searchInItems(itemsInlow);
+     if(searchText.value.length==0){
+        console.log("chiku");
+        main.style.display = "block"
+        showResult.innerHTML=``;
+      
+    }
     if(items!=""){
-    if(prods.length>0){
+    if(prods.length>0 ){
       prods.forEach(element =>{
         html+= ` 
         <div class="featured-products-card show-result-div-sec" >
@@ -449,6 +455,7 @@ async function search(){
         showResult.innerHTML=html;
     main.style.display = "none"
     }
+    
 }
 
 //    showResult.innerHTML=html;
