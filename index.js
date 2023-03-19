@@ -108,8 +108,8 @@ const showMostView = (arrayOfData) => {
                             <p>
                           
                                 <i class="fa-solid fa-cart-shopping fa-cart-shopping-item09 shopping-cart-at630"></i> <i
-                                    class="fa-regular fa-heart"></i> <i
-                                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
+                                    class="fa-regular  fa-cart-heart-item09 fa-heart"></i> <i
+                                    class="fa-sharp fa-solid fa-cart-arrow-item09 fa-arrow-right-arrow-left"></i>
                             </p>
                         </div>
                     </div>
@@ -399,7 +399,7 @@ const showBuy = (arrayOfData) => {
 }
 readData3("TOP_CATEGORIES");
 
-
+let prods=0 ;
 async function search(){
     let searchText = document.getElementById("myInput");
     let items=searchText.value;
@@ -408,7 +408,7 @@ async function search(){
     // let main= document.getElementsByTagName()
     let main= document.getElementById("main-section")
     let html = ``;
-    let prods = await searchInItems(itemsInlow);
+     prods = await searchInItems(itemsInlow);
     if(items!=""){
     if(prods.length>0){
       prods.forEach(element =>{
@@ -427,8 +427,10 @@ async function search(){
 
                     <input type="button" value="ADD TO CART">
                 </div>
-                <div>
-                    <i style="font-weight:100" class="fa-solid fa-heart"></i>
+                <div> 
+            
+                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                 
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
             </div>
@@ -461,7 +463,7 @@ async function search(){
   let products = Object.values(obj).map((category) => {
     return Object.values(category);
 })
-     let itemsFound =[]; 
+     itemsFound =[]; 
     //  console.log(products);
     products = products.flat().flat();
    
@@ -475,3 +477,4 @@ async function search(){
     return itemsFound;
     
 }
+

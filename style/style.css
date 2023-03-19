@@ -259,7 +259,7 @@ padding-right: 4px;
 }
 
 .bg-grey {
-  background-color: rgb(235 235 235 / 77%);
+  background-color: rgba(219, 219, 220, 0.933);
 }
 
 .row-jurnal {
@@ -408,6 +408,10 @@ padding-right: 4px;
 .show-result-cart{
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
+}
+.show-result-cart div i{
+  font-size: 20px;
 }
 .cart-container-show{
   padding: 10px;
@@ -1507,7 +1511,9 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   background-color: rgb(241 239 239 / 35%);
 }
 .item-main-07 {
-  height: 700px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 800px;
   border-radius: 20px;
   background-color: aliceblue;
 }
@@ -1677,12 +1683,16 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 .item-c2-09 p {
   word-spacing: 20px;
   opacity: 60%;
-  margin: 0px 0px 0px !important;
+  margin: 0px -8px 0px !important;
 }
 .item-c2-09 p .fa-cart-shopping-item09{
-   
+  
  background: none;
  color: black;
+}
+.item-c2-09 p .fa-cart-heart-item09 , .item-c2-09 p .fa-cart-arrow-item09{
+  
+font-size: 19px;
 }
 .item-c2-09 {
   
@@ -1995,6 +2005,12 @@ background-color: #1138e7;
 .up-arrowand-img-container a i {
   color:white
 }
+
+/* *******
+ */
+ .show-in-js{
+  display: none;
+ }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #c45200 !important;
