@@ -484,5 +484,61 @@ async function search(){
     return itemsFound;
     
 }
+async function seeAllProduct(){
+    let showResult= document.getElementById("show-result-div-sec");
+    let main= document.getElementById("main-section")
+
+    const response = await fetch('./data/item.json');
+    const obj= await response.json();
+
+  let products = Object.values(obj).map((category) => {
+    return Object.values(category);
+})
+let html = ``;
+//  console.log(products);
+products = products.flat().flat();
+products.forEach(element =>{
+    html+= ` 
+    <div class="featured-products-card show-result-div-sec" >
+    <div class="image-container">
+        <img loading="lazy" src="${element.img}" alt="">
+    </div>
+
+    <div class="cart-container cart-container-show">
+        <h2>${element.name}</h2>
+        <p class="price">$${element.price} </p>
+        <hr>
+        <div class="add-to-cart-container show-result-cart">
+            <div>
+
+                <input type="button" value="ADD TO CART">
+            </div>
+            <div> 
+        
+                <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+             
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+        </div>
 
 
+    </div>
+
+</div>`
+})
+html+=`
+<div class="pegination">
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+</div>`;
+
+showResult.innerHTML=html;
+main.style.display = "none";
+}

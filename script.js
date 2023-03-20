@@ -195,23 +195,35 @@ function tapButtonBlog(para) {
 
 function isLoggedIn() {
     let users = JSON.parse(localStorage.getItem("myInfo"))
-    console.log(users)
 
-    let loggedUser = users?.find(user => user.islogin === true)
-    console.log(loggedUser)
 
-    console.log(loggedUser.Uname)
+    let loggedUser = users?.find((user) => user.islogin === true)
+   
+
+let showLogin=document.getElementById("lim");
 
     let html = `
+    <li >
     <i class="fa-solid fa-user"></i>
-    <p id="para-login">
-    <a class="login-in-main-page" href="./login/login.html" id=" ">
-    ${loggedUser.Uname}
-    </a></p>
-    `
-    let loginName = document.getElementById("lim");
-    console.log(loginName)
-    loginName.innerHTML = html;
+    <p id="para-login"><a class="login-in-main-page" href="">${loggedUser.Uname}</a></p>
+</li>
+<li><i class="fa-solid fa-right-from-bracket"></i>
+    <p><a href="" onclick="inLogOut()">Log Out</a></p>
+</li>
+<li><i class="fa-solid fa-heart"></i>
+    <p>Wishlist</p>
+</li>
+<li><i class="fa-solid fa-code-compare"></i>
+    <p>Compare</p>
+</li>`
+showLogin.innerHTML = html;
 }
+function inLogOut(){
+    let users = JSON.parse(localStorage.getItem("myInfo"))
+    let loggedUser = users?.find((user) => user.islogin === true)
+    loggedUser.islogin =false;
+    localStorage.setItem("myInfo", JSON.stringify([loggedUser]))
+ }
+ 
 
 // isLoggedIn()

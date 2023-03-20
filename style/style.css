@@ -279,6 +279,11 @@ padding-right: 4px;
   padding-left: 50px;
   padding-bottom: 10px;
 }
+.login .show-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 1121px) and (max-width:1199px){
 .padding-left-right-container{
   padding-left: 0px;

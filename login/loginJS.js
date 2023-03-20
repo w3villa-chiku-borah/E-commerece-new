@@ -22,7 +22,6 @@ function signup(){
     let userNameValue = username.value.trim();
     let emailValue = email.value.trim();
     let passwordValue = password.value.trim();
-    console.log(1)
     if(userNameValue.length>0 && emailValue.length>0 && passwordValue.length>0)
     {
         let myInfo = {
@@ -59,9 +58,11 @@ function logInButton(){
     let userNameValue = username.value.trim();
     let passwordValue = password.value.trim();
     let i =0;
+    let j = 0;
     for(i=0;i<array.length;i++){
         if(array[i].Uname== userNameValue && array[i].password== passwordValue ){
             array[i].islogin=true;
+             j = i;
             let myInfo_string=JSON.stringify(array);
             localStorage.setItem("myInfo",myInfo_string)
             Swal.fire(
@@ -70,10 +71,14 @@ function logInButton(){
                 'success'
               ).then(() => {
                 window.location.href = "../index.html";
-              })
+
+              });
               break;
         }
     }
-}
+    
+    
+    }
 
-isLoggedIn()
+
+isLoggedIn();
