@@ -186,7 +186,9 @@ padding-right: 4px;
   justify-content: end;
 
 }
-
+.mobile-nav ul li a{
+  color: white;
+}
 
 /* **********jurnal******** */
  .jurnal {
@@ -206,7 +208,10 @@ padding-right: 4px;
 .o-items ul {
   justify-content: end;
 }
-
+.login ul li p a {
+  color: black;
+  opacity: 75%;
+}
 .login ul li {
   text-align: center;
 }
@@ -267,7 +272,7 @@ padding-right: 4px;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-    padding-bottom: 13px;
+    padding-bottom: 5px;
     overflow-x: hidden;
 }
 .search{
@@ -432,7 +437,7 @@ padding-right: 4px;
   font-size: 16px;
   color: aliceblue;
   padding-top: 15px;
-  padding-bottom: 7px;
+  /* padding-bottom: 7px; */
 }
 
 /* .all-dev ul li{
@@ -1481,7 +1486,18 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   border-radius: 10px;
 }
 
-
+@media screen and (max-width:650px){
+  .item-brand img {
+    height: 140px;
+    width: 120px;
+  }
+}
+@media screen and (max-width:443px){
+  .item-brand img {
+    height: 120px;
+    width: 110px !important;
+  }
+}
 
 /* ****************************main06*********************** */
 .main-06 {
@@ -1502,7 +1518,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 .main-06-image .item-brand img {
   width: 180px;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10 px;
 }
 
@@ -1511,8 +1527,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   background-color: rgb(241 239 239 / 35%);
 }
 .item-main-07 {
-  margin-left: 10px;
-  margin-right: 10px;
+ 
   height: 800px;
   border-radius: 20px;
   background-color: aliceblue;
