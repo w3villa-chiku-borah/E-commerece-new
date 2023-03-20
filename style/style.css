@@ -692,14 +692,15 @@ line-height: 48px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 7px;
   }
 
   .up {
-    width: 49%;
+    width: 49.5%;
   }
 
   .down {
-    width: 49%;
+    width: 49.5%;
   }
 }
 
@@ -768,7 +769,7 @@ line-height: 48px;
 .dark02 {
 
   
-    padding-top: 26px;
+    padding-top: 30px;
     padding-bottom: 26px;
 
 }
