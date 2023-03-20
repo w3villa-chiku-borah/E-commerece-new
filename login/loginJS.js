@@ -23,6 +23,7 @@ function signup(){
     let userNameValue = username.value.trim();
     let emailValue = email.value.trim();
     let passwordValue = password.value.trim();
+    let flag = false;
     if(userNameValue.length>0 && emailValue.length>0 && passwordValue.length>0)
     {
         let myInfo = {
@@ -32,22 +33,44 @@ function signup(){
                 islogin :false,
         }
         let array = JSON.parse(localStorage.getItem('myInfo'))
+        
         console.log(typeof array)
         if(array==undefined || array==null || !array.length ){
             array=[myInfo];
-        }else{
+        }
+    
+        else{ 
+          
+            for(let i =0;i<array.length;i++){
+              if(myInfo.email== array[i].email){
+                 flag=true;
+                 break;
+              } 
+            }
+            if(!flag){
             array.push(myInfo)
+            Swal.fire(
+                'Good job!',
+                'You are Register',
+                'success'
+              )
+            }
+            else(
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">This Email already Registered</a>'
+                  })
+                  
+            )
         }
         let myInfo_string=JSON.stringify(array);
         // console.log(myInfo_array)
         localStorage.setItem("myInfo",myInfo_string);
         // let myInfo_intoObj = JSON.parse(localStorage.getItem("myInfo"));
         // console.log(myInfo_intoObj);
-        Swal.fire(
-            'Good job!',
-            'You are Register',
-            'success'
-          )
+      
     }
     // console.log(localStorage)
 }
@@ -60,10 +83,11 @@ function logInButton(){
     let passwordValue = password.value.trim();
     let i =0;
     let j = 0;
+    let flag =false;
     for(i=0;i<array.length;i++){
         if(array[i].Uname== userNameValue && array[i].password== passwordValue ){
             array[i].islogin=true;
-             j = i;
+            flag =true;
             let myInfo_string=JSON.stringify(array);
             localStorage.setItem("myInfo",myInfo_string)
             Swal.fire(
@@ -77,7 +101,14 @@ function logInButton(){
               break;
         }
     }
-    
+    if(!flag){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Something went wrong!',
+            footer: '<a href="">The incorrect/email is wrong</a>'
+          })
+    }
     
     }
 
