@@ -1,8 +1,3 @@
-const { isLoggedIn } = require("../script");
-
-// import {isLoggedIn} from './script.js'
-const login = require(isLoggedIn)
-
 var LoginForm = document.getElementById("LoginForm");
 var RegForm = document.getElementById("RegForm");
 var Indicator = document.getElementById("Indicator");
@@ -79,5 +74,6 @@ function logInButton(){
               break;
         }
     }
-    isLoggedIn()
 }
+
+isLoggedIn()

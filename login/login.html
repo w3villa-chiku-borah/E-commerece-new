@@ -1,121 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
     <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="style.css">
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-  
-<!------account-page----->
 
-<div class="account-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <img class="img-in-login" src="attachment.png" width="100%">
-            </div>
+    <!------account-page----->
 
-            <div class="col-2">
-                <div class="form-container">
-                    <div class="form-btn">
-                        <span onclick="login()">Login</span>
-                        <span onclick="register()">Register</span>
-                        <hr id="Indicator">
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img class="img-in-login" src="attachment.png" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+
+                        <form id="LoginForm" onsubmit="return false">
+                            <input type="text" id="unameInLogin" placeholder="Username">
+                            <input type="password" id="passwordInLogin" placeholder="Password">
+                            <button type="submit" class="btn" onclick="logInButton()">login</button>
+                            <a href="">Forget password</a>
+                        </form>
+                        <form id="RegForm" onsubmit="return false">
+                            <input type="text" id="Username" placeholder="Username">
+                            <input type="email" id="Email" placeholder="Email">
+                            <input type="password" id="Password" placeholder="Password">
+                            <button type="submit" class="btn" onclick="signup()">Register</button>
+                            <a href="">Forget password</a>
+                        </form>
                     </div>
-
-
-                    <form id="LoginForm" onsubmit="return false">
-                        <input type="text" id="unameInLogin" placeholder="Username">
-                        <input type="password" id="passwordInLogin" placeholder="Password">
-                        <button type="submit" class="btn" onclick="logInButton()">login</button>
-                        <a href="">Forget password</a>
-                    </form>
-                    <form id="RegForm" onsubmit="return false">
-                        <input type="text" id="Username" placeholder="Username">
-                        <input type="email" id="Email"  placeholder="Email">
-                        <input type="password" id="Password"  placeholder="Password">
-                        <button type="submit" class="btn" onclick="signup()">Register</button>
-                        <a href="">Forget password</a>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-<!--------footer----->
+    <!--------footer----->
 
-<section class="footer_sec">
-    <div class="container">
-        <footer class="footer-sec-main">
+    <section class="footer_sec">
+        <div class="container">
+            <footer class="footer-sec-main">
 
-            <div class="footer-sec-main-1">
-                <h2>About Us</h2>
-                <hr>
-                <ul>
-                    <li><a href="#"></a>About Us</li>
-                    <li><a href="#"></a>Delivery</li>
-                    <li><a href="#"></a>Privacy Policy</li>
-                    <li><a href="#"></a>Terms & Condition</li>
-                    <li><a href="#"></a>Custom Links</li>
-                </ul>
-            </div>
-
-
-            <div>
-                <h2>Customer Service</h2>
-                <hr>
-                <ul>
-                    <li><a href="#"></a>Contact</li>
-                    <li><a href="#"></a>Returns</li>
-                    <li><a href="#"></a>Site Map</li>
-                    <li><a href="#"></a>Brands</li>
-                    <li><a href="#"></a>Unlimited Links</li>
-                </ul>
-            </div>
-
-
-
-            <div>
-                <h2>My Account</h2>
-                <hr>
-                <ul>
-                    <li><a href="#"></a>My Account</li>
-                    <li><a href="#"></a>Order History</li>
-                    <li><a href="#"></a>Affiliats</li>
-                    <li><a href="#"></a>Newslatter</li>
-                    <li><a href="#"></a>Gifts Certificates</li>
-                </ul>
-            </div>
-
-            <div class="foot-nav">
-                <h2>Newsletter</h2>
-                <hr>
-                <p class="paragraph">Stay up to date with news and promotions by signing up for promotions</p>
-
-                <div class="foot-input-con">
-                     <input type="email" placeholder="Your email"> </input>
-                     <button class="button-send"><i class="fa-solid fa-envelope"></i>send</button>
+                <div class="footer-sec-main-1">
+                    <h2>About Us</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#"></a>About Us</li>
+                        <li><a href="#"></a>Delivery</li>
+                        <li><a href="#"></a>Privacy Policy</li>
+                        <li><a href="#"></a>Terms & Condition</li>
+                        <li><a href="#"></a>Custom Links</li>
+                    </ul>
                 </div>
-              
-               
-                <p> <input type="checkbox" name="" id=""> I have read and agree to the <a class="Privacy" href="#">Privacy
-                        Policy</a></p>
-            </div>
-        </footer>
 
-    </div>
 
-    <script src="loginJS.js" type="text/javascript"></script>
+                <div>
+                    <h2>Customer Service</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#"></a>Contact</li>
+                        <li><a href="#"></a>Returns</li>
+                        <li><a href="#"></a>Site Map</li>
+                        <li><a href="#"></a>Brands</li>
+                        <li><a href="#"></a>Unlimited Links</li>
+                    </ul>
+                </div>
 
-    </body>
-    </html>
+
+
+                <div>
+                    <h2>My Account</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#"></a>My Account</li>
+                        <li><a href="#"></a>Order History</li>
+                        <li><a href="#"></a>Affiliats</li>
+                        <li><a href="#"></a>Newslatter</li>
+                        <li><a href="#"></a>Gifts Certificates</li>
+                    </ul>
+                </div>
+
+                <div class="foot-nav">
+                    <h2>Newsletter</h2>
+                    <hr>
+                    <p class="paragraph">Stay up to date with news and promotions by signing up for promotions</p>
+
+                    <div class="foot-input-con">
+                        <input type="email" placeholder="Your email"> </input>
+                        <button class="button-send"><i class="fa-solid fa-envelope"></i>send</button>
+                    </div>
+
+
+                    <p> <input type="checkbox" name="" id=""> I have read and agree to the <a class="Privacy"
+                            href="#">Privacy
+                            Policy</a></p>
+                </div>
+            </footer>
+
+        </div>
+        <script src="./index.js" type="text/javascript"></script>
+        <script src="../script.js" type="text/javascript"></script>
+        <script src="./loginJS.js" type="text/javascript"></script>
+
+</body>
+
+</html>

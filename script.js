@@ -193,25 +193,25 @@ function tapButtonBlog(para) {
 }
 
 
-// export function isLoggedIn() {
-//     let users = JSON.parse(localStorage.getItem("myInfo"))
-//     console.log(users)
+function isLoggedIn() {
+    let users = JSON.parse(localStorage.getItem("myInfo"))
+    console.log(users)
 
-//     let loggedUser = users?.find(user => user.islogin === true)
-//     console.log(loggedUser)
+    let loggedUser = users?.find(user => user.islogin === true)
+    console.log(loggedUser)
 
-//     console.log(loggedUser.Uname)
+    console.log(loggedUser.Uname)
 
-//     let html = `
-//     <i class="fa-solid fa-user"></i>
-//     <p id="para-login">
-//     <a class="login-in-main-page" href="./login/login.html" id=" ">
-//     ${loggedUser.Uname}
-//     </a></p>
-//     `
-//     let loginName = document.getElementById("lim");
-//     console.log(loginName)
-//     loginName.innerHTML = html;
-// }
+    let html = `
+    <i class="fa-solid fa-user"></i>
+    <p id="para-login">
+    <a class="login-in-main-page" href="./login/login.html" id=" ">
+    ${loggedUser.Uname}
+    </a></p>
+    `
+    let loginName = document.getElementById("lim");
+    console.log(loginName)
+    loginName.innerHTML = html;
+}
 
 // isLoggedIn()
