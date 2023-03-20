@@ -9,6 +9,7 @@ function register(){
     
 }
 
+
 function login(){
     RegForm.style.transform = "translatex(300px)";
     LoginForm.style.transform = "translatex(300px)";
@@ -79,6 +80,5 @@ function logInButton(){
     
     
     }
-
 
 isLoggedIn();
