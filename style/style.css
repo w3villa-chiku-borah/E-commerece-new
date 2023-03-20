@@ -1546,7 +1546,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
  
   height: 800px;
   border-radius: 20px;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
 }
 
 .item-main-07 img {
@@ -2028,6 +2028,8 @@ background-color: #1138e7;
 }
 .up-arrowand-img-container{
   display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .up-arrowand-img-container a{
   padding: 10px;
