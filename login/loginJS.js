@@ -119,10 +119,9 @@ function logInButton(){
             icon: 'error',
             title: 'Oops...',
             text: 'Something went wrong!',
-            footer: '<a href="">The incorrect/email is wrong</a>'
+            footer: '<a href="">The password/email is incorrect</a>'
           })
     }
-    
-    }
+}    
 
 isLoggedIn();
