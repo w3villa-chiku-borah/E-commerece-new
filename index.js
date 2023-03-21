@@ -409,24 +409,24 @@ async function search(){
     let main= document.getElementById("main-section")
     let html = ``;
      prods = await searchInItems(itemsInlow);
-     if(searchText.value.length==0){
-        console.log("chiku");
-        main.style.display = "block"
-        showResult.innerHTML=``;
-      
-    }
+     let pagitantionDiv =document.getElementById("pegination-div-main");
+     let pegiArray=[];
+     let pegiArrayMain=[];
+     let n = prods.length;
+     
     if(items!=""){
-    if(prods.length>0 ){
-      prods.forEach(element =>{
+        if(prods.length>0 ){
+        console.log("hmo")
+        for(let i =0;i<prods.length;i++){
         html+= ` 
         <div class="featured-products-card show-result-div-sec" >
         <div class="image-container">
-            <img loading="lazy" src="${element.img}" alt="">
+            <img loading="lazy" src="${prods[i].img}" alt="">
         </div>
 
         <div class="cart-container cart-container-show">
-            <h2>${element.name}</h2>
-            <p class="price">$${element.price} </p>
+            <h2>${prods[i].name}</h2>
+            <p class="price">$${prods[i].price} </p>
             <hr>
             <div class="add-to-cart-container show-result-cart">
                 <div>
@@ -443,12 +443,31 @@ async function search(){
 
 
         </div>
-
     </div>`
 
     showResult.innerHTML=html;
-    main.style.display = "none"
-      })
+
+pagitantionDiv.innerHTML =`
+<div class="pegination-div">
+        <ul>
+          <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">2</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">3</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">4</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">5</a></li>
+        
+        </ul>
+    </div>
+`
+console.log(pagitantionDiv)
+main.style.display = "none";
+pagitantionDiv.classList.add("show-pegination");
+
+
+    if(i>=10){
+        break;
+    }
+      }
     }
     else {
         html = `<div> No Result is Found </div>`
@@ -461,6 +480,7 @@ async function search(){
 //    showResult.innerHTML=html;
 //     main.style.display = "none"
     console.log(prods)
+
  }
 
  async function searchInItems(elem){
@@ -487,17 +507,34 @@ async function search(){
 async function seeAllProduct(){
     let showResult= document.getElementById("show-result-div-sec");
     let main= document.getElementById("main-section")
-
+    let showSearchItemSec = document.getElementById("show-search-items");
     const response = await fetch('./data/item.json');
     const obj= await response.json();
+    let pagitantionDiv =document.getElementById("pegination-div-main");
+     let pegiArray=[];
+     let pegiArrayMain=[];
 
   let products = Object.values(obj).map((category) => {
     return Object.values(category);
 })
 let html = ``;
-//  console.log(products);
+
 products = products.flat().flat();
-products.forEach(element =>{
+// pegiArrayMain = products.slice(0,9)
+let chunk = 10;
+for(let i =0;i<products.length;i+=chunk){
+if(products.length<10){
+    pegiArrayMain=products;
+}
+else{
+    pegiArrayMain.push(products.slice(i,chunk+i));
+}
+}
+ 
+pegiArray.push(pegiArrayMain[0]);
+pegiArray=pegiArray.flat();
+
+pegiArray.forEach((element,indx) =>{
     html+= ` 
     <div class="featured-products-card show-result-div-sec" >
     <div class="image-container">
@@ -525,20 +562,235 @@ products.forEach(element =>{
     </div>
 
 </div>`
+ 
 })
-html+=`
-<div class="pegination">
-<nav aria-label="Page navigation example">
-<ul class="pagination">
-  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-  <li class="page-item"><a class="page-link" href="#">1</a></li>
-  <li class="page-item"><a class="page-link" href="#">2</a></li>
-  <li class="page-item"><a class="page-link" href="#">3</a></li>
-  <li class="page-item"><a class="page-link" href="#">Next</a></li>
-</ul>
-</nav>
-</div>`;
+showResult.innerHTML=html;
+pagitantionDiv.innerHTML =`
+<div class="pegination-div">
+        <ul>
+          <li><a href="#" onclick="pegination(this)">1</a></li>
+          <li><a href="#" onclick="pegination(this)">2</a></li>
+          <li><a href="#" onclick="pegination(this)">3</a></li>
+          <li><a href="#" onclick="pegination(this)">4</a></li>
+          <li><a href="#" onclick="pegination(this)">5</a></li>
+        
+        </ul>
+    </div>
+`
+main.style.display = "none";
 
+pagitantionDiv.classList.add("show-pegination");
+}
+ async function pegination(elem){
+    console.log("hellooo..")
+    let showResult= document.getElementById("show-result-div-sec");
+    let main= document.getElementById("main-section")
+    let showSearchItemSec = document.getElementById("show-search-items");
+    const response = await fetch('./data/item.json');
+    const obj= await response.json();
+    let pagitantionDiv =document.getElementById("pegination-div-main");
+     let pegiArray=[];
+     let pegiArrayMain=[];
+
+  let products = Object.values(obj).map((category) => {
+    return Object.values(category);
+})
+let html = ``;
+
+products = products.flat().flat();
+// pegiArrayMain = products.slice(0,9)
+let chunk = 10;
+for(let i =0;i<products.length;i+=chunk){
+if(products.length<10){
+    pegiArrayMain=products;
+}
+else{
+    pegiArrayMain.push(products.slice(i,chunk+i));
+}
+}
+let value=Number(elem.innerText);
+let value2=value;
+value=value-1
+let len=pegiArrayMain.length;
+console.log(len)
+pegiArray.push(pegiArrayMain[value]);
+pegiArray=pegiArray.flat();
+console.log(pegiArray)
+
+pegiArray.forEach((element,indx) =>{
+    html+= ` 
+    <div class="featured-products-card show-result-div-sec" >
+    <div class="image-container">
+        <img loading="lazy" src="${element.img}" alt="">
+    </div>
+
+    <div class="cart-container cart-container-show">
+        <h2>${element.name}</h2>
+        <p class="price">$${element.price} </p>
+        <hr>
+        <div class="add-to-cart-container show-result-cart">
+            <div>
+
+                <input type="button" value="ADD TO CART">
+            </div>
+            <div> 
+        
+                <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+             
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>`
+
+ 
+})
 showResult.innerHTML=html;
 main.style.display = "none";
+pagitantionDiv.classList.add("show-pegination");
 }
+
+ async function peginationInSearch(elem){
+    let searchText = document.getElementById("myInput");
+    let items=searchText.value;
+    let itemsInlow = items.toLowerCase();
+    let showResult= document.getElementById("show-result-div-sec");
+    // let main= document.getElementsByTagName()
+    let main= document.getElementById("main-section")
+    let html = ``;
+    products = await searchInItems(itemsInlow);
+     let pagitantionDiv =document.getElementById("pegination-div-main");
+     let pegiArray=[];
+     let pegiArrayMain=[];
+     let pegiArrayMain2=[];
+     let n = prods.length;
+     let chunk =10;
+     for(let i =0;i< products.length;i+=chunk){
+        if(products.length<10){
+            pegiArrayMain2=products;
+        }
+        else{
+            pegiArrayMain.push(products.slice(i,chunk+i));
+        }
+        };
+    let value=Number(elem.innerText);
+    let value2=value;
+    value=value-1
+    let len=pegiArrayMain.length;
+    console.log(len)
+    pegiArray.push(pegiArrayMain[value]);
+    pegiArray=pegiArray.flat();
+    console.log(pegiArray)
+    if(products.length<10){
+       
+        pegiArrayMain2.forEach((element,indx) =>{
+        html+= ` 
+        <div class="featured-products-card show-result-div-sec" >
+        <div class="image-container">
+            <img loading="lazy" src="${element.img}" alt="">
+        </div>
+    
+        <div class="cart-container cart-container-show">
+            <h2>${element.name}</h2>
+            <p class="price">$${element.price} </p>
+            <hr>
+            <div class="add-to-cart-container show-result-cart">
+                <div>
+    
+                    <input type="button" value="ADD TO CART">
+                </div>
+                <div> 
+            
+                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                 
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+            </div>
+    
+    
+        </div>
+    
+    </div>`
+    
+     
+    })
+
+    showResult.innerHTML=html;
+
+pagitantionDiv.innerHTML =`
+<div class="pegination-div">
+        <ul>
+          <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">2</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">3</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">4</a></li>
+          <li><a href="#" onclick="peginationInSearch(this)">5</a></li>
+        
+        </ul>
+    </div>
+`
+console.log(pagitantionDiv)
+main.style.display = "none";
+pagitantionDiv.classList.add("show-pegination");
+
+      }
+    
+    else {
+        
+        pegiArray.forEach((element,indx) =>{
+            html+= ` 
+            <div class="featured-products-card show-result-div-sec" >
+            <div class="image-container">
+                <img loading="lazy" src="${element.img}" alt="">
+            </div>
+        
+            <div class="cart-container cart-container-show">
+                <h2>${element.name}</h2>
+                <p class="price">$${element.price} </p>
+                <hr>
+                <div class="add-to-cart-container show-result-cart">
+                    <div>
+        
+                        <input type="button" value="ADD TO CART">
+                    </div>
+                    <div> 
+                
+                        <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                     
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    </div>
+                </div>
+        
+        
+            </div>
+        
+        </div>`
+        
+         
+        })
+    
+        showResult.innerHTML=html;
+    
+    pagitantionDiv.innerHTML =`
+    <div class="pegination-div">
+            <ul>
+              <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
+              <li><a href="#" onclick="peginationInSearch(this)">2</a></li>
+              <li><a href="#" onclick="peginationInSearch(this)">3</a></li>
+              <li><a href="#" onclick="peginationInSearch(this)">4</a></li>
+              <li><a href="#" onclick="peginationInSearch(this)">5</a></li>
+            
+            </ul>
+        </div>
+    `
+    console.log(pagitantionDiv)
+    main.style.display = "none";
+    pagitantionDiv.classList.add("show-pegination");
+    
+    }
+    
+}  
+ 

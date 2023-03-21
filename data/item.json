@@ -7,7 +7,8 @@
             "img" : "./asset/babycon2.jpg",
             "c_lebels" : true,
             "hot" : true,
-            "off" :"-70%"
+            "off" :"-70%",
+            "id" : "1"
             
         },
         {
@@ -16,7 +17,8 @@
             "img" : "./asset/jeans3.jpg",
             "c_lebels" : false,
             "hot" : false,
-            "off" :"-70%"
+            "off" :"-70%",
+            "id" : "2"
         },
         {
             "name" : "Jacket",
@@ -24,7 +26,8 @@
             "img" : "./asset/13.jpg" ,
             "c_lebels" : false,
             "hot" : true,
-            "off" :"-70%"
+            "off" :"-70%",
+            "id" : "3"
         },
         {
             "name" : "Top",
@@ -32,7 +35,8 @@
             "img" : "./asset/12.jpg",
             "c_lebels" : true,
             "hot" : false,
-            "off" :"Hot"
+            "off" :"Hot",
+            "id" : "4"
         },
         {
             "name" : "Top",
@@ -40,7 +44,8 @@
             "img" : "./asset/12.jpg",
             "c_lebels" : false,
             "hot" : false,
-            "off" :"-70%"
+            "off" :"-70%",
+            "id" : "5"
         }
     ]
 },
@@ -55,7 +60,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : true,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "6"
    },
    {
     "name" : "FOOTWEAR",
@@ -66,7 +72,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : false,
-    "off" :"-80%"
+    "off" :"-80%",
+    "id" : "7"
    },
    {
     "name" : "BAGS",
@@ -77,7 +84,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "8"
    },
    {
     "name" : "CAMERA",
@@ -88,7 +96,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : true,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "9"
    },
    {
     "name" : "MOBILE",
@@ -99,7 +108,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : true,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "10"
    },
    {
     "name" : "GLASSES",
@@ -110,7 +120,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "11"
 
    }
 
@@ -126,7 +137,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : true,
     "hot" : true,
-    "off" :"-50%"
+    "off" :"-50%",
+    "id" : "12"
        },
        {
         "name" : "BAGS",
@@ -137,7 +149,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : false,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "13"
        },
        {
     "name" : "HEADPHONE",
@@ -148,7 +161,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "14"
    },
  
    {
@@ -160,7 +174,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "15"
    },
    {
     "name" : "MOBILE",
@@ -171,7 +186,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : false,
-    "off" :""       
+    "off" :"",
+    "id" : "16"       
    },
    {
     "name" : "GLASSES",
@@ -182,7 +198,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "17"
    }
 
    
@@ -198,7 +215,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "18"
    },
    {
     "name" : "MOBILE",
@@ -209,7 +227,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "19"
    },
    {
     "name" : "GLASSES",
@@ -220,7 +239,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : false,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "20"
    },
 
     {
@@ -232,7 +252,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : false,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "21"
        },
        {
         "name" : "BAGS",
@@ -243,7 +264,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : true,
     "hot" : false,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "22"
        },
        {
     "name" : "HEADPHONE",
@@ -254,7 +276,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : false,
     "hot" : true,
-    "off" :""
+    "off" :"",
+    "id" : "23"
    }
  
    
@@ -269,7 +292,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : false,
     "hot" : true,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "24"
        },
        {
         "name" : "GLASSES",
@@ -280,7 +304,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : true,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "25"
        },
     
         {
@@ -292,7 +317,8 @@
             "price_cut" : "7890.00",
             "c_lebels" : true,
     "hot" : false,
-    "off" :""
+    "off" :"",
+    "id" : "26"
            },
    {
     "name" : "CAMERA",
@@ -303,7 +329,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : true,
     "hot" : false,
-    "off" :"-60%"
+    "off" :"-60%",
+    "id" : "27"
    },
   
        {
@@ -315,7 +342,8 @@
         "price_cut" : "7890.00",
         "c_lebels" : false,
     "hot" : true,
-    "off" :""
+    "off" :"",
+    "id" : "28"
        },
        {
     "name" : "HEADPHONE",
@@ -326,7 +354,8 @@
     "price_cut" : "7890.00",
     "c_lebels" : true,
     "hot" : false,
-    "off" :"-70%"
+    "off" :"-70%",
+    "id" : "29"
    }
  
    

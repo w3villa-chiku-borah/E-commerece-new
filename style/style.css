@@ -58,14 +58,14 @@ body {
   /* padding-top: 5px; */
 }
 
-.FAQ {
+.faq {
   position: relative;
 }
 
 .drop_down_container{
   display: none;
 }
-.FAQ:hover .drop_down_container {
+.faq:hover .drop_down_container {
   display: block;
   position: absolute;
  /* opacity: 100%!important; */
@@ -80,7 +80,7 @@ body {
 /* text-align: center */
 }
 
-.FAQ .drop_down_container .drop_down {
+.faq .drop_down_container .drop_down {
   display:block ;
   list-style-type: none;
   color: aliceblue;
@@ -89,10 +89,10 @@ body {
 
 
 }
-.FAQ .drop_down_container .drop_down li a{
+.faq .drop_down_container .drop_down li a{
   color: rgb(255, 255, 255) !important;
 }
-.FAQ .drop_down_container , .drop_down li{
+.faq .drop_down_container , .drop_down li{
 padding-top: 5px;
 padding-bottom: 5px;
 /* padding-left: 10px;
@@ -101,10 +101,10 @@ padding-right: 10px; */
   padding-right: 1px;
   border-bottom:1px solid white ;
 }
-.FAQ .drop_down_container , .drop_down li:last-child{
+.faq .drop_down_container , .drop_down li:last-child{
   border-bottom: none;
 }
-/* .FAQ .drop_down_container .drop_down li a{
+/* .faq .drop_down_container .drop_down li a{
   color: aliceblue;
   text-decoration: none;
 }
@@ -135,7 +135,7 @@ padding-right: 4px;
   }
 
   .nav-sec {
-    background-color: blue;
+    background-color: #0000ffb5;
   }
   .mobile-row {
     padding-top: 10px;
@@ -398,11 +398,14 @@ padding-right: 4px;
 }
 .show-result-div-sec {
   width: 294px;
-  /* padding-top: 20px; */
+
   border: 1px solid black;
   /* height: 500px; */
   height: 380px;
-  margin: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .show-result-div-sec img {
   width: 100%;
@@ -412,8 +415,10 @@ padding-right: 4px;
 }
 .show-result{
   display: flex;
-  /* justify-content: center; */
+  justify-content: start;
   flex-wrap: wrap;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .show-result-cart{
   display: flex;
@@ -426,7 +431,29 @@ padding-right: 4px;
 .cart-container-show{
   padding: 10px;
 }
-
+.pegination-div-main{
+  display: none;
+}
+.pegination-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.show-pegination{
+  display: block;
+}
+.pegination-div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.pegination-div ul li{
+  list-style: none;
+    row-gap: 27px;
+   
+    border: 1px solid;
+    padding: 15px;
+}
 /* ******************* */
 .blue-line {
   background-color: blue;
