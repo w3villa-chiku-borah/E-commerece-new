@@ -220,9 +220,13 @@ showLogin.innerHTML = html;
 }
 function inLogOut(){
     let users = JSON.parse(localStorage.getItem("myInfo"))
-    let loggedUser = users?.find((user) => user.islogin === true)
+
+    let loggedUser = users?.find((user) => user.islogin === true);
+    let index=users.indexOf(loggedUser);
     loggedUser.islogin =false;
-    localStorage.setItem("myInfo", JSON.stringify([loggedUser]))
+    users[index]=loggedUser;
+    let myInfo_string=JSON.stringify(users);
+    localStorage.setItem("myInfo",myInfo_string)
  }
  
 

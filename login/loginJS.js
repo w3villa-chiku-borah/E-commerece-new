@@ -37,6 +37,11 @@ function signup(){
         console.log(typeof array)
         if(array==undefined || array==null || !array.length ){
             array=[myInfo];
+                Swal.fire(
+                    'Good job!',
+                    'You are Register',
+                    'success'
+                  )
         }
     
         else{ 
@@ -47,6 +52,14 @@ function signup(){
                  break;
               } 
             }
+        
+                array.push(myInfo)
+                Swal.fire(
+                    'Good job!',
+                    'You are Register',
+                    'success'
+                  )
+            
             if(!flag){
             array.push(myInfo)
             Swal.fire(
