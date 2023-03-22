@@ -219,8 +219,7 @@ let showLogin=document.getElementById("lim");
 showLogin.innerHTML = html;
 }
 function inLogOut(){
-    let users = JSON.parse(localStorage.getItem("myInfo"))
-
+    let users = JSON.parse(localStorage.getItem("myInfo"));
     let loggedUser = users?.find((user) => user.islogin === true);
     let index=users.indexOf(loggedUser);
     loggedUser.islogin =false;

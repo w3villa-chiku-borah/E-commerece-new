@@ -275,6 +275,18 @@ padding-right: 4px;
     padding-bottom: 5px;
     overflow-x: hidden;
 }
+.cartItems{
+  position: relative;
+}
+.cartItems div{
+  border: 1px solid ;
+  position: absolute;
+  font-size: 10px;
+  background-color: aliceblue;
+  top: -8px;
+  right: 0px;
+  width: 15px;
+}
 .search{
   padding-left: 50px;
   padding-bottom: 10px;

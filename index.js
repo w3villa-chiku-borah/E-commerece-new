@@ -43,7 +43,7 @@ const showFashion = (arrayOfData) => {
                 <div class="add-to-cart-container">
                     <div>
 
-                        <input type="button" value="ADD TO CART">
+                        <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
                     </div>
                     <div class="heart-exchange-fashion">
                         <i style="font-weight:100" class="fa-solid fa-heart"></i>
@@ -275,7 +275,7 @@ const showFeature = (arrayOfData) => {
         </div>
         <div class="item02-c3">
             <div><input type="number" value="1">
-                <input type="button" value="ADD TO CART">
+                <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
                 <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
             </div>
             <div><span><i class="fa-regular fa-heart"></i> <i
@@ -431,7 +431,7 @@ async function search(){
             <div class="add-to-cart-container show-result-cart">
                 <div>
 
-                    <input type="button" value="ADD TO CART">
+                    <input type="button" onclick="addToCart(${prods[i].id})" value="ADD TO CART">
                 </div>
                 <div> 
             
@@ -548,11 +548,11 @@ pegiArray.forEach((element,indx) =>{
         <div class="add-to-cart-container show-result-cart">
             <div>
 
-                <input type="button" value="ADD TO CART">
+                <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
             </div>
             <div> 
         
-                <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove()"></i>
              
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
@@ -631,7 +631,7 @@ pegiArray.forEach((element,indx) =>{
         <div class="add-to-cart-container show-result-cart">
             <div>
 
-                <input type="button" value="ADD TO CART">
+                <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
             </div>
             <div> 
         
@@ -700,7 +700,7 @@ pagitantionDiv.classList.add("show-pegination");
             <div class="add-to-cart-container show-result-cart">
                 <div>
     
-                    <input type="button" value="ADD TO CART">
+                    <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
                 </div>
                 <div> 
             
@@ -754,7 +754,7 @@ pagitantionDiv.classList.add("show-pegination");
                 <div class="add-to-cart-container show-result-cart">
                     <div>
         
-                        <input type="button" value="ADD TO CART">
+                        <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
                     </div>
                     <div> 
                 
@@ -786,11 +786,170 @@ pagitantionDiv.classList.add("show-pegination");
             </ul>
         </div>
     `
-    console.log(pagitantionDiv)
     main.style.display = "none";
     pagitantionDiv.classList.add("show-pegination");
     
     }
     
 }  
- 
+const itemIncart= JSON.parse(localStorage.getItem('cart')) || [];
+async function addToCart(elem){
+    const response = await fetch('./data/item.json');
+    const obj= await response.json();
+  let products = Object.values(obj).map((category) => {
+    return Object.values(category);
+})
+products = products.flat().flat();
+console.log(products);
+console.log(elem);
+console.log(itemIncart);
+
+let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
+let flag= false;
+for(let i= 0 ;i<itemIncart.length;i++){
+    if(itemIncart[i].id==loggedUser.id){
+   flag=true;
+    }
+}
+
+if(!flag){
+itemIncart.push(loggedUser);
+Swal.fire(
+    'Good job!',
+    'Item is added to cart',
+    'success'
+  )
+}
+else{
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        footer: '<a href="">Items is already in cart</a>'
+      })
+}
+
+  let itemIncartInLocal=JSON.stringify(itemIncart);
+  localStorage.setItem("cart",itemIncartInLocal);
+  numOfItems();
+}
+
+
+function cartItems(){
+    let showResult= document.getElementById("show-result-div-sec");
+    let html =``;
+    let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
+    let pagitantionDiv =document.getElementById("pegination-div-main");
+
+    let main= document.getElementById("main-section");
+            
+    if(itemIncart.length>0 ){
+        console.log("hmo")
+        for(let i =0;i<itemIncart.length;i++){
+        html+= ` 
+        <div class="featured-products-card show-result-div-sec" >
+        <div class="image-container">
+            <img loading="lazy" src="${itemIncart[i].img}" alt="">
+        </div>
+
+        <div class="cart-container cart-container-show">
+            <h2>${itemIncart[i].name}</h2>
+            <p class="price">$${itemIncart[i].price} </p>
+            <hr>
+            <div class="add-to-cart-container show-result-cart">
+                <div>
+
+                    <input type="button" onclick="removeToCart(${itemIncart[i].id})" value="Remove From CART">
+                </div>
+                <div> 
+            
+                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                 
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+            </div>
+
+
+        </div>
+    </div>`
+
+    showResult.innerHTML=html;
+    main.style.display = "none";
+        }
+    }
+    else {
+
+        html = `<div> No item in Cart </div>`
+        showResult.innerHTML=html;
+    main.style.display = "none";
+    }
+    pagitantionDiv.style.display="none";
+    jurnalDiv.style.display="none";
+    numOfItems();
+}
+
+function removeToCart(elem){
+    for(let i =0;i<itemIncart.length;i++){
+        if(elem==itemIncart[i].id){
+            itemIncart.splice(i,1)
+        }
+    }
+    let itemIncartInLocal=JSON.stringify(itemIncart);
+    localStorage.setItem("cart",itemIncartInLocal);
+
+    let showResult= document.getElementById("show-result-div-sec");
+    let html =``;
+    let pagitantionDiv =document.getElementById("pegination-div-main");
+
+    let main= document.getElementById("main-section");
+            
+    if(itemIncart.length>0 ){
+        console.log("hmo")
+        for(let i =0;i<itemIncart.length;i++){
+        html+= ` 
+        <div class="featured-products-card show-result-div-sec" >
+        <div class="image-container">
+            <img loading="lazy" src="${itemIncart[i].img}" alt="">
+        </div>
+
+        <div class="cart-container cart-container-show">
+            <h2>${itemIncart[i].name}</h2>
+            <p class="price">$${itemIncart[i].price} </p>
+            <hr>
+            <div class="add-to-cart-container show-result-cart">
+                <div>
+
+                    <input type="button" onclick="removeToCart(${itemIncart[i].id})" value="Remove From CART">
+                </div>
+                <div> 
+            
+                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                 
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+            </div>
+
+
+        </div>
+    </div>`
+
+    showResult.innerHTML=html;
+    main.style.display = "none";
+        }
+    }
+    else {
+
+        html = `<div> No item in Cart </div>`
+        showResult.innerHTML=html;
+    main.style.display = "none";
+    }
+    pagitantionDiv.style.display="none";
+    numOfItems();
+}
+function numOfItems(){
+   let numOfItems = document.getElementsByClassName("cartItems-child")[0];
+
+   let n=itemIncart.length;
+   numOfItems.innerHTML=n;
+}
+numOfItems();

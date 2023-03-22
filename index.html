@@ -19,6 +19,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -102,8 +104,8 @@
                 <div class=" mobile-row">
                     <div class=" mobile-nav">
                         <ul>
-                            <li><i class="fa-solid fa-user-login fa-user"></i><a>Login</a></li>
-                            <li><i class="fa-solid fa-user-login fa-square-pen"></i>Register</li>
+                            <li><i class="fa-solid fa-user-login fa-user"></i><a href="./login/login.html">Login</a></li>
+                            <li><i class="fa-solid fa-user-login fa-square-pen"></i><a href="./login/login.html">Register</a></li>
                         </ul>
                     </div>
                     <div class=" mobile-nav nav-mobile-us">
@@ -130,7 +132,7 @@
                 <div class="row  row-jurnal">
                     <div class="col-lg-2 padding-left-right mo-jurnal">
                         <div class="jurnal">
-                            <p><a style="color: black;" href="./index.html">JOURNAL</a></p>
+                            <p><a style="color: black; text-decoration: none;" href="./index.html">JOURNAL</a></p>
                         </div>
                     </div>
                     <div class="col-lg-5 padding-left-right">
@@ -180,7 +182,10 @@
                         <div class="login o-items" >
                             <ul>
                                 <li style="font-weight: bold; opacity: 70%; font-size: 17px;" > 0 items(s)-$0.00</li>
-                                <li><i class="fa-solid fa-cart-shopping"></i></li>
+                                <li class="cartItems"><i class="fa-solid fa-cart-shopping" onclick="cartItems()">
+                                </i>
+                                <div class="cartItems-child"></div>
+                            </li>
                             </ul>
                         </div>
                     </div>
@@ -196,7 +201,7 @@
                         <ul>
                             <li><i class="fa-solid fa-magnifying-glass"></i></li>
                             <li><i class="fa-solid fa-bars"></i></li>
-                            <li><i class="fa-solid fa-cart-shopping"></i></li>
+                            <li><i class="fa-solid fa-cart-shopping" onclick="cartItems()"></i></li>
                         </ul>
                     </div>
                 </div>
