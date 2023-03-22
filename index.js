@@ -832,6 +832,7 @@ else{
   let itemIncartInLocal=JSON.stringify(itemIncart);
   localStorage.setItem("cart",itemIncartInLocal);
   numOfItems();
+  totalPrice();
 }
 
 
@@ -948,8 +949,23 @@ function removeToCart(elem){
 }
 function numOfItems(){
    let numOfItems = document.getElementsByClassName("cartItems-child")[0];
+   let numOfItemsAtO = document.getElementsByClassName("itms-num-at-0")[0];
 
    let n=itemIncart.length;
    numOfItems.innerHTML=n;
+   numOfItemsAtO.innerHTML=n;
 }
 numOfItems();
+function totalPrice(){
+    let totalPrice = document.getElementsByClassName("total-price")[0];
+   let price=0;
+    for(let i = 0;i<itemIncart.length;i++){
+       price+=Number(itemIncart[i].price);
+    }
+    console.log(price);
+    totalPrice.innerHTML=price;
+}
+function reload(){
+    numOfItems()
+    totalPrice();
+}

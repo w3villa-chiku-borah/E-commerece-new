@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body onload="reload()">
     <!-- *****************header******************* -->
     <header>
         <section class="nav-sec">
@@ -181,7 +181,7 @@
                     <div class="col-lg-2 padding-left-right" style="padding-bottom: 10px;">
                         <div class="login o-items" >
                             <ul>
-                                <li style="font-weight: bold; opacity: 70%; font-size: 17px;" > 0 items(s)-$0.00</li>
+                                <li style="font-weight: bold; opacity: 70%; font-size: 17px;" ><span class="itms-num-at-0"></span>  items(s)- $<span class="total-price"></span></li>
                                 <li class="cartItems"><i class="fa-solid fa-cart-shopping" onclick="cartItems()">
                                 </i>
                                 <div class="cartItems-child"></div>
