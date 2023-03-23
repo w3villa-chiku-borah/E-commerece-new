@@ -210,7 +210,7 @@ let showLogin=document.getElementById("lim");
 <li><i class="fa-solid fa-right-from-bracket"></i>
     <p><a href="" onclick="inLogOut()">Log Out</a></p>
 </li>
-<li><i class="fa-solid fa-heart"></i>
+<li><i class="fa-solid fa-heart" onclick="wishlistIcon()" ></i>
     <p>Wishlist</p>
 </li>
 <li><i class="fa-solid fa-code-compare"></i>

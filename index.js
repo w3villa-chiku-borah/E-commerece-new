@@ -46,7 +46,7 @@ const showFashion = (arrayOfData) => {
                         <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
                     </div>
                     <div class="heart-exchange-fashion">
-                        <i style="font-weight:100" class="fa-solid fa-heart"></i>
+                        <i style="font-weight:100" onclick="wishlistItems(${element.id})" class="fa-solid fa-heart"></i>
                         <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     </div>
                 </div>
@@ -278,7 +278,7 @@ const showFeature = (arrayOfData) => {
                 <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
                 <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
             </div>
-            <div><span><i class="fa-regular fa-heart"></i> <i
+            <div><span><i class="fa-regular fa-heart" onclick="wishlistItems(${element.id})"></i> <i
                         class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
         </div>
         <div class="item02-c4">
@@ -435,7 +435,7 @@ async function search(){
                 </div>
                 <div> 
             
-                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                    <i style="font-weight:100" class="fa-solid fa-heart"onclick="wishlistItems(${prods[i].id})""></i>
                  
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
@@ -552,7 +552,7 @@ pegiArray.forEach((element,indx) =>{
             </div>
             <div> 
         
-                <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove()"></i>
+                <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${element.id})"></i>
              
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
@@ -565,18 +565,18 @@ pegiArray.forEach((element,indx) =>{
  
 })
 showResult.innerHTML=html;
-pagitantionDiv.innerHTML =`
+let num = products.length/10;
+num=Math.ceil(num)
+console.log(Math.ceil(num));
+for(i=1;i<=num;i++){
+pagitantionDiv.innerHTML +=`
 <div class="pegination-div">
         <ul>
-          <li><a href="#" onclick="pegination(this)">1</a></li>
-          <li><a href="#" onclick="pegination(this)">2</a></li>
-          <li><a href="#" onclick="pegination(this)">3</a></li>
-          <li><a href="#" onclick="pegination(this)">4</a></li>
-          <li><a href="#" onclick="pegination(this)">5</a></li>
-        
+          <li><a href="#" onclick="pegination(this)">${i}</a></li>
         </ul>
     </div>
 `
+}
 main.style.display = "none";
 
 pagitantionDiv.classList.add("show-pegination");
@@ -635,7 +635,7 @@ pegiArray.forEach((element,indx) =>{
             </div>
             <div> 
         
-                <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${element.id})"></i>
              
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
             </div>
@@ -704,7 +704,7 @@ pagitantionDiv.classList.add("show-pegination");
                 </div>
                 <div> 
             
-                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${element.id})"></i>
                  
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
@@ -758,7 +758,7 @@ pagitantionDiv.classList.add("show-pegination");
                     </div>
                     <div> 
                 
-                        <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                        <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${element.id})"></i>
                      
                         <i class="fa-solid fa-arrow-right-arrow-left"></i>
                     </div>
@@ -773,7 +773,7 @@ pagitantionDiv.classList.add("show-pegination");
         })
     
         showResult.innerHTML=html;
-    
+        
     pagitantionDiv.innerHTML =`
     <div class="pegination-div">
             <ul>
@@ -839,8 +839,12 @@ else{
 function cartItems(){
     let showResult= document.getElementById("show-result-div-sec");
     let html =``;
+    let cartdivP =document.getElementsByClassName("cartdivP")[0];
+    let pricenItems =document.getElementsByClassName("cart-n-wishlist-header-c2")[0];
+
     let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
     let pagitantionDiv =document.getElementById("pegination-div-main");
+    let cartDiv =document.getElementsByClassName("cart-n-wishlist-header")[0];
 
     let main= document.getElementById("main-section");
             
@@ -864,7 +868,7 @@ function cartItems(){
                 </div>
                 <div> 
             
-                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
+                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${itemIncart[i].id})"></i>
                  
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
@@ -887,9 +891,16 @@ function cartItems(){
     pagitantionDiv.style.display="none";
     jurnalDiv.style.display="none";
     numOfItems();
+    cartDiv.style.display="block";
+    showResult.classList.add("min-hight-class")
+    cartdivP.innerHTML="CART"
+    
 }
 
 function removeToCart(elem){
+    let cartDiv =document.getElementsByClassName("cart-n-wishlist-header")[0];
+    let cartdivP =document.getElementsByClassName("cartdivP")[0];
+
     for(let i =0;i<itemIncart.length;i++){
         if(elem==itemIncart[i].id){
             itemIncart.splice(i,1)
@@ -924,8 +935,8 @@ function removeToCart(elem){
                 </div>
                 <div> 
             
-                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="showLove(this)"></i>
-                 
+                    <i style="font-weight:100" class="fa-solid fa-heart"onclick="wishlistItems(${itemIncart[i].id})"></i>
+                   
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
             </div>
@@ -940,12 +951,15 @@ function removeToCart(elem){
     }
     else {
 
-        html = `<div> No item in Cart </div>`
+        html = `<div class="no-item"> No item in Cart </div>`
         showResult.innerHTML=html;
     main.style.display = "none";
     }
     pagitantionDiv.style.display="none";
     numOfItems();
+    cartDiv.style.display="block";
+    showResult.classList.add("min-hight-class")
+    cartdivP.innerHTML="CART"
 }
 function numOfItems(){
    let numOfItems = document.getElementsByClassName("cartItems-child")[0];
@@ -963,9 +977,163 @@ function totalPrice(){
        price+=Number(itemIncart[i].price);
     }
     console.log(price);
-    totalPrice.innerHTML=price;
+    totalPrice.innerHTML=price.toFixed(2);
 }
 function reload(){
-    numOfItems()
+    numOfItems();
     totalPrice();
+}
+const itemInWishlist= JSON.parse(localStorage.getItem('wishlist')) || [];
+
+async function wishlistItems(elem){
+    const response = await fetch('./data/item.json');
+    const obj= await response.json();
+  let products = Object.values(obj).map((category) => {
+    return Object.values(category);
+})
+products = products.flat().flat();
+
+let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
+let flag= false;
+for(let i= 0 ;i<itemInWishlist.length;i++){
+    if(itemInWishlist[i].id==loggedUser.id){
+   flag=true;
+    }
+}
+
+if(!flag){
+    itemInWishlist.push(loggedUser);
+Swal.fire(
+    'Good job!',
+    'Item is added to wishlist',
+    'success'
+  )
+}
+else{
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Something went wrong!',
+        footer: '<a href="">Items is already in wishlist</a>'
+      })
+}
+
+  let itemInWishListInLocal=JSON.stringify(itemInWishlist);
+  localStorage.setItem("wishlist",itemInWishListInLocal);
+}
+
+function wishlistIcon(){
+    let cartDiv =document.getElementsByClassName("cart-n-wishlist-header")[0];
+    let cartdivP =document.getElementsByClassName("cartdivP")[0];
+
+    let showResult= document.getElementById("show-result-div-sec");
+    let html =``;
+    let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
+    let pagitantionDiv =document.getElementById("pegination-div-main");
+
+    let main= document.getElementById("main-section");
+            
+    if(itemInWishlist.length>0 ){
+        console.log("hmo")
+        for(let i =0;i<itemInWishlist.length;i++){
+        html+= ` 
+        <div class="featured-products-card show-result-div-sec" >
+        <div class="image-container">
+            <img loading="lazy" src="${itemInWishlist[i].img}" alt="">
+        </div>
+
+        <div class="cart-container cart-container-show">
+            <h2>${itemInWishlist[i].name}</h2>
+            <p class="price">$${itemInWishlist[i].price} </p>
+            <hr>
+            <div class="add-to-cart-container show-result-cart">
+                <div>
+
+                    <input type="button" onclick="addToCart(${itemInWishlist[i].id})" value="Add to CART">
+                </div>
+                <div> 
+            
+                <i class="fa-solid fa-trash-can" onclick="removeWishlistItems(${itemInWishlist[i].id})"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+            </div>
+
+
+        </div>
+    </div>`
+
+    showResult.innerHTML=html;
+    main.style.display = "none";
+        }
+    }
+    else {
+
+        html = `<div> No item in WishList </div>`
+        showResult.innerHTML=html;
+    main.style.display = "none";
+    }
+    pagitantionDiv.style.display="none";
+    jurnalDiv.style.display="none";
+    cartDiv.style.display="block";
+    showResult.classList.add("min-hight-class")
+    cartdivP.innerHTML="WISHLIST"
+}
+
+function removeWishlistItems(elem){
+    for(let i =0;i<itemInWishlist.length;i++){
+        if(elem==itemInWishlist[i].id){
+            itemInWishlist.splice(i,1)
+        }
+    }
+    let itemInWishlistInLocal=JSON.stringify(itemInWishlist);
+    localStorage.setItem("wishlist",itemInWishlistInLocal);
+
+    let showResult= document.getElementById("show-result-div-sec");
+    let html =``;
+    let pagitantionDiv =document.getElementById("pegination-div-main");
+
+    let main= document.getElementById("main-section");
+            
+    if(itemInWishlist.length>0 ){
+        console.log("hmo")
+        for(let i =0;i<itemInWishlist.length;i++){
+        html+= ` 
+        <div class="featured-products-card show-result-div-sec" >
+        <div class="image-container">
+            <img loading="lazy" src="${itemInWishlist[i].img}" alt="">
+        </div>
+
+        <div class="cart-container cart-container-show">
+            <h2>${itemInWishlist[i].name}</h2>
+            <p class="price">$${itemInWishlist[i].price} </p>
+            <hr>
+            <div class="add-to-cart-container show-result-cart">
+                <div>
+
+                    <input type="button" onclick="addToCart(${itemInWishlist[i].id})" value="Add to CART">
+                </div>
+                <div> 
+                <i class="fa-solid fa-trash-can" onclick="removeWishlistItems(${itemInWishlist[i].id})"></i>
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+            </div>
+
+
+        </div>
+    </div>`
+
+    showResult.innerHTML=html;
+    main.style.display = "none";
+        }
+    }
+    else {
+
+        html = `<div class="no-item"> No item in Wishlist </div>`
+        showResult.innerHTML=html;
+    main.style.display = "none";
+    }
+    pagitantionDiv.style.display="none";
+    cartDiv.style.display="block";
+    showResult.classList.add("min-hight-class")
+    cartdivP.innerHTML="WISHLIST"
 }
