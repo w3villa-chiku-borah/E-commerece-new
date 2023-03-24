@@ -152,8 +152,8 @@
                                         </div> -->
                                     </p>
                                     <input type="text" id="myInput"
-                                        placeholder="Search for names..">
-                                    <p><i class="fa-solid fa-magnifying-glass" onclick="search()"></i></p>
+                                        placeholder="Search for names.."  onkeypress="search('inComputer')">
+                                    <p><i class="fa-solid fa-magnifying-glass" onclick="search('inComputer')"></i></p>
                                 </li>
 
                             </ul>
@@ -193,15 +193,18 @@
                 <div>
 
                 </div>
+                <!-- ****************** -->
                 <div class="mobile-row-jp">
                     <div class="mobile-jurnal">
-                        JURNAL
+                        <a href="./index.html">JURNAL</a>
                     </div>
                     <div class="search-mobile">
                         <ul>
-                            <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                            <li>   <input type="text" class="myInput1" id="myInput1"
+                                placeholder="Search for names.."  onkeypress="search('inMobile')"> </li>
+                            <li><i class="fa-solid fa-magnifying-glass" onclick="comeSearch()" ></i></li>
                             <li><i class="fa-solid fa-bars"></i></li>
-                            <li><i class="fa-solid fa-cart-shopping" onclick="cartItems()"></i></li>
+                            <li><i class="fa-solid fa-cart-shopping" onmouseover="comeSearch()" onclick="cartItems()" ></i></li>
                         </ul>
                     </div>
                 </div>

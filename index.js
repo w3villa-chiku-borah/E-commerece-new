@@ -400,9 +400,17 @@ const showBuy = (arrayOfData) => {
 readData3("TOP_CATEGORIES");
 
 let prods=0 ;
-async function search(){
+async function search(elem){
     let searchText = document.getElementById("myInput");
-    let items=searchText.value;
+    let searchText1= document.getElementById("myInput1");
+    let items;
+    if(elem== "inComputer"){
+   items= searchText.value;
+    }
+    else{
+   items= searchText1.value;
+
+    }
     let itemsInlow = items.toLowerCase();
     let showResult= document.getElementById("show-result-div-sec");
     // let main= document.getElementsByTagName()
@@ -655,7 +663,16 @@ pagitantionDiv.classList.add("show-pegination");
 
  async function peginationInSearch(elem){
     let searchText = document.getElementById("myInput");
-    let items=searchText.value;
+    let searchText1 = document.getElementById("myInput1");
+    let items;
+    if(elem== "inComputer"){
+   items= searchText.value;
+    }
+    else{
+   items= searchText1.value;
+
+    }
+
     let itemsInlow = items.toLowerCase();
     let showResult= document.getElementById("show-result-div-sec");
     // let main= document.getElementsByTagName()
@@ -815,7 +832,6 @@ for(let i= 0 ;i<itemIncart.length;i++){
 if(!flag){
 itemIncart.push(loggedUser);
 Swal.fire(
-    'Good job!',
     'Item is added to cart',
     'success'
   )
@@ -823,9 +839,9 @@ Swal.fire(
 else{
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        footer: '<a href="">Items is already in cart</a>'
+    
+        text: 'Items is already in cart',
+      
       })
 }
 
@@ -1004,7 +1020,6 @@ for(let i= 0 ;i<itemInWishlist.length;i++){
 if(!flag){
     itemInWishlist.push(loggedUser);
 Swal.fire(
-    'Good job!',
     'Item is added to wishlist',
     'success'
   )
@@ -1012,9 +1027,7 @@ Swal.fire(
 else{
     Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        footer: '<a href="">Items is already in wishlist</a>'
+        text: 'Items is already in wishlist',
       })
 }
 
@@ -1136,4 +1149,9 @@ function removeWishlistItems(elem){
     cartDiv.style.display="block";
     showResult.classList.add("min-hight-class")
     cartdivP.innerHTML="WISHLIST"
+}
+function comeSearch(){
+    console.log("hahaha")
+  let searchButton = document.getElementById('myInput1');
+  searchButton.classList.toggle("show-the-search")
 }
