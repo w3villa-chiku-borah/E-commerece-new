@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search-Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/searchpage.css">
+
+    <!-- **********fontawesome*****************8 -->
+    <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default" disabled
+    href="/css/app-af6a05f42b013986b481566363f0186f.css?vsn=d" />
+  <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
+    href="/css/app-wa-df1bd4d47fc6bf066625b27b61ccafe7.css?vsn=d" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/all.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-solid.css" />
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.3.0/css/sharp-regular.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header>
+        <section class="nav-sec">
+
+
+            <div class="container ">
+                <div class="row d-flex home-about" id="home-arrow-up">
+                    <div class="col-md-4 padding-left-right">
+                        <div class="nav-home">
+                            <ul class="nav-12">
+                                <li><i class="fa-solid fa-house"></i></i> <a a href="./index.html">Home</a></li>
+                                <li><i class="fa-solid fa-address-card"></i> <a herf="#">About Us</a></li>
+                                <li><i class="fa-solid fa-envelope"></i> <a herf="#">Contact Us</a></li>
+                                <li class="faq faq-first"><i class="fa-regular fa-circle-question"
+                                        style="color: black;"></i><a herf="#">FAQ </a><i
+                                        class="fa-solid faq-first-fa-caret-down fa-caret-down"></i>
+                                    <div class="drop_down_container">
+                                        <ul class="drop_down">
+                                            <li><a href="#">Question us</a></li>
+                                            <li><a href="#">Contect us</a></li>
+                                            <li><a href="#">me</a></li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 padding-left-right">
+                        <div class="nav-home nav-english">
+                            <ul class="nav-home">
+                                <li class="faq">
+                                    &#127468;&#127463; English <i class="fa-solid fa-caret-down"></i>
+                                    <div class="drop_down_container">
+                                        <ul class="drop_down">
+                                            <li><a href="#">Hindi</a></li>
+                                            <li><a href="#">Tamil</a></li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="faq">
+                                    $ Us Doller <i class="fa-solid fa-caret-down"></i>
+                                    <div class="drop_down_container">
+                                        <ul class="drop_down">
+                                            <li><a href="#">UK</a></li>
+                                            <li><a href="#">INDIAN RUPEE</a></li>
+
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 padding-left-right">
+                        <div class="nav-home nav-menu">
+                            <ul class="nav-home">
+                                <li class="faq"><i class="fa-solid fa-user"></i><i class="fa-solid fa-bars"></i> More
+                                    Menus <i class="fa-solid fa-caret-down"></i>
+                                    <div class="drop_down_container">
+                                        <ul class="drop_down">
+                                            <li><a href="#">HOME </a></li>
+                                            <li><a href="#">ABOUT US</a></li>
+                                            <li><a href="#">CONTECT US</a></li>
+
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li><i class="fa-solid fa-truck"></i> Delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***********moblie screen nav bar********** -->
+
+                <div class=" mobile-row">
+                    <div class=" mobile-nav">
+                        <ul>
+                            <li><i class="fa-solid fa-user-login fa-user"></i><a href="./login/login.html">Login</a>
+                            </li>
+                            <li><i class="fa-solid fa-user-login fa-square-pen"></i><a
+                                    href="./login/login.html">Register</a></li>
+                        </ul>
+                    </div>
+                    <div class=" mobile-nav nav-mobile-us">
+                        <ul>
+                            <li>
+                                $ Us Doller <i class="fa-solid fa-caret-down"></i>
+                            </li>
+                            <li class=>
+                                &#127468;&#127463; English
+
+                                <i class="fa-solid fa-caret-down"></i>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- **************jurnal***** -->
+        <section class="bg-grey">
+            <div class="container padding-left-right-container">
+                <div class="row  row-jurnal">
+                    <div class="col-lg-2 padding-left-right mo-jurnal">
+                        <div class="jurnal">
+                            <p><a style="color: black; text-decoration: none;" href="./index.html">JOURNAL</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 padding-left-right">
+                        <div class="search login">
+                            <ul>
+                                <li class="faq">
+                                    <p> <a class="ancher-all-manu" href="#">All</a>
+
+                                        <i class="fa-solid fa-caret-down"></i>
+                                        <!-- <div class="drop_down_container for-all-drop-down">
+                                            <ul class="drop_down">
+                                                <li><a href="#">Mobile </a></li>
+                                                <li><a href="#">HeadPhones</a></li>
+                                                <li><a href="#">footwear</a></li>
+    
+                                            </ul>
+                                        </div> -->
+                                    </p>
+                                    <input type="text" id="myInput" placeholder="Search for names..">
+                                    <p><i class="fa-solid fa-magnifying-glass" onclick="handleSearchPageQuery()"></i></p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 padding-left-right">
+                        <div class="login" style="font-weight: bold; opacity: 70%;">
+                            <ul id="lim">
+                                <li>
+                                    <i class="fa-solid fa-user"></i>
+                                    <p id="para-login"><a class="login-in-main-page" href="./login/login.html"
+                                            id=" ">Login</a></p>
+                                </li>
+                                <li><i class="fa-solid fa-square-pen"></i>
+                                    <p><a href="./login/login.html">Register</a></p>
+                                </li>
+                                <li onclick="wishlistIcon()"><i class="fa-solid fa-heart"></i>
+                                    <p>Wishlist</p>
+                                </li>
+                                <li><i class="fa-solid fa-code-compare"></i>
+                                    <p>Compare</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 padding-left-right" style="padding-bottom: 10px;">
+                        <div class="login o-items">
+                            <ul>
+                                <li style="font-weight: bold; opacity: 70%; font-size: 17px;"><span
+                                        class="itms-num-at-0"></span> items(s)- $<span class="total-price"></span></li>
+                                <li class="cartItems"><i class="fa-solid fa-cart-shopping" onclick="cartItems()">
+                                    </i>
+                                    <div class="cartItems-child"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <!-- ****************** -->
+                <div class="mobile-row-jp">
+                    <div class="mobile-jurnal">
+                        <a href="./index.html">JURNAL</a>
+                    </div>
+                    <div class="search-mobile">
+                        <ul>
+                            <li> <input type="text" class="myInput1" id="myInput1" placeholder="Search for names.."> </li>
+                            <li><i class="fa-solid fa-magnifying-glass" id="myInput1-mobile" onclick="comeSearch()" on></i></li>
+                            <li><i class="fa-solid fa-bars"></i></li>
+                            <li><i class="fa-solid fa-cart-shopping"
+                                    onclick="cartItems()"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ********************************** ALL DEPARTMENTS******************** -->
+        <section class="blue-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 all-dev bg-yellow">
+                        <ul class="sale-p">
+                            <li>
+                                <i class="fa-solid fa-bars"></i>
+                            </li>
+                            <li>
+                                ALL DEPARTMENTS
+                            </li>
+                            <div class="sale">Sale</div>
+                        </ul>
+                    </div>
+                    <div class="col-md-7 all-dev multi">
+                        <ul>
+                            <li>MULTILEVEL</li>
+                            <li class="new-p"> MEGAMENU
+                                <div class="new">new</div>
+
+                            </li>
+                            <li> FULLWIDTH</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 all-dev blog">
+                        <ul>
+                            <li><i class="fa-solid fa-phone"></i> 1890-2784929</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-1 all-dev all-dev-2 bg-yellow">
+                        <ul>
+                            <li><i class="fa-solid fa-comment-dots"></i> BLOG</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- ************in cart/wishlist/search************** -->
+    <section class="cart-n-wishlist-header">
+        <div class="container padding-left-right cart-n-wishlist-header-c">
+            <div class="cart-n-wishlist-header-c1">
+                <div class="cartdivP">
+                    <p></p>
+                </div>
+                <div class="cart-n-wishlist-header-c2" style="display: flex; word-spacing: 10px;">
+                    <p><a><i style="padding-top: 8px; " class="fa-solid fa-cart-shopping" onclick="cartItems()"></i></a>
+                    </p>
+                    <p><a href="./index.html"><i class="fa-sharp fa-solid fa-house"></i></a></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ****************search-nav**************88 -->
+    <section class="search-nav">
+        <div class="container search-nav-con">
+            <div class="search-nav-div">
+                <i class="fa-solid fa-house"></i><i class="fa-solid fa-arrow-right"></i> Search
+            </div>
+        </div>
+    </section>
+    <!-- ****************seach-sec02*************88 -->
+    <section class="seach-sec02">
+        <div class="container seach-sec02-con">
+            <div>
+                <h1>Search-<span id="search-item-name"></span></h1>
+                <div class="line-p-seach-sec02-con ">
+                    <div class="line-c--seach-sec02-con "></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- *****************search-sec03*************** -->
+    <section class="search-sec03">
+        <div class="container search-sec03-con">
+            <div class="search-sec03-div">
+                <div class="search-sec03-div-1st-child">
+                    <div class="search-sec03-div-1c">
+                        <h1>Filter
+                            <div class="line-p-search-sec03-div-1c">
+                                <div class="line-c"></div>
+                            </div>
+                        </h1>
+                        <p><button><i class="fa-regular fa-circle-xmark"></i> Clear</button></p>
+                    </div>
+                    <div class="search-sec03-div-1c-price">
+
+                        <div class="header-acordian header-acordian-1">
+                            <p>PRICE</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus "></i></button>
+                        </div>
+                        <div class="panel">
+                            
+                        </div>
+                    </div>
+                    <div class="search-sec03-div-1c-availability">
+                        <div class="header-acordian header-acordian-2">
+                            <p>AVAILABILITY</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class="  panel-2">
+                            <p><input type="checkbox"> In Stock</p>
+                            <p><input type="checkbox"> Out of Stock</p>
+
+                        </div>
+                    </div>
+                     <div class="search-sec03-div-1c-subcategories">
+                        <div class="header-acordian header-acordian-2">
+                            <p>SUBCATEGORIES</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-3">
+                          <img src="./asset/14.jpg" alt=""> <span>Electronics</span>
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-brands">
+                        <div class="header-acordian header-acordian-3">
+                            <p>BRANDS</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-4">
+                  <div class=" plnel-4-brand">       
+                    <div> <img src="./asset/510.jpg" alt=""></div>
+                  <div> <img src="./asset/53.jpeg" alt=""></div>
+                 <div> <img src="./asset/54.jpg" alt=""></div>  
+            </div>                      
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-select">
+                        <div class="header-acordian header-acordian-4">
+                            <p>SELECT</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-5">
+                                    
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-radio">
+                        <div class="header-acordian header-acordian-5">
+                            <p>RADIO</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-6">
+                                    
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-color">
+                        <div class="header-acordian header-acordian-3">
+                            <p>COLOR</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-7">
+                                  <div class="plnel-7-child">
+                                             <div style="background-color: aquamarine;"></div>
+                                             <div style="background-color: yellow;"></div>
+                                             <div style="background-color: green;"></div>
+                                             <div style="background-color: red;"></div>
+
+                                  </div>
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-clookspeed">
+                        <div class="header-acordian header-acordian-3">
+                            <p>CLOOKSPPED</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-8">
+                                    
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-test1">
+                        <div class="header-acordian header-acordian-3">
+                            <p>TEST 1</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-9">
+                                    
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-cores">
+                        <div class="header-acordian header-acordian-3">
+                            <p>NO OF CORES</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-10">
+                                    
+                        </div>
+                     </div>
+                     <div class="search-sec03-div-1c-style">
+                        <div class="header-acordian header-acordian-3">
+                            <p>STYLE</p>
+                            <button class="accordion"><i class="fa-solid fa-plus plus-minus"></i></button>
+                        </div>
+                        <div class=" panel-2 plnel-11">
+                                    
+                        </div>
+                     </div>
+         
+                </div>
+                <div class="search-sec03-div-2st-child">
+                <div class="search-sec03-2c-s-and-c"> 
+                  <div class="search-sec03-2c-search">
+                    <input type="search" placeholder="" id="input-search-item">
+                  </div>
+                  <div class="search-sec03-2c-catagories">
+                    <select name="catagories" id="all-catagories">
+                        <option value="">All Categories</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Beauty">Beauty</option>
+                        <option value="Fashion">Fashion</option>
+                    </select>
+                  </div>
+                </div>
+               <div class="search-sec03-2c-checkbox">
+                <p><input type="checkbox">Search in subcategories</p>
+                <p><input type="checkbox">Search in product descriptions</p>
+               </div>
+               <div class="search-sec03-2c-search-blue-bar">
+                  <button>
+                     SEARCH
+                  </button>
+               </div>
+               <div class="search-sec03-2c-product-meeting">
+              <h1>Products meeting the search criteria</h1>
+              <div style="padding-top:8px;" class="line-p main-09-c1-line-p ">
+                <div style="width: 100px;" class="line-c main-09-c1-line-c"></div>
+            </div>
+               </div>
+               <div class="search-sec03-2c-grid-list">
+                 <div class="grid-list">
+                     <p>  <i class="fa-solid fa-grid" onclick="onGrid()"></i>   <i class="fa-solid fa-list" onclick="onList()"></i></p>
+                     <p> <i class="fa-solid fa-code-compare"></i><span>Product Compare</span> </p>
+                    </div>
+                 <div class="sort-show">
+                     <p>
+                        <label><span>Sort by.</span>
+                            <select class="sort-by" name="sort" id="">
+                                <option value="">Defaults</option>
+                                <option value="low">Low-high</option>
+                                <option value="high">High-low</option>
+                            </select>
+                        </label>
+                        
+                    </p>
+                     <p>  <label> <span>Show.</span>
+                        <select class="show" name="Show" id="">
+                            <option value="">12</option>
+                            <option value="low">Low-high</option>
+                            <option value="high">High-low</option>
+                        </select>
+                    </label></p>
+                 </div>
+                </div>
+                <div class="serach-sec03-item">
+                    <div id="show-result-div-sec" class="search-item-p">
+                        <!-- <div class="item02-list"> 
+                            <div class="item02-list-image">
+                                <img class="labels-1" src="/asset/21.jpg">
+                                <div class="lebels-c1">
+                                    CUSTOM LEBELS
+                                </div>
+                                <div class="lebels-c2">
+                                    -70%
+                                </div>
+                                <div class="lebels-c2 lebels-c3">
+                                    HOT
+                                </div>
+                            </div>
+                           
+                           <div class="item02-list-details">
+                            <div class="item02-c1">
+                                <p>Brand:<u style="color:blue">Eriksson</u></p>
+                                <p style="padding-left: 20px;">Model: 2098</p>
+                            </div>
+
+                            <div class="item02-c2">
+                                <h1>HEADPHONES</h1>
+                              
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20</p>
+                                <p class="price-details">
+                                     <span style="font-size: 30px; color: brown; font-weight: bold;">$999.00</span> <s style="font-size: 25px;">$3,299.00</s> <br><span style="font-weight: 900; opacity: 80%; font-size: 20px;">Ex Tax:$70.61</span></p>
+
+                            </div>
+                            <div class="item02-c3">
+                                <div><input type="number" value="1">
+                                    <input type="button" value="ADD TO CART">
+                                    <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                                </div>
+                                <div style="padding-left: 20px;"><span><i class="fa-regular fa-heart"></i> <i
+                                            class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                            </div>
+                            <div class="item02-c4">
+                                <p><i class="fa-solid fa-sack-dollar"></i>
+                                    Buy Now </p>
+                                <p style="padding-left: 30px;"><i class="fa-regular fa-circle-question"></i> Question</p>
+                            </div>
+                           </div>
+                        </div> -->
+
+
+
+
+
+                        <!-- <div class="item02"> <img class="labels-1" src="/asset/21.jpg">
+                            <div class="lebels-c1">
+                                CUSTOM LEBELS
+                            </div>
+                            <div class="lebels-c2">
+                                -70%
+                            </div>
+                            <div class="lebels-c2 lebels-c3">
+                                HOT
+                            </div>
+                            <div class="item02-c1">
+                                <p><u>Eriksson</u></p>
+                                <p>model 2098</p>
+                            </div>
+                            <div class="item02-c2">
+                                <h1>HEADPHONES</h1>
+                                <p>$999.00 <s>$3,299.00</s></p>
+                            </div>
+                            <div class="item02-c3">
+                                <div><input type="number" value="1">
+                                    <input type="button" value="ADD TO CART">
+                                    <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                                </div>
+                                <div><span><i class="fa-regular fa-heart"></i> <i
+                                            class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                            </div>
+                            <div class="item02-c4">
+                                <p><i class="fa-solid fa-sack-dollar"></i>
+                                    Buy Now </p>
+                                <p><i class="fa-regular fa-circle-question"></i> Question</p>
+                            </div>
+                        </div>
+                        <div class="item02"> <img class="labels-1" src="/asset/21.jpg">
+                            <div class="lebels-c1">
+                                CUSTOM LEBELS
+                            </div>
+                            <div class="lebels-c2">
+                                -70%
+                            </div>
+                            <div class="lebels-c2 lebels-c3">
+                                HOT
+                            </div>
+                            <div class="item02-c1">
+                                <p><u>Eriksson</u></p>
+                                <p>model 2098</p>
+                            </div>
+                            <div class="item02-c2">
+                                <h1>HEADPHONES</h1>
+                                <p>$999.00 <s>$3,299.00</s></p>
+                            </div>
+                            <div class="item02-c3">
+                                <div><input type="number" value="1">
+                                    <input type="button" value="ADD TO CART">
+                                    <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                                </div>
+                                <div><span><i class="fa-regular fa-heart"></i> <i
+                                            class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                            </div>
+                            <div class="item02-c4">
+                                <p><i class="fa-solid fa-sack-dollar"></i>
+                                    Buy Now </p>
+                                <p><i class="fa-regular fa-circle-question"></i> Question</p>
+                            </div>
+                        </div>
+                        <div class="item02"> <img class="labels-1" src="/asset/21.jpg">
+                            <div class="lebels-c1">
+                                CUSTOM LEBELS
+                            </div>
+                            <div class="lebels-c2">
+                                -70%
+                            </div>
+                            <div class="lebels-c2 lebels-c3">
+                                HOT
+                            </div>
+                            <div class="item02-c1">
+                                <p><u>Eriksson</u></p>
+                                <p>model 2098</p>
+                            </div>
+                            <div class="item02-c2">
+                                <h1>HEADPHONES</h1>
+                                <p>$999.00 <s>$3,299.00</s></p>
+                            </div>
+                            <div class="item02-c3">
+                                <div><input type="number" value="1">
+                                    <input type="button" value="ADD TO CART">
+                                    <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                                </div>
+                                <div><span><i class="fa-regular fa-heart"></i> <i
+                                            class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                            </div>
+                            <div class="item02-c4">
+                                <p><i class="fa-solid fa-sack-dollar"></i>
+                                    Buy Now </p>
+                                <p><i class="fa-regular fa-circle-question"></i> Question</p>
+                            </div>
+                        </div>
+                        <div class="item02"> <img class="labels-1" src="/asset/21.jpg">
+                            <div class="lebels-c1">
+                                CUSTOM LEBELS
+                            </div>
+                            <div class="lebels-c2">
+                                -70%
+                            </div>
+                            <div class="lebels-c2 lebels-c3">
+                                HOT
+                            </div>
+                            <div class="item02-c1">
+                                <p><u>Eriksson</u></p>
+                                <p>model 2098</p>
+                            </div>
+                            <div class="item02-c2">
+                                <h1>HEADPHONES</h1>
+                                <p>$999.00 <s>$3,299.00</s></p>
+                            </div>
+                            <div class="item02-c3">
+                                <div><input type="number" value="1">
+                                    <input type="button" value="ADD TO CART">
+                                    <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                                </div>
+                                <div><span><i class="fa-regular fa-heart"></i> <i
+                                            class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                            </div>
+                            <div class="item02-c4">
+                                <p><i class="fa-solid fa-sack-dollar"></i>
+                                    Buy Now </p>
+                                <p><i class="fa-regular fa-circle-question"></i> Question</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div id="show-result-div-sec-list" class="search-item-list-p">
+                            
+                     </div>
+                     <div class="pegination-div-main" id="pegination-div-main-2">
+                </div>
+                </div>
+                
+            </div>
+    </section>
+    <!-- ****************************main09********************************* -->
+    <section class="main-09">
+        <div class="container main-09-con">
+            <div class="main2-01 main-09-c1">
+                <h1>
+                    MOST VIEWED
+                </h1>
+            </div>
+            <div class="line-p main-09-c1-line-p ">
+                <div class="line-c main-09-c1-line-c"></div>
+            </div>
+
+            <div id="mostView">
+                <div class="owl-carousel owl-theme" id="owlnine">
+
+                     <div class="item-09">
+                    <div class="item-c-09">
+                        <div class="item-c1-09"><img src="./asset/13.jpg"></div>
+                        <div class="item-c2-09">
+                             <div>
+                            <h1> <strong>JACKET</strong><br>&100.00</h1>
+                            
+                            </div>
+                            <p>
+                          
+                                <i class="fa-solid fa-cart-shopping fa-cart-shopping-item09 shopping-cart-at630"></i> <i
+                                    class="fa-regular  fa-cart-heart-item09 fa-heart"></i> <i
+                                    class="fa-sharp fa-solid fa-cart-arrow-item09 fa-arrow-right-arrow-left"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- <div class="item-09">
+                        <div class="item-c-09">
+                            <div class="item-c1-09"><img src="/asset/22.jpg"></div>
+                            <div class="item-c2-09">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>$ 99.00</p>
+                                <p>
+                                    <i class="fa-solid fa-cart-shopping shopping-cart-at630"></i> <i
+                                        class="fa-regular fa-heart"></i> <i
+                                        class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-09">
+                        <div class="item-c-09">
+                            <div class="item-c1-09"><img src="/asset/22.jpg"></div>
+                            <div class="item-c2-09">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>$ 99.00</p>
+                                <p>
+                                    <i class="fa-solid fa-cart-shopping shopping-cart-at630"></i> <i
+                                        class="fa-regular fa-heart"></i> <i
+                                        class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-09">
+                        <div class="item-c-09">
+                            <div class="item-c1-09"><img src="/asset/22.jpg"></div>
+                            <div class="item-c2-09">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>$ 99.00</p>
+                                <p>
+                                    <i class="fa-solid fa-cart-shopping shopping-cart-at630"></i> <i
+                                        class="fa-regular fa-heart"></i> <i
+                                        class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-09">
+                        <div class="item-c-09">
+                            <div class="item-c1-09"><img src="/asset/22.jpg"></div>
+                            <div class="item-c2-09">
+                                <h1>Lorem, ipsum dolor.</h1>
+                                <p>$ 99.00</p>
+                                <p>
+                                    <i class="fa-solid fa-cart-shopping shopping-cart-at630"></i> <i
+                                        class="fa-regular fa-heart"></i> <i
+                                        class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="main-10">
+        <div class="container">
+            <div class="social-10">
+                <p><i class="fa-brands fa-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+                <p><i class="fa-brands fa-twitter"></i></p>
+                <p><i class="fa-brands fa-youtube"></i></p>
+                <p><i class="fa-brands fa-linkedin"></i></p>
+                <p><i class="fa-brands fa-skype"></i></p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- *************footer***************** -->
+    <section class="footer_sec">
+        <div class="container">
+            <footer class="footer-sec-main">
+
+                <div class="footer-sec-main-1">
+                    <h2>About Us</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Custom Links</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h2>Customer Service</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Brands</a></li>
+                        <li><a href="#">Unlimited Links</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div>
+                    <h2>My Account</h2>
+                    <hr>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Affiliats</a></li>
+                        <li><a href="#">Newslatter</a></li>
+                        <li><a href="#">Gifts Certificates</a></li>
+                    </ul>
+                </div>
+
+                <div class="foot-nav">
+                    <h2>Newsletter</h2>
+                    <hr>
+                    <p class="paragraph">Stay up to date with news and promotions by signing up for promotions</p>
+
+                    <div class="foot-input-con">
+                        <input type="email" placeholder="Your email"> </input>
+                        <button class="button-send"><i class="fa-solid fa-envelope"></i>send</button>
+                    </div>
+
+
+                    <p> <input type="checkbox" name="" id=""> I have read and agree to the <a class="Privacy"
+                            href="#">Privacy
+                            Policy</a></p>
+                </div>
+            </footer>
+
+        </div>
+
+        <!-- ***************************copyright*************** -->
+
+        <section class="copyright_sec">
+            <div class="container">
+                <div class="copyright-div">
+                    <p> Copyright © 2023 developed by <a href="mailto:chikuborah@gmail.com"> Chiku Borah </a></p>
+                    <div class="up-arrowand-img-container">
+                        <div><img src="./asset/paymentcard.png" alt=""></div>
+                        <div style="position: fixed;"><a href="#home-arrow-up"><i class="fa-solid fa-arrow-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var header1 = document.getElementsByClassName("header-acordian");
+
+        for (let i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                
+                var panel = this.parentElement.nextElementSibling;
+                var header1 =  this.parentElement;
+
+                if (panel.style.display === "block") {
+                    header1.style.color="black"
+                    panel.style.display = "none";
+                    acc[i].innerHTML = `<i class="fa-solid fa-plus plus-minus "></i>`
+                } else {
+                    console.log(i)
+                    header1.style.color="blue";
+                    panel.style.display = "block";
+                    acc[i].innerHTML = `<i class="fa-solid fa-minus plus-minus "></i>`
+
+                }
+
+            });
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./script.js" type="text/javascript"></script>
+        <script src="./login/loginJS.js" type="text/javascript"></script>
+        <script src="./index.js" type="text/javascript"></script>
+     <!-- *************** -->
+        <script>
+            function getParameterByName( url = window.location.search) {
+     
+        console.log(url)
+        const urlParam = new URLSearchParams(url)
+        return urlParam.get("search")
+    }
+    const inputData = getParameterByName()
+    search(this,inputData);
+         </script>
+         <!-- **************** -->
+</body>
+
+</html>

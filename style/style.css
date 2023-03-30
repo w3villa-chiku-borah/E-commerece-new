@@ -364,7 +364,7 @@ padding-right: 4px;
     display: none;
   }
 }
-
+/* *******mobile-search*********** */
 .mobile-jurnal {
   font-size: 40px;
   font-weight: bolder;
@@ -382,6 +382,13 @@ padding-right: 4px;
   /* border: none; */
   border-radius: 5px;
   outline: none;
+}
+@media screen and (max-width:388px){
+  .myInput1 {
+    top: 127%;
+    /* left: -173px; */
+    right: 29%;
+}
 }
 .show-the-search{
   display: block;
@@ -1046,8 +1053,10 @@ line-height: 48px;
 
 .item02 {
   /* margin-left: 5px;
+  mar
   margin-right: 5px; */
   position: relative;
+  margin-top: 10px;
   height: 560px;
   margin-left: 5px;
   border-radius: 5px;

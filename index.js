@@ -22,13 +22,13 @@ const showFashion = (arrayOfData) => {
               ${element.c_lebels ? ` <div class="lebels-c1 lebels-04-main-1">
                     2-3 days
                 </div>` : ``}`;
-                if (element.off.length > 0) {
-                    html += `<div class="lebels-c2">
+        if (element.off.length > 0) {
+            html += `<div class="lebels-c2">
                    ${element.off}
                 </div>`
-                }
+        }
 
-               html += `${element.hot ? ` <div class="lebels-c2 lebels-c3 lebels-04-main-2">
+        html += `${element.hot ? ` <div class="lebels-c2 lebels-c3 lebels-04-main-2">
                     HOT
                 </div>` : ``}
 
@@ -66,7 +66,7 @@ const showFashion = (arrayOfData) => {
         loop: true,
         margin: 0,
         nav: false,
-        autoplay:true,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1
@@ -86,7 +86,7 @@ const showFashion = (arrayOfData) => {
             1460: {
                 items: 4
             }
-            
+
         }
 
     });
@@ -399,63 +399,152 @@ const showBuy = (arrayOfData) => {
 }
 readData3("TOP_CATEGORIES");
 
-let prods=0 ;
-async function search(elem){
+let prods = 0;
+
+function getSearchUrl(){
     let searchText = document.getElementById("myInput");
-    let searchText1= document.getElementById("myInput1");
+    let searchText1 = document.getElementById("myInput1");
     let items;
-    if(elem== "inComputer"){
-   items= searchText.value;
-    }
-    else{
-   items= searchText1.value;
+    // if (elem == "inComputer") {
+    //     items = searchText.value;
+    // }
+    // else {
+    //     items = searchText1.value;
+        
+    // }
+    location.href=(`/searchpage.html?search=${searchText.value}`)
+    location.href=(`/searchpage.html?search=${searchText1.value}`)
+}
+async function search(elem,inputData) {
 
+     let searchItemName = document.getElementById("search-item-name");
+     let inputItemName = document.getElementById("input-search-item");
+    // let searchText1 = document.getElementById("myInput1");
+    let searchText = inputData;
+    let searchText1 = inputData;
+    let items;
+    if (elem == "inComputer") {
+        items = searchText;
     }
+    else {
+        items = searchText1;
+        
+    }
+    searchItemName.innerHTML=items;
+    inputItemName.value=items;
     let itemsInlow = items.toLowerCase();
-    let showResult= document.getElementById("show-result-div-sec");
+   
+    let showResult = document.getElementById("show-result-div-sec");
+    let showResultList = document.getElementById("show-result-div-sec-list");
     // let main= document.getElementsByTagName()
-    let main= document.getElementById("main-section")
+    let main = document.getElementById("main-section")
     let html = ``;
-     prods = await searchInItems(itemsInlow);
-     let pagitantionDiv =document.getElementById("pegination-div-main");
-     let pegiArray=[];
-     let pegiArrayMain=[];
-     let n = prods.length;
-     
-    if(items!=""){
-        if(prods.length>0 ){
-        console.log("hmo")
-        for(let i =0;i<prods.length;i++){
-        html+= ` 
-        <div class="featured-products-card show-result-div-sec" >
-        <div class="image-container">
-            <img loading="lazy" src="${prods[i].img}" alt="">
+    let htmlList = ``;
+    let prods= await searchInItems(itemsInlow);
+   
+    // location.href=("searchpage.html")
+    let pagitantionDiv = document.getElementById("pegination-div-main-2");
+    let pegiArray = [];
+    let pegiArrayMain = [];
+    let n = prods.length;
+   localStorage
+    if (items != "") {
+        if (prods.length > 0) {
+        
+            for (let i = 0; i < prods.length; i++) {
+                console.log(i)
+                html += ` <div class="item02" id="item02-id"> <img class="labels-1" src="${prods[i].img}">
+    <div class="lebels-c1">
+        CUSTOM LEBELS
+    </div>
+    <div class="lebels-c2">
+        -70%
+    </div>
+    <div class="lebels-c2 lebels-c3">
+        HOT
+    </div>
+    <div class="item02-c1">
+        <p><u>Eriksson</u></p>
+        <p>model 2098</p>
+    </div>
+    <div class="item02-c2">
+        <h1>${prods[i].name}</h1>
+        <p>$${prods[i].price} <s>$3,299.00</s></p>
+    </div>
+    <div class="item02-c3">
+        <div><input type="number" value="1">
+            <input type="button" onclick="addToCart(${prods[i].id})"  value="ADD TO CART">
+            <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
         </div>
+        <div><span><i class="fa-regular fa-heart" onclick="wishlistItems(${prods[i].id})"></i> <i
+                    class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+    </div>
+    <div class="item02-c4">
+        <p><i class="fa-solid fa-sack-dollar"></i>
+            Buy Now </p>
+        <p><i class="fa-regular fa-circle-question"></i> Question</p>
+    </div>
+</div>`
 
-        <div class="cart-container cart-container-show">
-            <h2>${prods[i].name}</h2>
-            <p class="price">$${prods[i].price} </p>
-            <hr>
-            <div class="add-to-cart-container show-result-cart">
-                <div>
-
-                    <input type="button" onclick="addToCart(${prods[i].id})" value="ADD TO CART">
-                </div>
-                <div> 
+                
             
-                    <i style="font-weight:100" class="fa-solid fa-heart"onclick="wishlistItems(${prods[i].id})""></i>
-                 
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                </div>
-            </div>
 
+            }
+            showResult.innerHTML = html;
+// *****************
 
-        </div>
-    </div>`
+ for(let i=0;i<prods.length;i++){
+    htmlList+= `
+    <div class="item02-list" id="item02-list"> 
+                            <div class="item02-list-image">
+                                <img class="labels-1" src="${prods[i].img}">
+                                <div class="lebels-c1">
+                                    CUSTOM LEBELS
+                                </div>
+                                <div class="lebels-c2">
+                                    -70%
+                                </div>
+                                <div class="lebels-c2 lebels-c3">
+                                    HOT
+                                </div>
+                            </div>
+                           
+                           <div class="item02-list-details">
+                            <div class="item02-c1">
+                                <p>Brand:<u style="color:blue">Eriksson</u></p>
+                                <p style="padding-left: 20px;">Model: 2098</p>
+                            </div>
 
-    showResult.innerHTML=html;
+                            <div class="item02-c2">
+                                <h1>${prods[i].name}</h1>
+                                <!--  -->
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20</p>
+                                <p class="price-details">
+                                     <span style="font-size: 30px; color: brown; font-weight: bold;">${prods[i].price}</span> <s style="font-size: 25px;">$3,299.00</s> <br><span style="font-weight: 900; opacity: 80%; font-size: 20px;">Ex Tax:$70.61</span></p>
 
-pagitantionDiv.innerHTML =`
+                            </div>
+                            <div class="item02-c3">
+                                <div><input type="number" value="1">
+                                    <input type="button" onclick="addToCart(${prods[i].id})" value="ADD TO CART" >
+                                    <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                                </div>
+                                <div style="padding-left: 20px;"><span><i class="fa-regular fa-heart" onclick="wishlistItems(${prods[i].id})"></i> <i
+                                            class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                            </div>
+                            <div class="item02-c4">
+                                <p><i class="fa-solid fa-sack-dollar"></i>
+                                    Buy Now </p>
+                                <p style="padding-left: 30px;"><i class="fa-regular fa-circle-question"></i> Question</p>
+                            </div>
+                           </div>
+                        </div>
+    `
+ }
+
+ showResultList.innerHTML = htmlList;
+// ************
+console.log(pagitantionDiv)
+                pagitantionDiv.innerHTML = `
 <div class="pegination-div">
         <ul>
           <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
@@ -467,83 +556,96 @@ pagitantionDiv.innerHTML =`
         </ul>
     </div>
 `
-console.log(pagitantionDiv)
-main.style.display = "none";
-pagitantionDiv.classList.add("show-pegination");
-
-
-    if(i>=10){
-        break;
-    }
-      }
+        }
+        else{
+            html = `<div> No Result is Found on name ${items} </div>`  
+        }
+        
     }
     else {
         html = `<div> No Result is Found </div>`
-        showResult.innerHTML=html;
-    main.style.display = "none"
+        showResult.innerHTML = html;
+        main.style.display = "none"
     }
-    
+
+    showResultList.classList.add("show-list-result")
+
+    console.log(prods);
+   
 }
 
-//    showResult.innerHTML=html;
-//     main.style.display = "none"
-    console.log(prods)
 
- }
+function onGrid(){
+    let showResult = document.getElementById("show-result-div-sec");
+    let showResultList = document.getElementById("show-result-div-sec-list");
+    showResult.classList.remove("show-list-none")
+    showResultList.classList.add("show-list-none")
+}
+function onList(){
+    let showResult = document.getElementById("show-result-div-sec");
+    let showResultList = document.getElementById("show-result-div-sec-list");
+    
+        showResultList.classList.add("show-list-block");
+        showResultList.classList.remove("show-list-none");
+    
 
- async function searchInItems(elem){
+    showResult.classList.add("show-list-none");
+}
+
+
+async function searchInItems(elem) {
     const response = await fetch('./data/item.json');
-    const obj= await response.json();
+    const obj = await response.json();
 
-  let products = Object.values(obj).map((category) => {
-    return Object.values(category);
-})
-     itemsFound =[]; 
+    let products = Object.values(obj).map((category) => {
+        return Object.values(category);
+    })
+    itemsFound = [];
     //  console.log(products);
     products = products.flat().flat();
-   
-    for(let i =0;i< products.length;i++){
+
+    for (let i = 0; i < products.length; i++) {
         let itemName = products[i].name;
         itemName = itemName.toLowerCase();
-       if(itemName.includes(elem)){
-        itemsFound.push(products[i]);
-       }
+        if (itemName.includes(elem)) {
+            itemsFound.push(products[i]);
+        }
     }
     return itemsFound;
-    
+
 }
-async function seeAllProduct(){
-    let showResult= document.getElementById("show-result-div-sec");
-    let main= document.getElementById("main-section")
+async function seeAllProduct() {
+    let showResult = document.getElementById("show-result-div-sec");
+    let main = document.getElementById("main-section")
     let showSearchItemSec = document.getElementById("show-search-items");
     const response = await fetch('./data/item.json');
-    const obj= await response.json();
-    let pagitantionDiv =document.getElementById("pegination-div-main");
-     let pegiArray=[];
-     let pegiArrayMain=[];
+    const obj = await response.json();
+    let pagitantionDiv = document.getElementById("pegination-div-main");
+    let pegiArray = [];
+    let pegiArrayMain = [];
 
-  let products = Object.values(obj).map((category) => {
-    return Object.values(category);
-})
-let html = ``;
+    let products = Object.values(obj).map((category) => {
+        return Object.values(category);
+    })
+    let html = ``;
 
-products = products.flat().flat();
-// pegiArrayMain = products.slice(0,9)
-let chunk = 10;
-for(let i =0;i<products.length;i+=chunk){
-if(products.length<10){
-    pegiArrayMain=products;
-}
-else{
-    pegiArrayMain.push(products.slice(i,chunk+i));
-}
-}
- 
-pegiArray.push(pegiArrayMain[0]);
-pegiArray=pegiArray.flat();
+    products = products.flat().flat();
+    // pegiArrayMain = products.slice(0,9)
+    let chunk = 10;
+    for (let i = 0; i < products.length; i += chunk) {
+        if (products.length < 10) {
+            pegiArrayMain = products;
+        }
+        else {
+            pegiArrayMain.push(products.slice(i, chunk + i));
+        }
+    }
 
-pegiArray.forEach((element,indx) =>{
-    html+= ` 
+    pegiArray.push(pegiArrayMain[0]);
+    pegiArray = pegiArray.flat();
+
+    pegiArray.forEach((element, indx) => {
+        html += ` 
     <div class="featured-products-card show-result-div-sec" >
     <div class="image-container">
         <img loading="lazy" src="${element.img}" alt="">
@@ -570,63 +672,64 @@ pegiArray.forEach((element,indx) =>{
     </div>
 
 </div>`
- 
-})
-showResult.innerHTML=html;
-let num = products.length/10;
-num=Math.ceil(num)
-console.log(Math.ceil(num));
-for(i=1;i<=num;i++){
-pagitantionDiv.innerHTML +=`
+
+    })
+    showResult.innerHTML = html;
+    let num = products.length / 10;
+    num = Math.ceil(num)
+    console.log(Math.ceil(num));
+    for (i = 1; i <= num; i++) {
+        pagitantionDiv.innerHTML += `
 <div class="pegination-div">
         <ul>
           <li><a href="#" onclick="pegination(this)">${i}</a></li>
         </ul>
     </div>
 `
-}
-main.style.display = "none";
+    }
+    main.style.display = "none";
 
-pagitantionDiv.classList.add("show-pegination");
+    pagitantionDiv.classList.add("show-pegination");
 }
- async function pegination(elem){
+async function pegination(elem) {
     console.log("hellooo..")
-    let showResult= document.getElementById("show-result-div-sec");
-    let main= document.getElementById("main-section")
+    let showResult = document.getElementById("show-result-div-sec");
+    let main = document.getElementById("main-section")
     let showSearchItemSec = document.getElementById("show-search-items");
     const response = await fetch('./data/item.json');
-    const obj= await response.json();
-    let pagitantionDiv =document.getElementById("pegination-div-main");
-     let pegiArray=[];
-     let pegiArrayMain=[];
+    const obj = await response.json();
+    let pagitantionDiv = document.getElementById("pegination-div-main");
+    let pegiArray = [];
+    let pegiArrayMain = [];
 
-  let products = Object.values(obj).map((category) => {
-    return Object.values(category);
-})
-let html = ``;
+    let products = Object.values(obj).map((category) => {
+        return Object.values(category);
+    })
+    let html = ``;
 
-products = products.flat().flat();
-// pegiArrayMain = products.slice(0,9)
-let chunk = 10;
-for(let i =0;i<products.length;i+=chunk){
-if(products.length<10){
-    pegiArrayMain=products;
-}
-else{
-    pegiArrayMain.push(products.slice(i,chunk+i));
-}
-}
-let value=Number(elem.innerText);
-let value2=value;
-value=value-1
-let len=pegiArrayMain.length;
-console.log(len)
-pegiArray.push(pegiArrayMain[value]);
-pegiArray=pegiArray.flat();
-console.log(pegiArray)
+    products = products.flat().flat();
+    // pegiArrayMain = products.slice(0,9)
+    let chunk = 10;
+    for (let i = 0; i < products.length; i += chunk) {
+        if (products.length < 10) {
+            pegiArrayMain = products;
+        }
+        else {
+            pegiArrayMain.push(products.slice(i, chunk + i));
+        }
+    }
 
-pegiArray.forEach((element,indx) =>{
-    html+= ` 
+    let value = Number(elem.innerText);
+    let value2 = value;
+    value = value - 1
+    let len = pegiArrayMain.length;
+    console.log(len)
+    pegiArray.push(pegiArrayMain[value]);
+    pegiArray = pegiArray.flat();
+    console.log(pegiArray)
+
+    pegiArray.forEach((element, indx) => {
+        html += ` 
     <div class="featured-products-card show-result-div-sec" >
     <div class="image-container">
         <img loading="lazy" src="${element.img}" alt="">
@@ -654,57 +757,61 @@ pegiArray.forEach((element,indx) =>{
 
 </div>`
 
- 
-})
-showResult.innerHTML=html;
-main.style.display = "none";
-pagitantionDiv.classList.add("show-pegination");
+
+    })
+    showResult.innerHTML = html;
+    main.style.display = "none";
+    pagitantionDiv.classList.add("show-pegination");
 }
 
- async function peginationInSearch(elem){
-    let searchText = document.getElementById("myInput");
-    let searchText1 = document.getElementById("myInput1");
+async function peginationInSearch(elem) {
+    let searchText = inputData;
+    let searchText1 = inputData;
     let items;
-    if(elem== "inComputer"){
-   items= searchText.value;
+    if (elem == "inComputer") {
+        items = searchText;
     }
-    else{
-   items= searchText1.value;
+    else {
+        items = searchText1;
+        
+    }
+ 
 
-    }
 
     let itemsInlow = items.toLowerCase();
-    let showResult= document.getElementById("show-result-div-sec");
+    let showResult = document.getElementById("show-result-div-sec");
     // let main= document.getElementsByTagName()
-    let main= document.getElementById("main-section")
+    let main = document.getElementById("main-section")
     let html = ``;
     products = await searchInItems(itemsInlow);
-     let pagitantionDiv =document.getElementById("pegination-div-main");
-     let pegiArray=[];
-     let pegiArrayMain=[];
-     let pegiArrayMain2=[];
-     let n = prods.length;
-     let chunk =10;
-     for(let i =0;i< products.length;i+=chunk){
-        if(products.length<10){
-            pegiArrayMain2=products;
+    console.log(products)
+    let pagitantionDiv = document.getElementById("pegination-div-main-2");
+    let pegiArray = [];
+    let pegiArrayMain = [];
+    let pegiArrayMain2 = [];
+    let n = prods.length;
+    let chunk = 10;
+    for (let i = 0; i < products.length; i += chunk) {
+        if (products.length < 10) {
+
+            pegiArrayMain = products;
         }
-        else{
-            pegiArrayMain.push(products.slice(i,chunk+i));
+        else {
+            pegiArrayMain.push(products.slice(i, chunk + i));
         }
-        };
-    let value=Number(elem.innerText);
-    let value2=value;
-    value=value-1
-    let len=pegiArrayMain.length;
+    };
+    let value = Number(elem.innerText);
+    let value2 = value;
+    value = value - 1
+    let len = pegiArrayMain.length;
     console.log(len)
     pegiArray.push(pegiArrayMain[value]);
-    pegiArray=pegiArray.flat();
+    pegiArray = pegiArray.flat();
     console.log(pegiArray)
-    if(products.length<10){
-       
-        pegiArrayMain2.forEach((element,indx) =>{
-        html+= ` 
+    if (products.length < 10) {
+
+        pegiArrayMain2.forEach((element, indx) => {
+            html += ` 
         <div class="featured-products-card show-result-div-sec" >
         <div class="image-container">
             <img loading="lazy" src="${element.img}" alt="">
@@ -731,13 +838,13 @@ pagitantionDiv.classList.add("show-pegination");
         </div>
     
     </div>`
-    
-     
-    })
 
-    showResult.innerHTML=html;
 
-pagitantionDiv.innerHTML =`
+        })
+
+        showResult.innerHTML = html;
+
+        pagitantionDiv.innerHTML = `
 <div class="pegination-div">
         <ul>
           <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
@@ -749,16 +856,16 @@ pagitantionDiv.innerHTML =`
         </ul>
     </div>
 `
-console.log(pagitantionDiv)
-main.style.display = "none";
-pagitantionDiv.classList.add("show-pegination");
+        console.log(pagitantionDiv)
+        main.style.display = "none";
+        pagitantionDiv.classList.add("show-pegination");
 
-      }
-    
+    }
+
     else {
-        
-        pegiArray.forEach((element,indx) =>{
-            html+= ` 
+
+        pegiArray.forEach((element, indx) => {
+            html += ` 
             <div class="featured-products-card show-result-div-sec" >
             <div class="image-container">
                 <img loading="lazy" src="${element.img}" alt="">
@@ -785,13 +892,13 @@ pagitantionDiv.classList.add("show-pegination");
             </div>
         
         </div>`
-        
-         
+
+
         })
-    
-        showResult.innerHTML=html;
-        
-    pagitantionDiv.innerHTML =`
+
+        showResult.innerHTML = html;
+
+        pagitantionDiv.innerHTML = `
     <div class="pegination-div">
             <ul>
               <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
@@ -803,71 +910,71 @@ pagitantionDiv.classList.add("show-pegination");
             </ul>
         </div>
     `
-    main.style.display = "none";
-    pagitantionDiv.classList.add("show-pegination");
-    
+        main.style.display = "none";
+        pagitantionDiv.classList.add("show-pegination");
+
     }
-    
-}  
-const itemIncart= JSON.parse(localStorage.getItem('cart')) || [];
-async function addToCart(elem){
+
+}
+const itemIncart = JSON.parse(localStorage.getItem('cart')) || [];
+async function addToCart(elem) {
     const response = await fetch('./data/item.json');
-    const obj= await response.json();
-  let products = Object.values(obj).map((category) => {
-    return Object.values(category);
-})
-products = products.flat().flat();
-console.log(products);
-console.log(elem);
-console.log(itemIncart);
+    const obj = await response.json();
+    let products = Object.values(obj).map((category) => {
+        return Object.values(category);
+    })
+    products = products.flat().flat();
+    console.log(products);
+    console.log(elem);
+    console.log(itemIncart);
 
-let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
-let flag= false;
-for(let i= 0 ;i<itemIncart.length;i++){
-    if(itemIncart[i].id==loggedUser.id){
-   flag=true;
+    let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
+    let flag = false;
+    for (let i = 0; i < itemIncart.length; i++) {
+        if (itemIncart[i].id == loggedUser.id) {
+            flag = true;
+        }
     }
+
+    if (!flag) {
+        itemIncart.push(loggedUser);
+        Swal.fire(
+            'Item is added to cart',
+            'success'
+        )
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+
+            text: 'Items is already in cart',
+
+        })
+    }
+
+    let itemIncartInLocal = JSON.stringify(itemIncart);
+    localStorage.setItem("cart", itemIncartInLocal);
+    numOfItems();
+    totalPrice();
 }
 
-if(!flag){
-itemIncart.push(loggedUser);
-Swal.fire(
-    'Item is added to cart',
-    'success'
-  )
-}
-else{
-    Swal.fire({
-        icon: 'error',
-    
-        text: 'Items is already in cart',
-      
-      })
-}
 
-  let itemIncartInLocal=JSON.stringify(itemIncart);
-  localStorage.setItem("cart",itemIncartInLocal);
-  numOfItems();
-  totalPrice();
-}
-
-
-function cartItems(){
-    let showResult= document.getElementById("show-result-div-sec");
-    let html =``;
-    let cartdivP =document.getElementsByClassName("cartdivP")[0];
-    let pricenItems =document.getElementsByClassName("cart-n-wishlist-header-c2")[0];
+function cartItems() {
+    let showResult = document.getElementById("show-result-div-sec");
+    let html = ``;
+    let cartdivP = document.getElementsByClassName("cartdivP")[0];
+    let pricenItems = document.getElementsByClassName("cart-n-wishlist-header-c2")[0];
 
     let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
-    let pagitantionDiv =document.getElementById("pegination-div-main");
-    let cartDiv =document.getElementsByClassName("cart-n-wishlist-header")[0];
+    let pagitantionDiv = document.getElementById("pegination-div-main");
+    let cartDiv = document.getElementsByClassName("cart-n-wishlist-header")[0];
 
-    let main= document.getElementById("main-section");
-            
-    if(itemIncart.length>0 ){
+    let main = document.getElementById("main-section");
+
+    if (itemIncart.length > 0) {
         console.log("hmo")
-        for(let i =0;i<itemIncart.length;i++){
-        html+= ` 
+        for (let i = 0; i < itemIncart.length; i++) {
+            html += ` 
         <div class="featured-products-card show-result-div-sec" >
         <div class="image-container">
             <img loading="lazy" src="${itemIncart[i].img}" alt="">
@@ -894,47 +1001,47 @@ function cartItems(){
         </div>
     </div>`
 
-    showResult.innerHTML=html;
-    main.style.display = "none";
+            showResult.innerHTML = html;
+            main.style.display = "none";
         }
     }
     else {
 
         html = `<div> No item in Cart </div>`
-        showResult.innerHTML=html;
-    main.style.display = "none";
+        showResult.innerHTML = html;
+        main.style.display = "none";
     }
-    pagitantionDiv.style.display="none";
-    jurnalDiv.style.display="none";
+    pagitantionDiv.style.display = "none";
+    jurnalDiv.style.display = "none";
     numOfItems();
-    cartDiv.style.display="block";
+    cartDiv.style.display = "block";
     showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML="CART"
-    
+    cartdivP.innerHTML = "CART"
+
 }
 
-function removeToCart(elem){
-    let cartDiv =document.getElementsByClassName("cart-n-wishlist-header")[0];
-    let cartdivP =document.getElementsByClassName("cartdivP")[0];
+function removeToCart(elem) {
+    let cartDiv = document.getElementsByClassName("cart-n-wishlist-header")[0];
+    let cartdivP = document.getElementsByClassName("cartdivP")[0];
 
-    for(let i =0;i<itemIncart.length;i++){
-        if(elem==itemIncart[i].id){
-            itemIncart.splice(i,1)
+    for (let i = 0; i < itemIncart.length; i++) {
+        if (elem == itemIncart[i].id) {
+            itemIncart.splice(i, 1)
         }
     }
-    let itemIncartInLocal=JSON.stringify(itemIncart);
-    localStorage.setItem("cart",itemIncartInLocal);
+    let itemIncartInLocal = JSON.stringify(itemIncart);
+    localStorage.setItem("cart", itemIncartInLocal);
 
-    let showResult= document.getElementById("show-result-div-sec");
-    let html =``;
-    let pagitantionDiv =document.getElementById("pegination-div-main");
+    let showResult = document.getElementById("show-result-div-sec");
+    let html = ``;
+    let pagitantionDiv = document.getElementById("pegination-div-main");
 
-    let main= document.getElementById("main-section");
-            
-    if(itemIncart.length>0 ){
+    let main = document.getElementById("main-section");
+
+    if (itemIncart.length > 0) {
         console.log("hmo")
-        for(let i =0;i<itemIncart.length;i++){
-        html+= ` 
+        for (let i = 0; i < itemIncart.length; i++) {
+            html += ` 
         <div class="featured-products-card show-result-div-sec" >
         <div class="image-container">
             <img loading="lazy" src="${itemIncart[i].img}" alt="">
@@ -961,95 +1068,95 @@ function removeToCart(elem){
         </div>
     </div>`
 
-    showResult.innerHTML=html;
-    main.style.display = "none";
+            showResult.innerHTML = html;
+            main.style.display = "none";
         }
     }
     else {
 
         html = `<div class="no-item"> No item in Cart </div>`
-        showResult.innerHTML=html;
-    main.style.display = "none";
+        showResult.innerHTML = html;
+        main.style.display = "none";
     }
-    pagitantionDiv.style.display="none";
+    pagitantionDiv.style.display = "none";
     numOfItems();
-    cartDiv.style.display="block";
+    cartDiv.style.display = "block";
     showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML="CART"
+    cartdivP.innerHTML = "CART"
 }
-function numOfItems(){
-   let numOfItems = document.getElementsByClassName("cartItems-child")[0];
-   let numOfItemsAtO = document.getElementsByClassName("itms-num-at-0")[0];
+function numOfItems() {
+    let numOfItems = document.getElementsByClassName("cartItems-child")[0];
+    let numOfItemsAtO = document.getElementsByClassName("itms-num-at-0")[0];
 
-   let n=itemIncart.length;
-   numOfItems.innerHTML=n;
-   numOfItemsAtO.innerHTML=n;
+    let n = itemIncart.length;
+    numOfItems.innerHTML = n;
+    numOfItemsAtO.innerHTML = n;
 }
 numOfItems();
-function totalPrice(){
+function totalPrice() {
     let totalPrice = document.getElementsByClassName("total-price")[0];
-   let price=0;
-    for(let i = 0;i<itemIncart.length;i++){
-       price+=Number(itemIncart[i].price);
+    let price = 0;
+    for (let i = 0; i < itemIncart.length; i++) {
+        price += Number(itemIncart[i].price);
     }
     console.log(price);
-    totalPrice.innerHTML=price.toFixed(2);
+    totalPrice.innerHTML = price.toFixed(2);
 }
-function reload(){
+function reload() {
     numOfItems();
     totalPrice();
 }
-const itemInWishlist= JSON.parse(localStorage.getItem('wishlist')) || [];
+const itemInWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
-async function wishlistItems(elem){
+async function wishlistItems(elem) {
     const response = await fetch('./data/item.json');
-    const obj= await response.json();
-  let products = Object.values(obj).map((category) => {
-    return Object.values(category);
-})
-products = products.flat().flat();
+    const obj = await response.json();
+    let products = Object.values(obj).map((category) => {
+        return Object.values(category);
+    })
+    products = products.flat().flat();
 
-let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
-let flag= false;
-for(let i= 0 ;i<itemInWishlist.length;i++){
-    if(itemInWishlist[i].id==loggedUser.id){
-   flag=true;
+    let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
+    let flag = false;
+    for (let i = 0; i < itemInWishlist.length; i++) {
+        if (itemInWishlist[i].id == loggedUser.id) {
+            flag = true;
+        }
     }
+
+    if (!flag) {
+        itemInWishlist.push(loggedUser);
+        Swal.fire(
+            'Item is added to wishlist',
+            'success'
+        )
+    }
+    else {
+        Swal.fire({
+            icon: 'error',
+            text: 'Items is already in wishlist',
+        })
+    }
+
+    let itemInWishListInLocal = JSON.stringify(itemInWishlist);
+    localStorage.setItem("wishlist", itemInWishListInLocal);
 }
 
-if(!flag){
-    itemInWishlist.push(loggedUser);
-Swal.fire(
-    'Item is added to wishlist',
-    'success'
-  )
-}
-else{
-    Swal.fire({
-        icon: 'error',
-        text: 'Items is already in wishlist',
-      })
-}
+function wishlistIcon() {
+    let cartDiv = document.getElementsByClassName("cart-n-wishlist-header")[0];
+    let cartdivP = document.getElementsByClassName("cartdivP")[0];
 
-  let itemInWishListInLocal=JSON.stringify(itemInWishlist);
-  localStorage.setItem("wishlist",itemInWishListInLocal);
-}
-
-function wishlistIcon(){
-    let cartDiv =document.getElementsByClassName("cart-n-wishlist-header")[0];
-    let cartdivP =document.getElementsByClassName("cartdivP")[0];
-
-    let showResult= document.getElementById("show-result-div-sec");
-    let html =``;
+    let showResult = document.getElementById("show-result-div-sec");
+    let html = ``;
     let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
-    let pagitantionDiv =document.getElementById("pegination-div-main");
+    let pagitantionDiv = document.getElementById("pegination-div-main");
 
-    let main= document.getElementById("main-section");
-            
-    if(itemInWishlist.length>0 ){
+    let main = document.getElementById("main-section");
+
+    if (itemInWishlist.length > 0) {
         console.log("hmo")
-        for(let i =0;i<itemInWishlist.length;i++){
-        html+= ` 
+        for (let i = 0; i < itemInWishlist.length; i++) {
+            html += ` 
         <div class="featured-products-card show-result-div-sec" >
         <div class="image-container">
             <img loading="lazy" src="${itemInWishlist[i].img}" alt="">
@@ -1075,42 +1182,42 @@ function wishlistIcon(){
         </div>
     </div>`
 
-    showResult.innerHTML=html;
-    main.style.display = "none";
+            showResult.innerHTML = html;
+            main.style.display = "none";
         }
     }
     else {
 
         html = `<div> No item in WishList </div>`
-        showResult.innerHTML=html;
-    main.style.display = "none";
+        showResult.innerHTML = html;
+        main.style.display = "none";
     }
-    pagitantionDiv.style.display="none";
-    jurnalDiv.style.display="none";
-    cartDiv.style.display="block";
+    pagitantionDiv.style.display = "none";
+    jurnalDiv.style.display = "none";
+    cartDiv.style.display = "block";
     showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML="WISHLIST"
+    cartdivP.innerHTML = "WISHLIST"
 }
 
-function removeWishlistItems(elem){
-    for(let i =0;i<itemInWishlist.length;i++){
-        if(elem==itemInWishlist[i].id){
-            itemInWishlist.splice(i,1)
+function removeWishlistItems(elem) {
+    for (let i = 0; i < itemInWishlist.length; i++) {
+        if (elem == itemInWishlist[i].id) {
+            itemInWishlist.splice(i, 1)
         }
     }
-    let itemInWishlistInLocal=JSON.stringify(itemInWishlist);
-    localStorage.setItem("wishlist",itemInWishlistInLocal);
+    let itemInWishlistInLocal = JSON.stringify(itemInWishlist);
+    localStorage.setItem("wishlist", itemInWishlistInLocal);
 
-    let showResult= document.getElementById("show-result-div-sec");
-    let html =``;
-    let pagitantionDiv =document.getElementById("pegination-div-main");
+    let showResult = document.getElementById("show-result-div-sec");
+    let html = ``;
+    let pagitantionDiv = document.getElementById("pegination-div-main");
 
-    let main= document.getElementById("main-section");
-            
-    if(itemInWishlist.length>0 ){
+    let main = document.getElementById("main-section");
+
+    if (itemInWishlist.length > 0) {
         console.log("hmo")
-        for(let i =0;i<itemInWishlist.length;i++){
-        html+= ` 
+        for (let i = 0; i < itemInWishlist.length; i++) {
+            html += ` 
         <div class="featured-products-card show-result-div-sec" >
         <div class="image-container">
             <img loading="lazy" src="${itemInWishlist[i].img}" alt="">
@@ -1135,23 +1242,31 @@ function removeWishlistItems(elem){
         </div>
     </div>`
 
-    showResult.innerHTML=html;
-    main.style.display = "none";
+            showResult.innerHTML = html;
+            main.style.display = "none";
         }
     }
     else {
 
         html = `<div class="no-item"> No item in Wishlist </div>`
-        showResult.innerHTML=html;
-    main.style.display = "none";
+        showResult.innerHTML = html;
+        main.style.display = "none";
     }
-    pagitantionDiv.style.display="none";
-    cartDiv.style.display="block";
+    pagitantionDiv.style.display = "none";
+    cartDiv.style.display = "block";
     showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML="WISHLIST"
+    cartdivP.innerHTML = "WISHLIST"
 }
-function comeSearch(){
-    console.log("hahaha")
-  let searchButton = document.getElementById('myInput1');
-  searchButton.classList.toggle("show-the-search")
+function comeSearch() {
+   
+    let searchButton = document.getElementById('myInput1');
+
+    searchButton.classList.toggle("show-the-search")
+  
+}
+
+
+function handleSearchPageQuery(){
+    let inputData = document.getElementById("myInput").value;
+    location.href=(`searchpage.html?search=${inputData}`)
 }

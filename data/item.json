@@ -8,7 +8,8 @@
             "c_lebels" : true,
             "hot" : true,
             "off" :"-70%",
-            "id" : "1"
+            "id" : "1",
+            "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
             
         },
         {
@@ -18,7 +19,9 @@
             "c_lebels" : false,
             "hot" : false,
             "off" :"-70%",
-            "id" : "2"
+            "id" : "2",
+            "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+            
         },
         {
             "name" : "Jacket",
@@ -27,7 +30,9 @@
             "c_lebels" : false,
             "hot" : true,
             "off" :"-70%",
-            "id" : "3"
+            "id" : "3",
+            "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+ 
         },
         {
             "name" : "Top",
@@ -36,7 +41,9 @@
             "c_lebels" : true,
             "hot" : false,
             "off" :"Hot",
-            "id" : "4"
+            "id" : "4",
+            "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
         },
         {
             "name" : "Top",
@@ -45,7 +52,9 @@
             "c_lebels" : false,
             "hot" : false,
             "off" :"-70%",
-            "id" : "5"
+            "id" : "5",
+            "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
         }
     ]
 },
@@ -61,7 +70,9 @@
     "c_lebels" : true,
     "hot" : true,
     "off" :"-70%",
-    "id" : "6"
+    "id" : "6",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "FOOTWEAR",
@@ -73,7 +84,9 @@
     "c_lebels" : false,
     "hot" : false,
     "off" :"-80%",
-    "id" : "7"
+    "id" : "7",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "BAGS",
@@ -85,7 +98,9 @@
     "c_lebels" : false,
     "hot" : false,
     "off" :"",
-    "id" : "8"
+    "id" : "8",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "CAMERA",
@@ -97,7 +112,9 @@
     "c_lebels" : true,
     "hot" : true,
     "off" :"-70%",
-    "id" : "9"
+    "id" : "9",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "MOBILE",
@@ -109,7 +126,9 @@
     "c_lebels" : true,
     "hot" : false,
     "off" :"",
-    "id" : "10"
+    "id" : "10",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "GLASSES",
@@ -121,7 +140,9 @@
     "c_lebels" : false,
     "hot" : true,
     "off" :"-70%",
-    "id" : "11"
+    "id" : "11",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
 
    }
 
@@ -138,7 +159,9 @@
         "c_lebels" : true,
     "hot" : true,
     "off" :"-50%",
-    "id" : "12"
+    "id" : "12",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
        {
         "name" : "BAGS",
@@ -150,7 +173,9 @@
         "c_lebels" : false,
     "hot" : false,
     "off" :"",
-    "id" : "13"
+    "id" : "13",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
        {
     "name" : "HEADPHONE",
@@ -162,7 +187,9 @@
     "c_lebels" : false,
     "hot" : false,
     "off" :"",
-    "id" : "14"
+    "id" : "14",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
  
    {
@@ -175,7 +202,9 @@
     "c_lebels" : false,
     "hot" : true,
     "off" :"-70%",
-    "id" : "15"
+    "id" : "15",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "MOBILE",
@@ -187,7 +216,9 @@
     "c_lebels" : false,
     "hot" : false,
     "off" :"",
-    "id" : "16"       
+    "id" : "16"  ,
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+     
    },
    {
     "name" : "GLASSES",
@@ -199,7 +230,9 @@
     "c_lebels" : false,
     "hot" : true,
     "off" :"-70%",
-    "id" : "17"
+    "id" : "17",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    }
 
    
@@ -216,7 +249,9 @@
     "c_lebels" : false,
     "hot" : true,
     "off" :"-70%",
-    "id" : "18"
+    "id" : "18",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "MOBILE",
@@ -228,7 +263,9 @@
     "c_lebels" : false,
     "hot" : false,
     "off" :"",
-    "id" : "19"
+    "id" : "19",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
    {
     "name" : "GLASSES",
@@ -240,7 +277,9 @@
     "c_lebels" : false,
     "hot" : false,
     "off" :"-70%",
-    "id" : "20"
+    "id" : "20",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
 
     {
@@ -253,7 +292,9 @@
         "c_lebels" : false,
     "hot" : true,
     "off" :"-70%",
-    "id" : "21"
+    "id" : "21",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
        {
         "name" : "BAGS",
@@ -265,7 +306,9 @@
         "c_lebels" : true,
     "hot" : false,
     "off" :"-70%",
-    "id" : "22"
+    "id" : "22",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
        {
     "name" : "HEADPHONE",
@@ -277,7 +320,9 @@
     "c_lebels" : false,
     "hot" : true,
     "off" :"",
-    "id" : "23"
+    "id" : "23",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    }
  
    
@@ -293,7 +338,9 @@
         "c_lebels" : false,
     "hot" : true,
     "off" :"-70%",
-    "id" : "24"
+    "id" : "24",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
        {
         "name" : "GLASSES",
@@ -305,7 +352,9 @@
         "c_lebels" : true,
     "hot" : false,
     "off" :"",
-    "id" : "25"
+    "id" : "25",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
     
         {
@@ -318,7 +367,9 @@
             "c_lebels" : true,
     "hot" : false,
     "off" :"",
-    "id" : "26"
+    "id" : "26",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
            },
    {
     "name" : "CAMERA",
@@ -330,7 +381,9 @@
     "c_lebels" : true,
     "hot" : false,
     "off" :"-60%",
-    "id" : "27"
+    "id" : "27",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    },
   
        {
@@ -343,7 +396,9 @@
         "c_lebels" : false,
     "hot" : true,
     "off" :"",
-    "id" : "28"
+    "id" : "28",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
        },
        {
     "name" : "HEADPHONE",
@@ -355,7 +410,9 @@
     "c_lebels" : true,
     "hot" : false,
     "off" :"-70%",
-    "id" : "29"
+    "id" : "29",
+    "para" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20"
+
    }
  
    
