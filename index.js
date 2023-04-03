@@ -401,21 +401,16 @@ readData3("TOP_CATEGORIES");
 
 let prods = 0;
 
-function getSearchUrl(){
-    let searchText = document.getElementById("myInput");
-    let searchText1 = document.getElementById("myInput1");
-    let items;
-    // if (elem == "inComputer") {
-    //     items = searchText.value;
-    // }
-    // else {
-    //     items = searchText1.value;
-        
-    // }
-    location.href=(`/searchpage.html?search=${searchText.value}`)
-    location.href=(`/searchpage.html?search=${searchText1.value}`)
-}
-async function search(elem,inputData) {
+// function getSearchUrl(){
+//     let searchText = document.getElementById("myInput");
+//     let searchText1 = document.getElementById("myInput1");
+//     let items;
+//     console.log("hmm")
+//     location.href=(`/searchpage.html?search=${searchText.value}`)
+//     location.href=(`/searchpage.html?search=${searchText1.value}`)
+// }
+
+async function search(inputData) {
 
      let searchItemName = document.getElementById("search-item-name");
      let inputItemName = document.getElementById("input-search-item");
@@ -423,13 +418,12 @@ async function search(elem,inputData) {
     let searchText = inputData;
     let searchText1 = inputData;
     let items;
-    if (elem == "inComputer") {
+  
         items = searchText;
-    }
-    else {
+    
         items = searchText1;
         
-    }
+    
     searchItemName.innerHTML=items;
     inputItemName.value=items;
     let itemsInlow = items.toLowerCase();
@@ -452,7 +446,7 @@ async function search(elem,inputData) {
         if (prods.length > 0) {
         
             for (let i = 0; i < prods.length; i++) {
-                console.log(i)
+               
                 html += ` <div class="item02" id="item02-id"> <img class="labels-1" src="${prods[i].img}">
     <div class="lebels-c1">
         CUSTOM LEBELS
@@ -558,19 +552,21 @@ console.log(pagitantionDiv)
 `
         }
         else{
-            html = `<div> No Result is Found on name ${items} </div>`  
+            html = `<div style="font-size:25px"> No Result is Found </div>`
+            showResult.innerHTML = html;
+            main.style.display = "none"
         }
         
     }
     else {
-        html = `<div> No Result is Found </div>`
+        html = `<div style="font-size:25px"> No Result is Found </div>`
         showResult.innerHTML = html;
         main.style.display = "none"
     }
 
     showResultList.classList.add("show-list-result")
 
-    console.log(prods);
+  
    
 }
 
@@ -784,7 +780,7 @@ async function peginationInSearch(elem) {
     let main = document.getElementById("main-section")
     let html = ``;
     products = await searchInItems(itemsInlow);
-    console.log(products)
+    
     let pagitantionDiv = document.getElementById("pegination-div-main-2");
     let pegiArray = [];
     let pegiArrayMain = [];
@@ -808,7 +804,7 @@ async function peginationInSearch(elem) {
     pegiArray.push(pegiArrayMain[value]);
     pegiArray = pegiArray.flat();
     console.log(pegiArray)
-    if (products.length < 10) {
+    if (products.length >10) {
 
         pegiArrayMain2.forEach((element, indx) => {
             html += ` 
@@ -896,7 +892,7 @@ async function peginationInSearch(elem) {
 
         })
 
-        showResult.innerHTML = html;
+        showResult.innerHTML = html; 
 
         pagitantionDiv.innerHTML = `
     <div class="pegination-div">
@@ -1259,14 +1255,23 @@ function removeWishlistItems(elem) {
 }
 function comeSearch() {
    
-    let searchButton = document.getElementById('myInput1');
-
-    searchButton.classList.toggle("show-the-search")
+    let searchButton = document.getElementById('search-id');
+  console.log("hi")
+    searchButton.classList.toggle("search-id");
   
 }
 
 
-function handleSearchPageQuery(){
+function handleSearchPageQuery(elem){
     let inputData = document.getElementById("myInput").value;
-    location.href=(`searchpage.html?search=${inputData}`)
+    let inputData1 = document.getElementById("myInput1").value;
+ 
+    if(elem=="inComputer"){
+        location.href=(`searchpage.html?search=${inputData}`)
+
+    }
+    else{
+        location.href=(`searchpage.html?search=${inputData1}`)
+    
+    }
 }
