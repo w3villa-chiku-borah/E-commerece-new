@@ -399,16 +399,51 @@ const showBuy = (arrayOfData) => {
 }
 readData3("TOP_CATEGORIES");
 
+// ***************
+const rangeInput = document.querySelectorAll(".range-input input"),
+priceInput = document.querySelectorAll(".price-input input"),
+range = document.querySelector(".slider .progress");
+let priceGap = 1000;
+priceInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minPrice = parseInt(priceInput[0].value),
+        maxPrice = parseInt(priceInput[1].value);
+        
+        if((maxPrice - minPrice >= priceGap) && maxPrice <= rangeInput[1].max){
+            if(e.target.className === "input-min"){
+                rangeInput[0].value = minPrice;
+                range.style.left = ((minPrice / rangeInput[0].max) * 100) + "%";
+            }else{
+                rangeInput[1].value = maxPrice;
+                range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
+            }
+        }
+    });
+});
+rangeInput.forEach(input =>{
+    input.addEventListener("input", e =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+        if((maxVal - minVal) < priceGap){
+            if(e.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap
+            }else{
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
+            range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+    });
+});
+
+// ************
+
 let prods = 0;
 
-// function getSearchUrl(){
-//     let searchText = document.getElementById("myInput");
-//     let searchText1 = document.getElementById("myInput1");
-//     let items;
-//     console.log("hmm")
-//     location.href=(`/searchpage.html?search=${searchText.value}`)
-//     location.href=(`/searchpage.html?search=${searchText1.value}`)
-// }
+
 
 async function search(inputData) {
 
@@ -538,18 +573,23 @@ async function search(inputData) {
  showResultList.innerHTML = htmlList;
 // ************
 console.log(pagitantionDiv)
-                pagitantionDiv.innerHTML = `
+let num = prods.length / 10;
+num = Math.ceil(num)
+console.log(Math.ceil(num));
+for (i = 1; i <= num; i++) {
+    pagitantionDiv.innerHTML +=
+     `
 <div class="pegination-div">
-        <ul>
-          <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">2</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">3</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">4</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">5</a></li>
-        
-        </ul>
-    </div>
+    <ul>
+      <li><a href="#" onclick="peginationInSearch(this)">${i}</a></li>
+    </ul>
+</div>
 `
+}
+main.style.display = "none";
+
+pagitantionDiv.classList.add("show-pegination");
+
         }
         else{
             html = `<div style="font-size:25px"> No Result is Found </div>`
@@ -761,155 +801,88 @@ async function pegination(elem) {
 }
 
 async function peginationInSearch(elem) {
-    let searchText = inputData;
-    let searchText1 = inputData;
+    let itemName=getParameterByName();
+   
+  
     let items;
-    if (elem == "inComputer") {
-        items = searchText;
-    }
-    else {
-        items = searchText1;
-        
-    }
- 
-
-
-    let itemsInlow = items.toLowerCase();
-    let showResult = document.getElementById("show-result-div-sec");
-    // let main= document.getElementsByTagName()
-    let main = document.getElementById("main-section")
-    let html = ``;
-    products = await searchInItems(itemsInlow);
+  
+        items = itemName;
     
-    let pagitantionDiv = document.getElementById("pegination-div-main-2");
-    let pegiArray = [];
-    let pegiArrayMain = [];
-    let pegiArrayMain2 = [];
-    let n = prods.length;
-    let chunk = 10;
-    for (let i = 0; i < products.length; i += chunk) {
-        if (products.length < 10) {
-
+        items = itemName;
+        
+        
+        
+        let itemsInlow = items.toLowerCase();
+        let showResult = document.getElementById("show-result-div-sec");
+        // let main= document.getElementsByTagName()
+        let main = document.getElementById("main-section")
+        let html = ``;
+        products = await searchInItems(itemsInlow);
+        
+        let pagitantionDiv = document.getElementById("pegination-div-main-2");
+        let pegiArray = [];
+        let pegiArrayMain = [];
+        let pegiArrayMain2 = [];
+        let n = prods.length;
+        let chunk = 10;
+        for (let i = 0; i < products.length; i += chunk) {
+            if (products.length < 10) {
+            console.log("chiku")
             pegiArrayMain = products;
         }
         else {
             pegiArrayMain.push(products.slice(i, chunk + i));
+            let value = Number(elem.innerText);
+            let value2 = value;
+            value = value - 1
+            let len = pegiArrayMain.length;
+            pegiArray.push(pegiArrayMain[value]);
+            pegiArray = pegiArray.flat();
+            console.log(pegiArray)
+        
+            pegiArray.forEach((element, indx) => {
+                html +=  ` <div class="item02" id="item02-id"> <img class="labels-1" src="${element.img}">
+                <div class="lebels-c1">
+                    CUSTOM LEBELS
+                </div>
+                <div class="lebels-c2">
+                    -70%
+                </div>
+                <div class="lebels-c2 lebels-c3">
+                    HOT
+                </div>
+                <div class="item02-c1">
+                    <p><u>Eriksson</u></p>
+                    <p>model 2098</p>
+                </div>
+                <div class="item02-c2">
+                    <h1>${element.name}</h1>
+                    <p>$${element.price} <s>$3,299.00</s></p>
+                </div>
+                <div class="item02-c3">
+                    <div><input type="number" value="1">
+                        <input type="button" onclick="addToCart(${element.id})"  value="ADD TO CART">
+                        <span><i class="fa-solid fa-cart-shopping shopping-cart-at630"></i></span>
+                    </div>
+                    <div><span><i class="fa-regular fa-heart" onclick="wishlistItems(${element.id})"></i> <i
+                                class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
+                </div>
+                <div class="item02-c4">
+                    <p><i class="fa-solid fa-sack-dollar"></i>
+                        Buy Now </p>
+                    <p><i class="fa-regular fa-circle-question"></i> Question</p>
+                </div>
+            </div>`
+            
+                                
+        
+            })
+            showResult.innerHTML = html;
+            main.style.display = "none";
+            pagitantionDiv.classList.add("show-pegination");
         }
-    };
-    let value = Number(elem.innerText);
-    let value2 = value;
-    value = value - 1
-    let len = pegiArrayMain.length;
-    console.log(len)
-    pegiArray.push(pegiArrayMain[value]);
-    pegiArray = pegiArray.flat();
-    console.log(pegiArray)
-    if (products.length >10) {
-
-        pegiArrayMain2.forEach((element, indx) => {
-            html += ` 
-        <div class="featured-products-card show-result-div-sec" >
-        <div class="image-container">
-            <img loading="lazy" src="${element.img}" alt="">
-        </div>
-    
-        <div class="cart-container cart-container-show">
-            <h2>${element.name}</h2>
-            <p class="price">$${element.price} </p>
-            <hr>
-            <div class="add-to-cart-container show-result-cart">
-                <div>
-    
-                    <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
-                </div>
-                <div> 
-            
-                    <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${element.id})"></i>
-                 
-                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                </div>
-            </div>
-    
-    
-        </div>
-    
-    </div>`
-
-
-        })
-
-        showResult.innerHTML = html;
-
-        pagitantionDiv.innerHTML = `
-<div class="pegination-div">
-        <ul>
-          <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">2</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">3</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">4</a></li>
-          <li><a href="#" onclick="peginationInSearch(this)">5</a></li>
-        
-        </ul>
-    </div>
-`
-        console.log(pagitantionDiv)
-        main.style.display = "none";
-        pagitantionDiv.classList.add("show-pegination");
-
     }
 
-    else {
-
-        pegiArray.forEach((element, indx) => {
-            html += ` 
-            <div class="featured-products-card show-result-div-sec" >
-            <div class="image-container">
-                <img loading="lazy" src="${element.img}" alt="">
-            </div>
-        
-            <div class="cart-container cart-container-show">
-                <h2>${element.name}</h2>
-                <p class="price">$${element.price} </p>
-                <hr>
-                <div class="add-to-cart-container show-result-cart">
-                    <div>
-        
-                        <input type="button" onclick="addToCart(${element.id})" value="ADD TO CART">
-                    </div>
-                    <div> 
-                
-                        <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${element.id})"></i>
-                     
-                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                    </div>
-                </div>
-        
-        
-            </div>
-        
-        </div>`
-
-
-        })
-
-        showResult.innerHTML = html; 
-
-        pagitantionDiv.innerHTML = `
-    <div class="pegination-div">
-            <ul>
-              <li><a href="#" onclick="peginationInSearch(this)">1</a></li>
-              <li><a href="#" onclick="peginationInSearch(this)">2</a></li>
-              <li><a href="#" onclick="peginationInSearch(this)">3</a></li>
-              <li><a href="#" onclick="peginationInSearch(this)">4</a></li>
-              <li><a href="#" onclick="peginationInSearch(this)">5</a></li>
-            
-            </ul>
-        </div>
-    `
-        main.style.display = "none";
-        pagitantionDiv.classList.add("show-pegination");
-
-    }
 
 }
 const itemIncart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -922,7 +895,7 @@ async function addToCart(elem) {
     products = products.flat().flat();
     console.log(products);
     console.log(elem);
-    console.log(itemIncart);
+    
 
     let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
     let flag = false;
@@ -952,23 +925,18 @@ async function addToCart(elem) {
     localStorage.setItem("cart", itemIncartInLocal);
     numOfItems();
     totalPrice();
+    console.log(itemIncart);
 }
 
 
 function cartItems() {
-    let showResult = document.getElementById("show-result-div-sec");
+
+    let showResult = document.getElementById("cart-n-wishlist-header");
     let html = ``;
-    let cartdivP = document.getElementsByClassName("cartdivP")[0];
-    let pricenItems = document.getElementsByClassName("cart-n-wishlist-header-c2")[0];
-
-    let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
-    let pagitantionDiv = document.getElementById("pegination-div-main");
-    let cartDiv = document.getElementsByClassName("cart-n-wishlist-header")[0];
-
-    let main = document.getElementById("main-section");
+    console.log(showResult)
+    let main = document.getElementById("search-main");
 
     if (itemIncart.length > 0) {
-        console.log("hmo")
         for (let i = 0; i < itemIncart.length; i++) {
             html += ` 
         <div class="featured-products-card show-result-div-sec" >
@@ -996,24 +964,22 @@ function cartItems() {
 
         </div>
     </div>`
-
+          let html2=
             showResult.innerHTML = html;
+          
             main.style.display = "none";
         }
     }
     else {
 
-        html = `<div> No item in Cart </div>`
+        html = `<div class="no-item"> No item in Cart </div>`
         showResult.innerHTML = html;
         main.style.display = "none";
     }
-    pagitantionDiv.style.display = "none";
-    jurnalDiv.style.display = "none";
     numOfItems();
+    totalPrice()
     cartDiv.style.display = "block";
-    showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML = "CART"
-
+   
 }
 
 function removeToCart(elem) {
@@ -1028,11 +994,10 @@ function removeToCart(elem) {
     let itemIncartInLocal = JSON.stringify(itemIncart);
     localStorage.setItem("cart", itemIncartInLocal);
 
-    let showResult = document.getElementById("show-result-div-sec");
+    let showResult = document.getElementById("cart-n-wishlist-header");
     let html = ``;
-    let pagitantionDiv = document.getElementById("pegination-div-main");
 
-    let main = document.getElementById("main-section");
+    let main = document.getElementById("search-main");
 
     if (itemIncart.length > 0) {
         console.log("hmo")
@@ -1070,23 +1035,24 @@ function removeToCart(elem) {
     }
     else {
 
-        html = `<div class="no-item"> No item in Cart </div>`
+        html = `<div class="no-item" > no item in Cart </div>`
         showResult.innerHTML = html;
         main.style.display = "none";
     }
-    pagitantionDiv.style.display = "none";
     numOfItems();
+    totalPrice()
     cartDiv.style.display = "block";
-    showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML = "CART"
+   
 }
+
 function numOfItems() {
     let numOfItems = document.getElementsByClassName("cartItems-child")[0];
     let numOfItemsAtO = document.getElementsByClassName("itms-num-at-0")[0];
-
+    
     let n = itemIncart.length;
     numOfItems.innerHTML = n;
     numOfItemsAtO.innerHTML = n;
+    
 }
 numOfItems();
 function totalPrice() {
@@ -1095,12 +1061,17 @@ function totalPrice() {
     for (let i = 0; i < itemIncart.length; i++) {
         price += Number(itemIncart[i].price);
     }
-    console.log(price);
+  
     totalPrice.innerHTML = price.toFixed(2);
+    
 }
+totalPrice();
+
+ 
 function reload() {
     numOfItems();
     totalPrice();
+ 
 }
 const itemInWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
@@ -1141,13 +1112,12 @@ async function wishlistItems(elem) {
 function wishlistIcon() {
     let cartDiv = document.getElementsByClassName("cart-n-wishlist-header")[0];
     let cartdivP = document.getElementsByClassName("cartdivP")[0];
-
-    let showResult = document.getElementById("show-result-div-sec");
+    let showResult = document.getElementById("cart-n-wishlist-header");
     let html = ``;
-    let jurnalDiv = document.getElementsByClassName("bg-grey")[0];
-    let pagitantionDiv = document.getElementById("pegination-div-main");
+    
+    let main = document.getElementById("search-main");
 
-    let main = document.getElementById("main-section");
+
 
     if (itemInWishlist.length > 0) {
         console.log("hmo")
@@ -1184,15 +1154,12 @@ function wishlistIcon() {
     }
     else {
 
-        html = `<div> No item in WishList </div>`
+        html = `<div class="no-item"> No item in WishList </div>`
         showResult.innerHTML = html;
         main.style.display = "none";
     }
-    pagitantionDiv.style.display = "none";
-    jurnalDiv.style.display = "none";
     cartDiv.style.display = "block";
-    showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML = "WISHLIST"
+   
 }
 
 function removeWishlistItems(elem) {
@@ -1204,11 +1171,10 @@ function removeWishlistItems(elem) {
     let itemInWishlistInLocal = JSON.stringify(itemInWishlist);
     localStorage.setItem("wishlist", itemInWishlistInLocal);
 
-    let showResult = document.getElementById("show-result-div-sec");
+    let showResult = document.getElementById("cart-n-wishlist-header");
     let html = ``;
-    let pagitantionDiv = document.getElementById("pegination-div-main");
-
-    let main = document.getElementById("main-section");
+    
+    let main = document.getElementById("search-main");
 
     if (itemInWishlist.length > 0) {
         console.log("hmo")
@@ -1248,10 +1214,7 @@ function removeWishlistItems(elem) {
         showResult.innerHTML = html;
         main.style.display = "none";
     }
-    pagitantionDiv.style.display = "none";
-    cartDiv.style.display = "block";
     showResult.classList.add("min-hight-class")
-    cartdivP.innerHTML = "WISHLIST"
 }
 function comeSearch() {
    

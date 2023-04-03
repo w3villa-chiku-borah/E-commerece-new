@@ -435,31 +435,11 @@ padding-right: 4px;
 }
 /* <!-- ************in cart/wishlist/search************** -->
  */
-.cart-n-wishlist-header {
-  background-color: rgb(161 152 155 / 45%);
-  display: none;
-}
-.cart-n-wishlist-header-c1{
-  display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 31px;
-    padding-top: 5px;
-    font-weight: bold;
-}
-.cartdivP{
-  padding-bottom: 6px;
-}
-.cart-n-wishlist-header div p{
-
-padding-left: 30px; 
-}
-@media screen and (max-width:1120px){
-  .cart-n-wishlist-header-c{
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-  }
-}
+ .no-item{
+  height: 500px!important;
+  font-size: 22px;
+  padding-top: 10px;
+} 
 
 /* ********show-result-sec********** */
 .show-result{
