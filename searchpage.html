@@ -143,7 +143,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 padding-left-right">
-                        <div class="search login">
+                        <div class="search  login" >
                             <ul>
                                 <li class="faq">
                                     <p> <a class="ancher-all-manu" href="#">All</a>
@@ -159,7 +159,7 @@
                                         </div> -->
                                     </p>
                                     <input type="text" id="myInput" placeholder="Search for names..">
-                                    <p><i class="fa-solid fa-magnifying-glass" onclick="handleSearchPageQuery()"></i></p>
+                                    <p><i class="fa-solid fa-magnifying-glass" onclick="handleSearchPageQuery('inComputer')"></i></p>
                                 </li>
 
                             </ul>
@@ -208,7 +208,21 @@
                     </div>
                     <div class="search-mobile">
                         <ul>
-                            <li> <input type="text" class="myInput1" id="myInput1" placeholder="Search for names.."> </li>
+                         <li class="search-in-mobile" id="search-id"> 
+                              <div class="search  search-in-mobile-div login" >
+                            <ul>
+                                <li class="faq">
+                                    <p> <a class="ancher-all-manu" href="#">All</a>
+
+                                        <i class="fa-solid fa-caret-down"></i>
+                     
+                                    </p>
+                                    <input type="text" id="myInput1" placeholder="Search for names..">
+                                    <p><i class="fa-solid fa-magnifying-glass" onclick="handleSearchPageQuery()"></i></p>
+                                </li>
+
+                            </ul>
+                        </div></li>
                             <li><i class="fa-solid fa-magnifying-glass" id="myInput1-mobile" onclick="comeSearch()" on></i></li>
                             <li><i class="fa-solid fa-bars"></i></li>
                             <li><i class="fa-solid fa-cart-shopping"
@@ -316,7 +330,7 @@
                             <button class="accordion"><i class="fa-solid fa-plus plus-minus "></i></button>
                         </div>
                         <div class="panel">
-                            
+                              
                         </div>
                     </div>
                     <div class="search-sec03-div-1c-availability">
@@ -900,7 +914,7 @@
         return urlParam.get("search")
     }
     const inputData = getParameterByName()
-    search(this,inputData);
+    search(inputData);
          </script>
          <!-- **************** -->
 </body>
