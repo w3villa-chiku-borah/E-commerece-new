@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style/searchpage.css">
 
-    <!-- **********fontawesome*****************8 -->
+    <!-- **********fontawesome***************** -->
     <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Default" disabled
     href="/css/app-af6a05f42b013986b481566363f0186f.css?vsn=d" />
   <link rel="stylesheet" data-purpose="Layout StyleSheet" title="Web Awesome"
@@ -26,9 +26,11 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
 
-<body>
+<body >
     <header>
         <section class="nav-sec">
 
@@ -276,19 +278,14 @@
     <!-- ************in cart/wishlist/search************** -->
     <section class="cart-n-wishlist-header">
         <div class="container padding-left-right cart-n-wishlist-header-c">
-            <div class="cart-n-wishlist-header-c1">
-                <div class="cartdivP">
-                    <p></p>
-                </div>
-                <div class="cart-n-wishlist-header-c2" style="display: flex; word-spacing: 10px;">
-                    <p><a><i style="padding-top: 8px; " class="fa-solid fa-cart-shopping" onclick="cartItems()"></i></a>
-                    </p>
-                    <p><a href="./index.html"><i class="fa-sharp fa-solid fa-house"></i></a></p>
-                </div>
+           <div clas="cart-n-wishlist-header" id="cart-n-wishlist-header" style="display: flex;">
+
+           </div>
             </div>
 
         </div>
     </section>
+    <main id="search-main">
     <!-- ****************search-nav**************88 -->
     <section class="search-nav">
         <div class="container search-nav-con">
@@ -329,8 +326,30 @@
                             <p>PRICE</p>
                             <button class="accordion"><i class="fa-solid fa-plus plus-minus "></i></button>
                         </div>
-                        <div class="panel">
-                              
+                        <div class="panel-1">
+                      
+
+  <div class="wrapper">
+    <div class="slider">
+      <div class="progress"></div>
+    </div>
+    <div class="range-input">
+      <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+      <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+    </div>
+      <div class="price-input">
+        <div class="field">
+            <span>$</span>
+            <input type="number" class="input-min" value="2500">
+        </div>
+        <div class="separator">-</div>
+        <div class="field">
+          <span>$</span>
+          <input type="number" class="input-max" value="7500">
+        </div>
+      </div>
+      
+    </div>
                         </div>
                     </div>
                     <div class="search-sec03-div-1c-availability">
@@ -775,6 +794,7 @@
         </div>
 
     </section>
+  </main>
 
     <section class="main-10">
         <div class="container">
@@ -909,14 +929,13 @@
         <script>
             function getParameterByName( url = window.location.search) {
      
-        console.log(url)
         const urlParam = new URLSearchParams(url)
         return urlParam.get("search")
     }
     const inputData = getParameterByName()
     search(inputData);
          </script>
-         <!-- **************** -->
+       
 </body>
 
 </html>
