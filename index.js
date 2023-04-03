@@ -892,7 +892,7 @@ async function peginationInSearch(elem) {
 
         })
 
-        showResult.innerHTML = html;
+        showResult.innerHTML = html; 
 
         pagitantionDiv.innerHTML = `
     <div class="pegination-div">
