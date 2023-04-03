@@ -1234,7 +1234,7 @@ function handleSearchPageQuery(elem){
         location.href=(`searchpage.html?search=${inputData}`)
 
     }
-    else if(elem=="inComputerSearch"){
+    else if(elem=="productInsearch"){
         location.href=(`searchpage.html?search=${inputData2}`)
 
     }
