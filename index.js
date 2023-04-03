@@ -1228,9 +1228,14 @@ function comeSearch() {
 function handleSearchPageQuery(elem){
     let inputData = document.getElementById("myInput").value;
     let inputData1 = document.getElementById("myInput1").value;
+    let inputData2 = document.getElementById("input-search-item").value;
  
     if(elem=="inComputer"){
         location.href=(`searchpage.html?search=${inputData}`)
+
+    }
+    else if(elem=="inComputerSearch"){
+        location.href=(`searchpage.html?search=${inputData2}`)
 
     }
     else{
