@@ -109,6 +109,37 @@ $(document).ready(function () {
         }
 
     });
+    $('#owlProduct.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            800: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            },
+
+            1220: {
+                items: 1
+            },
+
+            1460: {
+                items: 1
+            },
+        }
+
+    });
     $('#owlthree.owl-carousel').owlCarousel({
         loop: true,
         margin: 0,

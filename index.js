@@ -121,10 +121,10 @@ const showMostView = (arrayOfData) => {
         loop: true,
         margin: 0,
         nav: false,
-        // autoplay: true,
+        autoplay: true,
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             460: {
                 items: 2
@@ -138,7 +138,7 @@ const showMostView = (arrayOfData) => {
             },
 
             1460: {
-                items: 5
+                items: 4
 
             },
         }
@@ -960,8 +960,6 @@ function cartItems() {
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
             </div>
-
-
         </div>
     </div>`
           let html2=
@@ -1242,4 +1240,37 @@ function handleSearchPageQuery(elem){
         location.href=(`searchpage.html?search=${inputData1}`)
     
     }
+}
+
+function showMore(){
+            // Get all the elements from the page
+            let points = 
+            document.getElementById("points");
+      
+        let showMoreText =
+            document.getElementById("moreText");
+      
+        let buttonText =
+            document.getElementById("textButton");
+      
+        let point1 =
+            document.getElementById("points-1");
+      
+
+        if (points.style.display === "none") {
+      
+            showMoreText.style.display = "none";
+      
+            points.style.display = "inline";
+      
+            point1.style.opacity="50%"
+            buttonText.innerHTML = `<i class="fa-thin fa-sort-down"></i> Show More`;
+        }
+        else {
+            point1.style.opacity="100%"
+
+            showMoreText.style.display = "inline";    
+            points.style.display = "none";
+            buttonText.innerHTML = `<i class="fa-thin fa-sort-up"></i> Show less`;
+        }
 }
