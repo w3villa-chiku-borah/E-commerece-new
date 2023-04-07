@@ -3,8 +3,8 @@ async function readData() {
     const data = await response.json();
     const response2 = await fetch('./data/mostView.json');
     const data2 = await response2.json();
-
     showFashion(data.fashion.fashionProducts);
+    
     showMostView(data2.mostView);
 
     // showBlog (data3.blog2)
@@ -92,6 +92,8 @@ const showFashion = (arrayOfData) => {
     });
 }
 
+
+
 const showMostView = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owlnine">`;
     let mView = document.getElementById("mostView");
@@ -124,7 +126,7 @@ const showMostView = (arrayOfData) => {
         autoplay: true,
         responsive: {
             0: {
-                items: 2
+                items: 1
             },
             460: {
                 items: 2

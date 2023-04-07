@@ -747,7 +747,7 @@ width: 120px;
    
   }
   .product-img-container-2 div{
- padding-top: 10px;
+ /* padding-top: 10px; */
     width: 100%;
     /* padding-bottom: 10px; */
     /* height: 500px; */
@@ -780,7 +780,7 @@ width: 120px;
 }  
 
 .owl-theme .owl-nav.disabled+.owl-dots {
-  margin-top: -30px !important;
+  margin-top: -25px !important;
   z-index: 10;
   position: absolute;
 }
@@ -810,7 +810,7 @@ height: 75px;
 }  
 
 .owl-theme .owl-nav.disabled+.owl-dots {
-  margin-top: -30px !important;
+  margin-top: -25px !important;
   z-index: 10;
   position: absolute;
 }
@@ -843,7 +843,7 @@ height: 75px;
 }
  .owl-theme .owl-dots .owl-dot span {
   width: 20px !important;
-  /* height: 5px !important; */
+    height: 5px !important;
 }
 @media screen and (max-width:1250px){
   .product-details-h button, .r-p-sec-1st-c button{
@@ -906,6 +906,14 @@ font-size: 18px !important;
   }
 }
 @media screen and (max-width:550px) {
+
+  .price-and-model-sec h1, .price-and-model-sec h2 {
+   font-size: 23px !important;
+}
+  .product-img-container-1 {
+    /* height: 500px; */
+    width: 101px;
+}
   .product-details-h button{
     font-size: 14px !important;
   }
@@ -938,6 +946,10 @@ font-size: 15px !important;
   }
 }
 @media screen and (max-width:600px) {
+
+  .input-form form textarea{
+    font-size: 16px;
+  }
   .social-10 p{
     font-size: 40px !important;
   }
@@ -1429,6 +1441,7 @@ background-color: rgb(208 208 208 / 72%);}
     .product-1 {
       width: 100% !important;
       margin-top: 20px !important;
+      margin-right: 0px !important;
     } 
   }
   @media screen and (min-width:1120px){
@@ -1450,10 +1463,19 @@ background-color: rgb(208 208 208 / 72%);}
   height: 100px;
   background-color: aliceblue;
   border-radius: 10px;
-  margin-left: 15px;
+  margin-right: 15px;
 
 }
-
+@media screen and (max-width:460px) {
+  .item-09 {
+    margin-right: 0px;
+  }
+}
+.main-09-c1 {
+  width: 164px;
+  border-bottom: 3px solid red;
+  margin-bottom: 20px;
+}
 .main-09-c1 h1 {
   color: aliceblue;
   text-align: start;

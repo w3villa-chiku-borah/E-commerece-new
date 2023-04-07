@@ -194,6 +194,35 @@ $(document).ready(function () {
     });
 
 });
+    $('#owlmostview.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            460: {
+                items: 2
+            },
+            700: {
+                items: 3
+            },
+
+            1220: {
+                items: 4
+            },
+
+            1460: {
+                items: 4
+
+            },
+        }
+
+    });
+
+
 
 function tapButtonBuy(para) {
     let boxC = document.getElementsByClassName('boxc1')[0];
