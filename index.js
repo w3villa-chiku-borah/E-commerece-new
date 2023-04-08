@@ -499,7 +499,7 @@ async function search(inputData) {
         <p>model 2098</p>
     </div>
     <div class="item02-c2">
-        <h1>${prods[i].name}</h1>
+        <h1 onclick="getProductDetails()">${prods[i].name}</h1>
         <p>$${prods[i].price} <s>$3,299.00</s></p>
     </div>
     <div class="item02-c3">
