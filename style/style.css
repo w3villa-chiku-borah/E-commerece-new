@@ -1755,13 +1755,19 @@ button, html input[type=button], input[type=reset], input[type=submit] {
   padding-bottom: 14px;
 }
 
-
 .item-09 {
   height: 100px;
   background-color: aliceblue;
   border-radius: 10px;
-  margin-left: 15px;
+  margin-right: 15px;
+  margin-left: 0px;
 
+}
+
+.main-09-c1 {
+  width: 164px;
+  border-bottom: 3px solid red;
+  margin-bottom: 20px;
 }
 
 .main-09-c1 h1 {

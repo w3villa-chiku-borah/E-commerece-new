@@ -3,8 +3,8 @@ async function readData() {
     const data = await response.json();
     const response2 = await fetch('./data/mostView.json');
     const data2 = await response2.json();
-
     showFashion(data.fashion.fashionProducts);
+    
     showMostView(data2.mostView);
 
     // showBlog (data3.blog2)
@@ -92,6 +92,8 @@ const showFashion = (arrayOfData) => {
     });
 }
 
+
+
 const showMostView = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owlnine">`;
     let mView = document.getElementById("mostView");
@@ -121,7 +123,7 @@ const showMostView = (arrayOfData) => {
         loop: true,
         margin: 0,
         nav: false,
-        // autoplay: true,
+        autoplay: true,
         responsive: {
             0: {
                 items: 1
@@ -138,7 +140,7 @@ const showMostView = (arrayOfData) => {
             },
 
             1460: {
-                items: 5
+                items: 4
 
             },
         }
@@ -497,7 +499,7 @@ async function search(inputData) {
         <p>model 2098</p>
     </div>
     <div class="item02-c2">
-        <h1>${prods[i].name}</h1>
+        <h1 onclick="getProductDetails()">${prods[i].name}</h1>
         <p>$${prods[i].price} <s>$3,299.00</s></p>
     </div>
     <div class="item02-c3">
@@ -960,8 +962,6 @@ function cartItems() {
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
             </div>
-
-
         </div>
     </div>`
           let html2=
@@ -1242,4 +1242,37 @@ function handleSearchPageQuery(elem){
         location.href=(`searchpage.html?search=${inputData1}`)
     
     }
+}
+
+function showMore(){
+            // Get all the elements from the page
+            let points = 
+            document.getElementById("points");
+      
+        let showMoreText =
+            document.getElementById("moreText");
+      
+        let buttonText =
+            document.getElementById("textButton");
+      
+        let point1 =
+            document.getElementById("points-1");
+      
+
+        if (points.style.display === "none") {
+      
+            showMoreText.style.display = "none";
+      
+            points.style.display = "inline";
+      
+            point1.style.opacity="50%"
+            buttonText.innerHTML = `<i class="fa-thin fa-sort-down"></i> Show More`;
+        }
+        else {
+            point1.style.opacity="100%"
+
+            showMoreText.style.display = "inline";    
+            points.style.display = "none";
+            buttonText.innerHTML = `<i class="fa-thin fa-sort-up"></i> Show less`;
+        }
 }

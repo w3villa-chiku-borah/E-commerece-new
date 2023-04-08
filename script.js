@@ -109,6 +109,37 @@ $(document).ready(function () {
         }
 
     });
+    $('#owlProduct.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            400: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            800: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            },
+
+            1220: {
+                items: 1
+            },
+
+            1460: {
+                items: 1
+            },
+        }
+
+    });
     $('#owlthree.owl-carousel').owlCarousel({
         loop: true,
         margin: 0,
@@ -163,6 +194,35 @@ $(document).ready(function () {
     });
 
 });
+    $('#owlmostview.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            460: {
+                items: 2
+            },
+            700: {
+                items: 3
+            },
+
+            1220: {
+                items: 4
+            },
+
+            1460: {
+                items: 4
+
+            },
+        }
+
+    });
+
+
 
 function tapButtonBuy(para) {
     let boxC = document.getElementsByClassName('boxc1')[0];
