@@ -499,7 +499,7 @@ async function search(inputData) {
         <p>model 2098</p>
     </div>
     <div class="item02-c2">
-        <h1 onclick="getProductDetails()">${prods[i].name}</h1>
+        <h1 onclick="handleProductPageQuery(${prods[i].id})">${prods[i].name}</h1>
         <p>$${prods[i].price} <s>$3,299.00</s></p>
     </div>
     <div class="item02-c3">
@@ -547,7 +547,7 @@ async function search(inputData) {
                             </div>
 
                             <div class="item02-c2">
-                                <h1>${prods[i].name}</h1>
+                                <h1 onclick="handleProductPageQuery(${prods[i].id})">${prods[i].name}</h1>
                                 <!--  -->
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto magnam ea qui culpa cum, quis rem voluptatibus eaque quisquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem libero deleniti qui nisi laborum cupiditate tempora iusto dolor iure magni? lorem20</p>
                                 <p class="price-details">
@@ -690,7 +690,7 @@ async function seeAllProduct() {
     </div>
 
     <div class="cart-container cart-container-show">
-        <h2>${element.name}</h2>
+        <h2 onclick="handleProductPageQuery(${element.id})">${element.name}</h2>
         <p class="price">$${element.price} </p>
         <hr>
         <div class="add-to-cart-container show-result-cart">
@@ -774,7 +774,7 @@ async function pegination(elem) {
     </div>
 
     <div class="cart-container cart-container-show">
-        <h2>${element.name}</h2>
+        <h2 onclick="handleProductPageQuery(${element.id})">${element.name}</h2>
         <p class="price">$${element.price} </p>
         <hr>
         <div class="add-to-cart-container show-result-cart">
@@ -858,7 +858,7 @@ async function peginationInSearch(elem) {
                     <p>model 2098</p>
                 </div>
                 <div class="item02-c2">
-                    <h1>${element.name}</h1>
+                    <h1 onclick="handleProductPageQuery(${element.id})">${element.name}</h1>
                     <p>$${element.price} <s>$3,299.00</s></p>
                 </div>
                 <div class="item02-c3">
@@ -895,11 +895,12 @@ async function addToCart(elem) {
         return Object.values(category);
     })
     products = products.flat().flat();
-    console.log(products);
-    console.log(elem);
+   
     
 
     let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
+     console.log(elem);
+
     let flag = false;
     for (let i = 0; i < itemIncart.length; i++) {
         if (itemIncart[i].id == loggedUser.id) {
@@ -947,7 +948,7 @@ function cartItems() {
         </div>
 
         <div class="cart-container cart-container-show">
-            <h2>${itemIncart[i].name}</h2>
+            <h2 onclick="handleProductPageQuery(${itemIncart[i].id})">${itemIncart[i].name}</h2>
             <p class="price">$${itemIncart[i].price} </p>
             <hr>
             <div class="add-to-cart-container show-result-cart">
@@ -1009,7 +1010,7 @@ function removeToCart(elem) {
         </div>
 
         <div class="cart-container cart-container-show">
-            <h2>${itemIncart[i].name}</h2>
+            <h2 onclick="handleProductPageQuery(${itemIncart[i].id})">${itemIncart[i].name}</h2>
             <p class="price">$${itemIncart[i].price} </p>
             <hr>
             <div class="add-to-cart-container show-result-cart">
@@ -1129,7 +1130,7 @@ function wishlistIcon() {
         </div>
 
         <div class="cart-container cart-container-show">
-            <h2>${itemInWishlist[i].name}</h2>
+            <h2 onclick="handleProductPageQuery(${itemInWishlist[i].id})">${itemInWishlist[i].name}</h2>
             <p class="price">$${itemInWishlist[i].price} </p>
             <hr>
             <div class="add-to-cart-container show-result-cart">
@@ -1186,7 +1187,7 @@ function removeWishlistItems(elem) {
         </div>
 
         <div class="cart-container cart-container-show">
-            <h2>${itemInWishlist[i].name}</h2>
+            <h2 onclick="handleProductPageQuery(${itemInWishlist[i].id})">${itemInWishlist[i].name}</h2>
             <p class="price">$${itemInWishlist[i].price} </p>
             <hr>
             <div class="add-to-cart-container show-result-cart">
@@ -1242,6 +1243,24 @@ function handleSearchPageQuery(elem){
         location.href=(`searchpage.html?search=${inputData1}`)
     
     }
+}
+
+
+async function handleProductPageQuery(elem){
+    const response2 = await fetch('./data/item.json');
+    const obj2 = await response2.json();
+    
+    let products = Object.values(obj2).map((category) => {
+        return Object.values(category);
+    })
+    products = products.flat().flat();
+    
+    let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
+
+    const productId=loggedUser.id;
+    console.log(productId);
+    location.href=(`productPage.html?product=${loggedUser.name}_${productId}`)
+
 }
 
 function showMore(){
