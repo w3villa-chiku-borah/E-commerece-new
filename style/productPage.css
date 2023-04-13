@@ -732,7 +732,7 @@ width: 120px;
 }
 .product-img-container-1 img{
     width: 100px;
-    height: 100px;
+    /* height: 100px; */
     object-fit: contain;
     border-radius: 6px;
     margin-bottom: 7px;
@@ -812,8 +812,6 @@ padding-top: 7px;
 }  
 .product-img-container-1 img{
 width: 80%;
-height: 75px;
-
 }  
 
 .owl-theme .owl-nav.disabled+.owl-dots {
@@ -1127,7 +1125,7 @@ border-left: none !important;
 }
 .model-image a{
   text-decoration: underline;
-  font-size: 20px;
+  font-size: 16px;
 }
 .details-form{
   padding-top: 20px;

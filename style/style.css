@@ -1766,7 +1766,7 @@ button, html input[type=button], input[type=reset], input[type=submit] {
 
 .main-09-c1 {
   width: 164px;
-  border-bottom: 3px solid red;
+  /* border-bottom: 3px solid red; */
   margin-bottom: 20px;
 }
 
