@@ -209,9 +209,9 @@ let nameProduct2 = document.getElementById("product-name-2")
   </div>
 </div>
 </div>
-<button class="cart-button"><i class="fa-solid fa-cart-shopping"></i><span>Add To Cart</span> </button>
+<button class="cart-button" onclick="addToCart(${loggedUser.id})"><i class="fa-solid fa-cart-shopping"></i><span>Add To Cart</span> </button>
 <button class="buy-button"><i class="fa-regular fa-circle-dollar"></i> <span>buy now</span></button>
-<button class="question-button"><i class="fa-regular fa-circle-question"></i></button>
+<button class="question-button" onclick="triggerModalView()"><i class="fa-regular fa-circle-question"></i></button>
 
 </div>
 
@@ -285,4 +285,9 @@ function numRemove(){
     let Value=dIValue.value;
     Value = Number(Value)-1;
     dIValue.value=Value;
+
+    if(Value===0 || Value<=0){
+        dIValue.value=0;
+
+    }
 }
