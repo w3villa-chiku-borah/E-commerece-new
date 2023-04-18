@@ -2350,7 +2350,10 @@ display: block;
     position: relative;
      border: none !important;
   }
-  
+  .footer-sec-main ul li a:hover{
+    text-decoration: none;
+     color: rgb(231, 116, 59);
+  }
   
   .button-send {
   background-color: #1138e7;
