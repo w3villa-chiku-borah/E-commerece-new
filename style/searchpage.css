@@ -16,6 +16,18 @@
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  .item02 img:hover {
+    transform: scale(1.06);
+  }
+
+  .item02-list-image img:hover{
+    transform: scale(1.09);
+  
+  }
+  img{
+    transition: .3s;
+  }
   
   .container {
     width: 90%;
@@ -222,6 +234,21 @@
     height: 35px;
   }
   
+
+  .search select{
+    width: 60px;   
+  outline: none;
+  border: none;
+  background-color: #0000ff00;
+}
+.search select option {
+margin: 60px;
+background: rgba(0, 0, 0, 0.3);
+color: #fff;
+text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+
   .search-id{
     display: block !important;
   }
@@ -655,6 +682,172 @@
     font-size: 22px;
     padding-top: 10px;
   } 
+
+
+
+
+/* ****************drop-down-in-jurnal********** */
+.all-department-details{
+  display: none
+}
+
+
+.all-dev:hover .all-department-details{
+  display: block;
+  position: absolute;
+  z-index: 99;
+  left: 0px;
+  top: 55px;
+  width: 90%;
+  background-color: white;
+  /* border: 1px solid rgba(135, 133, 133, 0.655); */
+}
+.all-department-details ul {
+  display: inline-block;
+}
+
+.all-department-details ul li{
+font-size: 20px;
+font-weight: 500;
+opacity: 60%;
+padding-bottom: 30px !important ;
+/* padding-top: 10px; */
+/* padding-bottom: 10px; */
+cursor: pointer   ;
+/* padding-left: 10px; */
+}
+.all-department-details ul li:hover{
+  opacity: 100%;
+}
+.all-department-details ul li i{
+  padding-left: 10px;
+  padding-right: 20px;
+  /* font-weight: 500; */
+}
+.multi-li-first-child{
+  position: relative;
+}
+
+.multi-li-first-child-1{
+  display: none;
+}
+.multi-li-first-child:hover .multi-li-first-child-1{
+  position: absolute;
+  display: block;
+  position: absolute;
+  z-index: 99;
+  left: -14px;
+  top: 40px;
+  /* color: black; */
+  width: 200px;
+  cursor: pointer;
+  background-color: white
+}
+
+.multi-li-first-child-1 ul {
+  display: inline-block;
+}
+.multi-li-thrid-child{
+  width: 100px !important;
+}
+
+.multi-li-first-child-1 ul li{
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 60%;
+  display: flex;
+  justify-content:space-between  ;
+
+  /* padding-top: 10px; */
+  padding-bottom: 10px;
+  cursor: pointer   ;
+  padding-left: 10px;
+  /* padding-left: 10px; */
+  color: black;
+  }
+.multi-li-first-child-1 ul li i{
+  padding-left: 50px;
+  }
+  .all-department-1{
+    position: relative;
+  }
+  .all-department-details-child{
+    display: none;
+padding-left: 50px;
+  }
+
+
+  .all-department-1:hover .all-department-details-child{
+    /* right: -180px;
+    le */
+    display: block;
+    left: 100%;
+    top: -10px;
+    position: absolute;
+    background-color: white;
+   
+  }
+  .all-department-details-child-3{
+
+    top:-65px !important;
+  }
+  .all-department-details-child-4{
+
+    top:-130px !important;
+  }
+  .all-department-details-child-5{
+
+    top:-185px !important;
+  }
+  .all-department-details-child-6{
+
+    top:-240px !important;
+  }
+  .all-department-details-child-7{
+
+    top:-305px !important;
+  }
+  .all-department-details-child-2{
+    display: flex;
+  }
+
+.add-c1-1 {
+  display: flex;
+  padding-bottom: 10px;
+}
+.add-c1-1 ul {
+  display: inline-block !important;
+  margin-right: 10px;
+}
+.add-c1-1 ul li{
+padding-bottom: 5px !important;
+padding-right: 50px;
+}
+.add-img{
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+}
+
+.add-img img{
+  width: 100%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.multi-li-second-child:hover , .multi-li-first-child:hover , .multi-li-thrid-child:hover , .bg-yellow:hover{
+  background-color: white !important  ;
+  color: #000;
+}
+.blog-c1:hover{
+  background-color: white !important;
+  color: black;
+}
+
+  
   /* **************************search-nav******************************** */
   .search-nav{
 
@@ -2278,3 +2471,138 @@ display: block;
     height: 30px; 
     /* width: 5p  x; */
   }
+
+
+
+
+  /* <!-- *********modal-show*********** --> */
+.trigger {
+  text-align: center;
+  padding: 7px 13px;
+  background: #3E3E3E;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-family: cursive;
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1000;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 90rem;
+  border-radius: 0.5rem;
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-button:hover {
+  background-color: darkgray;
+}
+.show-modal {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal .question-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 0px;
+  align-items: start;
+}
+.modal .question-heading span {
+  width: 10%;
+  height: 1.5px;
+  margin-top: 5px;
+  background-color: var(--secondary-background-color);
+}
+.modal .question-form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.modal .question-form .form-group{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+.modal .question-form .form-group label{
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 5px;
+}
+.modal .question-form .form-group input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+.modal .question-form .form-group textarea{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+.modal .question-form .form-group select{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+.modal .question-form button{
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #0F3A8D;
+  color: #fff;
+}
+
+/* <!-- *********modal-show*********** --> */

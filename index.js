@@ -15,6 +15,9 @@ const showFashion = (arrayOfData) => {
     let fashionContainer = document.getElementById("show-fashion");
     arrayOfData.forEach(element => {
         html += `<div class="item item-main-04">
+        <div class="plus-in-img" >
+        <i class="fa-solid fa-magnifying-glass-plus"></i>
+    </div>
         <div class="featured-products-card">
             <div class="image-container">
                 <img loading="lazy" src="${element.img}" alt="">
@@ -253,7 +256,15 @@ const showFeature = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owltwo">`;
     let blog = document.getElementById('show-feature');
     arrayOfData.forEach(element => {
-        html += `<div class="item02"> <img class="labels-1" src="${element.img}">
+        html += `
+       
+        <div class="item02">
+        <div class="plus-in-img" >
+        <i class="fa-solid fa-magnifying-glass-plus"></i>
+    </div>
+        
+        
+        <img class="labels-1" src="${element.img}">
          
         ${element.c_lebels ? `<div class="lebels-c1">
             CUSTOM LEBELS
@@ -284,9 +295,10 @@ const showFeature = (arrayOfData) => {
                         class="fa-sharp fa-solid fa-arrow-right-arrow-left"></i></span></div>
         </div>
         <div class="item02-c4">
-            <p><i class="fa-solid fa-sack-dollar"></i>
-                Buy Now </p>
-            <p><i class="fa-regular fa-circle-question"></i> Question</p>
+            <p> <button class="trigger-2"><i class="fa-solid fa-sack-dollar"></i>
+                Buy Now </button> </p>
+            <p> <button class="trigger" onclick="triggerModalView()"><i class="fa-regular fa-circle-question"></i> Question </button> </p>
+           
         </div>
     </div>`
     });
@@ -484,7 +496,9 @@ async function search(inputData) {
         
             for (let i = 0; i < prods.length; i++) {
                
-                html += ` <div class="item02" id="item02-id"> <img class="labels-1" src="${prods[i].img}">
+                html += ` <div class="item02" id="item02-id" > 
+                
+                <img class="labels-1" src="${prods[i].img}" onclick="handleProductPageQuery(${prods[i].id})">
     <div class="lebels-c1">
         CUSTOM LEBELS
     </div>
@@ -513,7 +527,7 @@ async function search(inputData) {
     <div class="item02-c4">
         <p><i class="fa-solid fa-sack-dollar"></i>
             Buy Now </p>
-        <p><i class="fa-regular fa-circle-question"></i> Question</p>
+        <p onclick="triggerModalView()"><i class="fa-regular fa-circle-question"></i> Question</p>
     </div>
 </div>`
 
@@ -527,7 +541,7 @@ async function search(inputData) {
  for(let i=0;i<prods.length;i++){
     htmlList+= `
     <div class="item02-list" id="item02-list"> 
-                            <div class="item02-list-image">
+                            <div class="item02-list-image" onclick="handleProductPageQuery(${prods[i].id})">
                                 <img class="labels-1" src="${prods[i].img}">
                                 <div class="lebels-c1">
                                     CUSTOM LEBELS
@@ -565,7 +579,7 @@ async function search(inputData) {
                             <div class="item02-c4">
                                 <p><i class="fa-solid fa-sack-dollar"></i>
                                     Buy Now </p>
-                                <p style="padding-left: 30px;"><i class="fa-regular fa-circle-question"></i> Question</p>
+                                <p onclick="triggerModalView()" style="padding-left: 30px;"><i class="fa-regular fa-circle-question"></i> Question</p>
                             </div>
                            </div>
                         </div>
@@ -654,11 +668,13 @@ async function searchInItems(elem) {
 }
 async function seeAllProduct() {
     let showResult = document.getElementById("show-result-div-sec");
-    let main = document.getElementById("main-section")
+    let main = document.getElementById("search-main")
+
+    
     let showSearchItemSec = document.getElementById("show-search-items");
     const response = await fetch('./data/item.json');
     const obj = await response.json();
-    let pagitantionDiv = document.getElementById("pegination-div-main");
+    let pagitantionDiv = document.getElementById("pegination-div-main-2");
     let pegiArray = [];
     let pegiArrayMain = [];
 
@@ -712,10 +728,13 @@ async function seeAllProduct() {
 </div>`
 
     })
+
+    main.style.display = "none";
     showResult.innerHTML = html;
     let num = products.length / 10;
     num = Math.ceil(num)
-    console.log(Math.ceil(num));
+    console.log(showResult);
+    console.log(pagitantionDiv)
     for (i = 1; i <= num; i++) {
         pagitantionDiv.innerHTML += `
 <div class="pegination-div">
@@ -725,8 +744,8 @@ async function seeAllProduct() {
     </div>
 `
     }
-    main.style.display = "none";
-
+ 
+    
     pagitantionDiv.classList.add("show-pegination");
 }
 async function pegination(elem) {
@@ -889,6 +908,7 @@ async function peginationInSearch(elem) {
 }
 const itemIncart = JSON.parse(localStorage.getItem('cart')) || [];
 async function addToCart(elem) {
+   
     const response = await fetch('./data/item.json');
     const obj = await response.json();
     let products = Object.values(obj).map((category) => {
@@ -956,13 +976,23 @@ function cartItems() {
 
                     <input type="button" onclick="removeToCart(${itemIncart[i].id})" value="Remove From CART">
                 </div>
+
+               
                 <div> 
             
                     <i style="font-weight:100" class="fa-solid fa-heart" onclick="wishlistItems(${itemIncart[i].id})"></i>
                  
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 </div>
+
+                <div>
+            <button style="background-color: brown;
+            border: none;">Buy </button>
+            
+             </div>
             </div>
+
+            
         </div>
     </div>`
           let html2=
@@ -1125,7 +1155,7 @@ function wishlistIcon() {
         for (let i = 0; i < itemInWishlist.length; i++) {
             html += ` 
         <div class="featured-products-card show-result-div-sec" >
-        <div class="image-container">
+        <div class="image-container" onclick="handleProductPageQuery(${itemInWishlist[i].id})">
             <img loading="lazy" src="${itemInWishlist[i].img}" alt="">
         </div>
 
@@ -1220,7 +1250,7 @@ function removeWishlistItems(elem) {
 function comeSearch() {
    
     let searchButton = document.getElementById('search-id');
-  console.log("hi")
+
     searchButton.classList.toggle("search-id");
   
 }
@@ -1294,4 +1324,46 @@ function showMore(){
             points.style.display = "none";
             buttonText.innerHTML = `<i class="fa-thin fa-sort-up"></i> Show less`;
         }
-}
+
+
+    }
+
+        // ****************open-modal*********
+        var modal = document.querySelector(".modal");
+        var closeButton = document.querySelector(".close-button");
+        function toggleView() {
+            modal.classList.toggle("show-modal");
+        }
+        function windowOnClick(event) {
+            if (event.target === modal) {
+                toggleView();
+            }
+        }
+        closeButton.addEventListener("click", toggleView);
+        window.addEventListener("click", windowOnClick);
+        function triggerModalView() {
+            toggleView();
+            console.log("1")
+        }
+
+        
+
+          // *************sticky-navbar**********
+        window.addEventListener("scroll",()=>{
+            let navBar = document.getElementById("blue-line");
+            let sale = document.getElementById("sale");
+            let tag2 = document.getElementById("new")
+            // console.log("hi")
+            if(window.pageYOffset > navBar.offsetTop){
+        navBar.classList.add("fix-class")
+         sale.style.display="none"
+         tag2.style.display="none"
+     }
+     else{
+        navBar.classList.remove("fix-class")
+        sale.style.display="block"
+        tag2.style.display="block"
+     }
+     
+
+        })
