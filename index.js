@@ -10,6 +10,7 @@ async function readData() {
     // showBlog (data3.blog2)
 }
 
+// *****************showFashion-section************
 const showFashion = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owlfour">`;
     let fashionContainer = document.getElementById("show-fashion");
@@ -19,7 +20,7 @@ const showFashion = (arrayOfData) => {
         <i class="fa-solid fa-magnifying-glass-plus"></i>
     </div>
         <div class="featured-products-card">
-            <div class="image-container">
+            <div class="image-container" onclick="handleProductPageQuery(${element.id})">
                 <img loading="lazy" src="${element.img}" alt="">
 
               ${element.c_lebels ? ` <div class="lebels-c1 lebels-04-main-1">
@@ -40,7 +41,7 @@ const showFashion = (arrayOfData) => {
             </div>
 
             <div class="cart-container">
-                <h2>${element.name}</h2>
+                <h2 onclick="handleProductPageQuery(${element.id})">${element.name}</h2>
                 <p class="price">$${element.price} </p>
                 <hr>
                 <div class="add-to-cart-container">
@@ -95,7 +96,7 @@ const showFashion = (arrayOfData) => {
     });
 }
 
-
+// **********showMostView-section************
 
 const showMostView = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owlnine">`;
@@ -164,6 +165,8 @@ async function readDataBlog(elem) {
             break;
     }
 }
+// *******************showBlog-section*****************
+
 
 const showBlog = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owlthree">`;
@@ -252,6 +255,10 @@ async function readData2(elem) {
     }
 }
 
+
+// **************************feature-section*************************
+
+
 const showFeature = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owltwo">`;
     let blog = document.getElementById('show-feature');
@@ -264,7 +271,7 @@ const showFeature = (arrayOfData) => {
     </div>
         
         
-        <img class="labels-1" src="${element.img}">
+        <img onclick="handleProductPageQuery(${element.id})" class="labels-1" src="${element.img}">
          
         ${element.c_lebels ? `<div class="lebels-c1">
             CUSTOM LEBELS
@@ -283,7 +290,7 @@ const showFeature = (arrayOfData) => {
             <p>model ${element.modal_name}</p>
         </div>
         <div class="item02-c2">
-            <h1>${element.name}</h1>
+            <h1 onclick="handleProductPageQuery(${element.id})">${element.name}</h1>
             <p>$${element.price}<s>$${element.price_cut}</s></p>
         </div>
         <div class="item02-c3">
@@ -372,6 +379,9 @@ async function readData3(elem) {
     }
 }
 
+
+// ***************why-you-buy-section*****************
+
 const showBuy = (arrayOfData) => {
     let html = `<div class="owl-carousel owl-theme" id="owlFirst">`;
     let blog = document.getElementById("buy-img-container");
@@ -457,7 +467,7 @@ rangeInput.forEach(input =>{
 
 let prods = 0;
 
-
+// ************search-item************
 
 async function search(inputData) {
 
@@ -626,6 +636,7 @@ pagitantionDiv.classList.add("show-pegination");
    
 }
 
+// *************onGrid***************
 
 function onGrid(){
     let showResult = document.getElementById("show-result-div-sec");
@@ -633,6 +644,11 @@ function onGrid(){
     showResult.classList.remove("show-list-none")
     showResultList.classList.add("show-list-none")
 }
+
+
+// **************onList************
+
+
 function onList(){
     let showResult = document.getElementById("show-result-div-sec");
     let showResultList = document.getElementById("show-result-div-sec-list");
@@ -666,6 +682,11 @@ async function searchInItems(elem) {
     return itemsFound;
 
 }
+
+
+// *********************seeAllProduct***********************
+
+
 async function seeAllProduct() {
     let showResult = document.getElementById("show-result-div-sec");
     let main = document.getElementById("search-main")
@@ -748,6 +769,12 @@ async function seeAllProduct() {
     
     pagitantionDiv.classList.add("show-pegination");
 }
+
+
+
+
+// ****************************pegination******************
+
 async function pegination(elem) {
     console.log("hellooo..")
     let showResult = document.getElementById("show-result-div-sec");
@@ -906,6 +933,16 @@ async function peginationInSearch(elem) {
 
 
 }
+
+
+
+
+
+
+
+// **********************addToCart*******************
+
+
 const itemIncart = JSON.parse(localStorage.getItem('cart')) || [];
 async function addToCart(elem) {
    
@@ -1104,6 +1141,11 @@ function reload() {
     totalPrice();
  
 }
+
+
+// ***************wishlistItems**************************
+
+
 const itemInWishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 
 async function wishlistItems(elem) {
@@ -1256,6 +1298,8 @@ function comeSearch() {
 }
 
 
+// ***************************handleSearchPageQuery**************************
+
 function handleSearchPageQuery(elem){
     let inputData = document.getElementById("myInput").value;
     let inputData1 = document.getElementById("myInput1").value;
@@ -1276,6 +1320,9 @@ function handleSearchPageQuery(elem){
 }
 
 
+
+// **************************handleProductPageQuery***************************
+
 async function handleProductPageQuery(elem){
     const response2 = await fetch('./data/item.json');
     const obj2 = await response2.json();
@@ -1292,6 +1339,11 @@ async function handleProductPageQuery(elem){
     location.href=(`productPage.html?product=${loggedUser.name}_${productId}`)
 
 }
+
+
+// *******************showMore***********************
+
+
 
 function showMore(){
             // Get all the elements from the page

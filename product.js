@@ -12,7 +12,6 @@ let nameProduct2 = document.getElementById("product-name-2")
     
 
     let loggedUser = products?.find((user) => Number(user.id) == Number(elem));
-  console.log(loggedUser)
   nameProduct.innerHTML=loggedUser.name;
   nameProduct2.innerHTML=loggedUser.name;
   ShowProduct.innerHTML=`
@@ -21,12 +20,12 @@ let nameProduct2 = document.getElementById("product-name-2")
   <div class="product-img-container">
       <div class="product-img-container-1">
          <div class="product-img-container-1-child">
-          <img src="${loggedUser.img2}" alt="">
-          <img src="${loggedUser.img3}" alt="">
-          <img src="${loggedUser.img4}" alt="">
-          <img src="${loggedUser.img5}" alt="">
-          <img src="${loggedUser.img6}" alt="">
-          <img src="${loggedUser.img7}" alt="">
+          <img   onclick="changeImage(this)" src="${loggedUser.img2}" alt="">
+          <img onclick="changeImage(this)" src="${loggedUser.img3}" alt="">
+          <img onclick="changeImage(this)" src="${loggedUser.img4}" alt="">
+          <img onclick="changeImage(this)" src="${loggedUser.img5}" alt="">
+          <img onclick="changeImage(this)" src="${loggedUser.img6}" alt="">
+          <img onclick="changeImage(this)" src="${loggedUser.img7}" alt="">
         
          </div>
       </div>
@@ -35,7 +34,7 @@ let nameProduct2 = document.getElementById("product-name-2")
                   <div class="owl-carousel owl-theme" id="owlProduct">      
                       <div>
                           
-                          <img src="${loggedUser.img}" alt="">
+                          <img id="image-in-big-screen" src="${loggedUser.img}" alt="">
                       
                       </div>
                       <div>
@@ -290,4 +289,23 @@ function numRemove(){
         dIValue.value=0;
 
     }
+}
+
+
+
+
+
+// *********on change**********
+
+function changeImage(elem){
+    let image = elem.src;
+    let imageInBigScreen =document.getElementById("image-in-big-screen")
+  
+    let temp = imageInBigScreen.src;
+
+    imageInBigScreen.src =image;
+    elem.src=temp;
+    console.log(imageInBigScreen);
+    console.log(image);
+
 }
