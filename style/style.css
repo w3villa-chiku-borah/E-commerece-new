@@ -1556,7 +1556,7 @@ s{
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   z-index: 1000;
 }
-.modal-content {
+.content-in-modal {
   position: absolute;
   top: 50%;
   left: 50%;
