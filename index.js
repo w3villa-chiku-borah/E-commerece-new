@@ -270,8 +270,10 @@ const showFeature = (arrayOfData) => {
         <i class="fa-solid fa-magnifying-glass-plus"></i>
     </div>
         
-        
-        <img onclick="handleProductPageQuery(${element.id})" class="labels-1" src="${element.img}">
+    <div class="item02-image-div">
+    <img onclick="handleProductPageQuery(${element.id})" class="labels-1" src="${element.img}">
+                
+    </div>
          
         ${element.c_lebels ? `<div class="lebels-c1">
             CUSTOM LEBELS

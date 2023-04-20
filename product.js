@@ -96,7 +96,7 @@ let nameProduct2 = document.getElementById("product-name-2")
       </div>
 
     <div class="review-sec">
-      <i class="fa-light fa-star"></i><i class="fa-light fa-star"></i><i class="fa-light fa-star"></i><i class="fa-light fa-star"></i><i class="fa-light fa-star"></i><a href="">Based on 1  reviews. </a> -<a href="">Write a Review</a>
+      <i class="fa-solid fa-star" style="color: #ffa702;"></i><i class="fa-solid fa-star" style="color: #ffa702;"></i><i class="fa-solid fa-star" style="color: #ffa702;"></i><i class="fa-light fa-star"></i><i class="fa-light fa-star"></i><a href="">Based on 1  reviews. </a> -<a href="">Write a Review</a>
     </div>
     <div class="price-and-model-sec">
       <div class="price-sec">
@@ -295,7 +295,7 @@ function numRemove(){
 
 
 
-// *********on change**********
+// *********on change image**********
 
 function changeImage(elem){
     let image = elem.src;
@@ -304,8 +304,5 @@ function changeImage(elem){
     let temp = imageInBigScreen.src;
 
     imageInBigScreen.src =image;
-    elem.src=temp;
-    console.log(imageInBigScreen);
-    console.log(image);
-
+    // elem.src=temp;
 }

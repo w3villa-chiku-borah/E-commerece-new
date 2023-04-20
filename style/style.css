@@ -728,14 +728,12 @@ padding-right: 4px;
 }
 
 .all-department-details ul li{
-font-size: 20px;
-font-weight: 500;
-opacity: 60%;
-padding-bottom: 30px !important ;
-/* padding-top: 10px; */
-/* padding-bottom: 10px; */
-cursor: pointer   ;
-/* padding-left: 10px; */
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 60%;
+  padding-bottom: 10px !important ;
+  padding-top: 10px; 
+  padding-bottom: 5px;
 }
 .all-department-details ul li:hover{
   opacity: 100%;
@@ -1314,9 +1312,13 @@ line-height: 48px;
   /* border-radius: 20px; */
   border: 1px solid rgba(86, 85, 85, 0.286)
 }
+.item02-image-div{
 
-.item02 img {
   height: 60%;
+
+}
+.item02 img {
+  height: 100%;
   object-fit: cover;
   z-index: -99;
 }
@@ -1428,7 +1430,7 @@ s{
 .lebels-c1 {
   position: absolute;
   top: 37px;
-  left: -34pxx;
+  left: -34px;
   left: -35px;
   /* width: 100%; */
   width: 184px;
