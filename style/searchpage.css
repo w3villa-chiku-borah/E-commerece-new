@@ -700,6 +700,7 @@ text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   top: 55px;
   width: 90%;
   background-color: white;
+ 
   /* border: 1px solid rgba(135, 133, 133, 0.655); */
 }
 .all-department-details ul {
@@ -717,6 +718,7 @@ padding-bottom: 5px;
 /* cursor: pointer   ;
 /* padding-left: 10px; */
 }
+
 .all-department-details ul li:hover{
   opacity: 100%;
 }
@@ -790,23 +792,23 @@ padding-left: 50px;
   }
   .all-department-details-child-3{
 
-    top:-65px !important;
+    top:0px !important;
   }
   .all-department-details-child-4{
 
-    top:-130px !important;
+    top:0px !important;
   }
   .all-department-details-child-5{
 
-    top:-185px !important;
+    top:0px !important;
   }
   .all-department-details-child-6{
 
-    top:-240px !important;
+    top:0px !important;
   }
   .all-department-details-child-7{
 
-    top:-305px !important;
+    top:0px !important;
   }
   .all-department-details-child-2{
     display: flex;
